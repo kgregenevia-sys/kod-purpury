@@ -7,6 +7,10 @@
 <meta property="og:title" content="RIWAY Europe — 6th Anniversary Gala Dinner">
 <meta property="og:description" content="1 sierpnia 2026 · Katowice · strój wieczorowy · prestiżowy międzynarodowy wieczór. Zgłoś obecność.">
 <meta property="og:url" content="https://kodpurpury.kgregenevia.pro/gala.html">
+<meta property="og:image" content="https://kodpurpury.kgregenevia.pro/gala-og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kodpurpury.kgregenevia.pro/gala-og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -62,6 +66,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-grad
 .rsvp input:focus,.rsvp textarea:focus{border-color:var(--gold)}
 .rsvp .full{grid-column:1/-1}
 .dress{text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold2);margin:8px 0}
+.pcard{display:inline-block;margin-top:16px;background:linear-gradient(120deg,rgba(201,162,74,.18),rgba(201,162,74,.04));border:1px solid var(--gold);border-radius:40px;padding:9px 22px;font-size:14px;color:var(--gold2);font-weight:500}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--panel);border:1px solid var(--gold);color:var(--ink);padding:14px 22px;border-radius:12px;opacity:0;transition:.3s;z-index:50}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 footer{border-top:1px solid var(--line);text-align:center;padding:34px 22px;color:var(--muted);font-size:13px;margin-top:30px}
@@ -75,10 +80,12 @@ footer{border-top:1px solid var(--line);text-align:center;padding:34px 22px;colo
   <h1 class="serif">6<span style="font-size:.6em">th</span> Anniversary <span class="gold">Gala Dinner</span></h1>
   <div class="sub">PRESTIŻOWY, MIĘDZYNARODOWY WIECZÓR</div>
   <div class="when">1 sierpnia 2026 · Katowice</div>
+  <div id="personal"></div>
   <div class="cd" id="cd"></div>
   <div style="margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
     <a class="btn" href="#rsvp">Zgłoś swoją obecność</a>
     <a class="btn btn-ghost" href="#szczegoly">Szczegóły wieczoru</a>
+    <a class="btn btn-ghost" href="#zapros">Zaproś znajomych</a>
   </div>
 </div></section>
 
@@ -129,6 +136,19 @@ footer{border-top:1px solid var(--line);text-align:center;padding:34px 22px;colo
   </div>
 </div></section>
 
+<section class="sec" id="zapros"><div class="wrap">
+  <div class="sec-h serif">Zaproś swoich</div>
+  <div class="sec-sub">Znasz ludzi, którzy siedzą w temacie? Wygeneruj swój osobisty link zaproszenia i wyślij dalej. Zobaczymy, kto przyprowadził najwięcej gości. 🔥</div>
+  <div class="rsvp" style="max-width:580px">
+    <input id="inv_name" placeholder="Twoje imię (podpis zaproszenia)">
+    <div id="inv_link" style="display:none;font-size:12px;color:var(--gold2);margin:2px 0 12px;word-break:break-all"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn" style="flex:1;min-width:200px" onclick="shareWa()">Udostępnij na WhatsApp 🥂</button>
+      <button class="btn btn-ghost" onclick="copyInv()">Kopiuj mój link</button>
+    </div>
+  </div>
+</div></section>
+
 <footer><div class="wrap">
   <div class="rlogo" style="margin-bottom:8px">◍ RIWAY EUROPE</div>
   6th Anniversary Gala Dinner · 1 sierpnia 2026 · Katowice International Conference Centre<br>
@@ -140,6 +160,15 @@ footer{border-top:1px solid var(--line);text-align:center;padding:34px 22px;colo
 <script>
 const SB='https://mdsvcobwuezriexyqqby.supabase.co';
 const ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1kc3Zjb2J3dWV6cmlleHlxcWJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNjMxMjMsImV4cCI6MjA5MzYzOTEyM30.o4CVcSf9drtDxlpVv11T_E3N4dd-BSTrQPRCZXfpusg';
+const P=new URLSearchParams(location.search);
+const REF=(P.get('ref')||'').slice(0,60);
+const GOSCIE=(P.get('goscie')||'').slice(0,60);
+function esc(s){return String(s||'').replace(/[<>&"]/g,'')}
+if(GOSCIE){document.getElementById('personal').innerHTML='<div class="pcard">✦ Zaproszenie osobiste dla: <b>'+esc(GOSCIE)+'</b> ✦</div>';}
+else if(REF){document.getElementById('personal').innerHTML='<div class="pcard">Zaproszenie od: <b>'+esc(REF)+'</b></div>';}
+function invLink(){const n=(document.getElementById('inv_name').value||'').trim();const base=location.origin+location.pathname;return {n:n, u:base+'?ref='+encodeURIComponent(n||'gosc')};}
+function shareWa(){const o=invLink();const box=document.getElementById('inv_link');box.style.display='block';box.textContent=o.u;const txt=encodeURIComponent('Zapraszam Cię na RIWAY Europe 6th Anniversary Gala Dinner — 1 sierpnia 2026, Katowice. Prestiżowy, międzynarodowy wieczór (strój wieczorowy). Szczegóły i potwierdzenie obecności: '+o.u);window.open('https://wa.me/?text='+txt,'_blank');}
+function copyInv(){const o=invLink();const box=document.getElementById('inv_link');box.style.display='block';box.textContent=o.u;try{navigator.clipboard.writeText(o.u)}catch(e){}toast('Skopiowano Twój link ✦');}
 function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),3400)}
 // countdown
 const target=new Date('2026-08-01T18:00:00+02:00').getTime();
@@ -158,7 +187,7 @@ async function rsvp(){
   if(!name&&!email&&!phone){toast('Podaj imię i kontakt');return}
   if(email&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){toast('Podaj poprawny e-mail');return}
   try{
-    const r=await fetch(SB+'/rest/v1/gala_rsvp',{method:'POST',headers:{apikey:ANON,'Authorization':'Bearer '+ANON,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({name,email,phone,guests,note})});
+    const r=await fetch(SB+'/rest/v1/gala_rsvp',{method:'POST',headers:{apikey:ANON,'Authorization':'Bearer '+ANON,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({name,email,phone,guests,note,ref:REF||null,goscie:GOSCIE||null})});
     if(r.ok){toast('Dziękujemy! Zgłoszenie przyjęte — do zobaczenia w Katowicach 🥂');document.querySelectorAll('.rsvp input,.rsvp textarea').forEach(i=>i.value='');document.getElementById('g_guests').value='1';}
     else{toast('Coś poszło nie tak — spróbuj ponownie lub napisz do nas')}
   }catch(e){toast('Błąd połączenia — spróbuj ponownie')}
