@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RIWAY Europe — 6th Anniversary Gala Dinner · Katowice 1.08.2026</title>
+<meta name="description" content="RIWAY Europe 6th Anniversary Gala Dinner — 1 sierpnia 2026, Katowice International Conference Centre. Prestiżowy, międzynarodowy wieczór. Strój wieczorowy. Zgłoś swoją obecność.">
+<meta name="theme-color" content="#0d0a06">
+<meta property="og:title" content="RIWAY Europe — 6th Anniversary Gala Dinner">
+<meta property="og:description" content="1 sierpnia 2026 · Katowice · strój wieczorowy · prestiżowy międzynarodowy wieczór. Zgłoś obecność.">
+<meta property="og:url" content="https://kodpurpury.kgregenevia.pro/gala.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d0a06;--panel:#171208;--gold:#c9a24a;--gold2:#e8cf94;--ink:#f4ecd9;--muted:rgba(244,236,217,.6);--line:rgba(201,162,74,.28)}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(60% 45% at 50% 0%,rgba(201,162,74,.16),transparent 62%),radial-gradient(50% 40% at 85% 20%,rgba(232,207,148,.08),transparent 60%),#0d0a06}
+.serif{font-family:'Cormorant Garamond',serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+.gold{background:linear-gradient(120deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.orn{color:var(--gold);letter-spacing:6px;text-align:center;font-size:15px;margin:10px 0}
+/* hero */
+.hero{text-align:center;padding:70px 0 40px;position:relative}
+.rlogo{font-family:'Cormorant Garamond',serif;letter-spacing:8px;font-size:20px;color:var(--gold2);margin-bottom:22px}
+.six{font-family:'Cormorant Garamond',serif;font-size:clamp(90px,20vw,180px);font-weight:700;line-height:.9;background:linear-gradient(135deg,#f6e6bf,#c9a24a 55%,#8a6a2a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 10px 40px rgba(201,162,74,.35))}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,46px);font-weight:600;letter-spacing:1px;margin-top:8px}
+.hero .sub{color:var(--muted);font-size:16px;margin-top:14px;letter-spacing:1px}
+.when{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold2);margin-top:20px}
+/* countdown */
+.cd{display:flex;gap:16px;justify-content:center;margin:30px 0 10px;flex-wrap:wrap}
+.cd .u{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;min-width:78px}
+.cd .n{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:var(--gold2);line-height:1}
+.cd .l{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.btn{display:inline-block;font-weight:600;font-size:15px;letter-spacing:.5px;padding:15px 34px;border-radius:12px;border:none;cursor:pointer;background:linear-gradient(120deg,var(--gold2),var(--gold));color:#2a1e08;transition:.2s;box-shadow:0 14px 40px -14px rgba(201,162,74,.6)}
+.btn:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;border:1px solid var(--gold);color:var(--gold2);box-shadow:none}
+/* invite text */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:38px 34px;text-align:center;margin:20px auto;max-width:720px}
+.card p{margin-bottom:16px;font-size:16px}
+.card b{color:var(--gold2)}
+/* highlights */
+.hl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
+.hl .h{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;text-align:center}
+.hl .h .ic{font-size:28px}
+.hl .h .n{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:var(--gold2);margin:6px 0}
+.hl .h .t{font-size:13px;color:var(--muted)}
+/* details */
+.det{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0}
+.det .box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+.det h3{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold2);margin-bottom:10px}
+.det .row{display:flex;gap:10px;font-size:14px;color:var(--muted);margin-bottom:6px}
+.det .row b{color:var(--ink);font-weight:500}
+#map{height:260px;border-radius:16px;border:1px solid var(--line);overflow:hidden}
+.sec-h{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;text-align:center;margin-bottom:6px}
+.sec-sub{color:var(--muted);text-align:center;margin-bottom:26px}
+.sec{padding:46px 0}
+/* rsvp */
+.rsvp{background:linear-gradient(160deg,rgba(201,162,74,.12),rgba(201,162,74,.03));border:1px solid var(--gold);border-radius:22px;padding:38px 30px;max-width:640px;margin:0 auto}
+.rsvp .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rsvp input,.rsvp textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:13px 15px;color:var(--ink);font-family:inherit;font-size:15px;outline:none;margin-bottom:12px}
+.rsvp input:focus,.rsvp textarea:focus{border-color:var(--gold)}
+.rsvp .full{grid-column:1/-1}
+.dress{text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold2);margin:8px 0}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--panel);border:1px solid var(--gold);color:var(--ink);padding:14px 22px;border-radius:12px;opacity:0;transition:.3s;z-index:50}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+footer{border-top:1px solid var(--line);text-align:center;padding:34px 22px;color:var(--muted);font-size:13px;margin-top:30px}
+@media(max-width:760px){.hl,.det,.rsvp .grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<section class="hero"><div class="wrap">
+  <div class="rlogo">◍ RIWAY EUROPE</div>
+  <div class="orn">✦ ⸻ ✦ ⸻ ✦</div>
+  <div class="six">6</div>
+  <h1 class="serif">6<span style="font-size:.6em">th</span> Anniversary <span class="gold">Gala Dinner</span></h1>
+  <div class="sub">PRESTIŻOWY, MIĘDZYNARODOWY WIECZÓR</div>
+  <div class="when">1 sierpnia 2026 · Katowice</div>
+  <div class="cd" id="cd"></div>
+  <div style="margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a class="btn" href="#rsvp">Zgłoś swoją obecność</a>
+    <a class="btn btn-ghost" href="#szczegoly">Szczegóły wieczoru</a>
+  </div>
+</div></section>
+
+<div class="wrap">
+  <div class="card serif" style="font-family:'Inter'">
+    <p class="serif" style="font-size:20px;color:var(--gold2)">Z całego serca chcielibyśmy zaprosić Cię na wyjątkowy wieczór</p>
+    <p><b>RIWAY Europe 6th Anniversary Gala Dinner</b> — prestiżowe, międzynarodowe wydarzenie, które zgromadzi gości z całego świata. 🥂</p>
+    <p>Kolację przygotuje <b>ponad 60 szefów kuchni</b> z najlepszych hoteli w Polsce, a o perfekcyjną obsługę zadba blisko <b>1000 kelnerów</b>.</p>
+    <p>Wyobraź sobie salę z <b>1000 elegancko nakrytych, okrągłych stołów</b>, każdy dla 10 osób — to widok, którego nie da się opisać słowami. ✨</p>
+    <p style="color:var(--muted)">Będzie nam ogromnie miło, jeśli będziesz tam razem z nami.</p>
+  </div>
+
+  <div class="hl">
+    <div class="h"><div class="ic">👨‍🍳</div><div class="n">60+</div><div class="t">szefów kuchni z najlepszych hoteli</div></div>
+    <div class="h"><div class="ic">🤵</div><div class="n">~1000</div><div class="t">kelnerów, perfekcyjna obsługa</div></div>
+    <div class="h"><div class="ic">🍽️</div><div class="n">1000</div><div class="t">okrągłych stołów, każdy dla 10 osób</div></div>
+  </div>
+</div>
+
+<section class="sec" id="szczegoly"><div class="wrap">
+  <div class="sec-h serif">Szczegóły wieczoru</div>
+  <div class="dress">✦ Dress code: strój wieczorowy ✦</div>
+  <div class="det">
+    <div class="box">
+      <h3>Kiedy i gdzie</h3>
+      <div class="row">📅 <b>1 sierpnia 2026</b></div>
+      <div class="row">📍 <b>Katowice International Conference Centre</b></div>
+      <div class="row">🏛️ Hala Wielofunkcyjna (Multifunctional Hall)</div>
+      <div class="row">🗺️ Plac Sławika i Antalla 1, 40-163 Katowice</div>
+      <div class="row">👗 Obowiązuje strój wieczorowy</div>
+    </div>
+    <div id="map"></div>
+  </div>
+</div></section>
+
+<section class="sec" id="rsvp"><div class="wrap">
+  <div class="sec-h serif">Potwierdź obecność</div>
+  <div class="sec-sub">Zostaw kontakt — odezwiemy się z pełnymi szczegółami. Do zobaczenia 1 sierpnia w Katowicach! 🥂</div>
+  <div class="rsvp">
+    <div class="grid">
+      <input id="g_name" placeholder="Imię i nazwisko">
+      <input id="g_phone" placeholder="Telefon" inputmode="tel">
+      <input id="g_email" class="full" type="email" placeholder="E-mail" inputmode="email">
+      <input id="g_guests" class="full" type="number" min="1" value="1" placeholder="Liczba osób">
+      <textarea id="g_note" class="full" rows="2" placeholder="Uwagi (opcjonalnie)"></textarea>
+    </div>
+    <button class="btn full" style="width:100%" onclick="rsvp()">Zgłaszam obecność ✦</button>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="rlogo" style="margin-bottom:8px">◍ RIWAY EUROPE</div>
+  6th Anniversary Gala Dinner · 1 sierpnia 2026 · Katowice International Conference Centre<br>
+  <span style="font-size:11px;color:rgba(244,236,217,.4)">Zaproszenie informacyjne. W razie pytań napisz lub zadzwoń.</span>
+</div></footer>
+<div class="toast" id="toast"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const SB='https://mdsvcobwuezriexyqqby.supabase.co';
+const ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1kc3Zjb2J3dWV6cmlleHlxcWJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNjMxMjMsImV4cCI6MjA5MzYzOTEyM30.o4CVcSf9drtDxlpVv11T_E3N4dd-BSTrQPRCZXfpusg';
+function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),3400)}
+// countdown
+const target=new Date('2026-08-01T18:00:00+02:00').getTime();
+function tick(){let d=Math.max(0,target-Date.now());const dd=Math.floor(d/864e5),hh=Math.floor(d%864e5/36e5),mm=Math.floor(d%36e5/6e4),ss=Math.floor(d%6e4/1e3);
+ document.getElementById('cd').innerHTML=[[dd,'Dni'],[hh,'Godz'],[mm,'Min'],[ss,'Sek']].map(u=>`<div class="u"><div class="n">${String(u[0]).padStart(2,'0')}</div><div class="l">${u[1]}</div></div>`).join('');}
+tick();setInterval(tick,1000);
+// map
+try{const map=L.map('map',{scrollWheelZoom:false}).setView([50.2657,19.0238],14);L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:18}).addTo(map);L.circleMarker([50.2657,19.0238],{radius:11,color:'#c9a24a',fillColor:'#e8cf94',fillOpacity:.9}).addTo(map).bindPopup('Katowice ICC — Hala Wielofunkcyjna');setTimeout(()=>map.invalidateSize(),300);}catch(e){}
+// rsvp
+async function rsvp(){
+  const name=(document.getElementById('g_name').value||'').trim();
+  const email=(document.getElementById('g_email').value||'').trim();
+  const phone=(document.getElementById('g_phone').value||'').trim();
+  const guests=parseInt(document.getElementById('g_guests').value||'1')||1;
+  const note=(document.getElementById('g_note').value||'').trim();
+  if(!name&&!email&&!phone){toast('Podaj imię i kontakt');return}
+  if(email&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){toast('Podaj poprawny e-mail');return}
+  try{
+    const r=await fetch(SB+'/rest/v1/gala_rsvp',{method:'POST',headers:{apikey:ANON,'Authorization':'Bearer '+ANON,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({name,email,phone,guests,note})});
+    if(r.ok){toast('Dziękujemy! Zgłoszenie przyjęte — do zobaczenia w Katowicach 🥂');document.querySelectorAll('.rsvp input,.rsvp textarea').forEach(i=>i.value='');document.getElementById('g_guests').value='1';}
+    else{toast('Coś poszło nie tak — spróbuj ponownie lub napisz do nas')}
+  }catch(e){toast('Błąd połączenia — spróbuj ponownie')}
+}
+</script>
+</body></html>
