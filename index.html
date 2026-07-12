@@ -238,7 +238,64 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
 .philo blockquote em{font-style:normal;background:linear-gradient(120deg,var(--lilac),var(--magenta));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .philo .qmark{font-family:'Cinzel',serif;font-size:80px;color:var(--purple);opacity:.35;line-height:.4;margin-bottom:10px}
 .philo cite{display:block;margin-top:22px;font-family:'Rajdhani';font-weight:600;letter-spacing:3px;text-transform:uppercase;font-size:13px;color:var(--muted);font-style:normal}
+
+/* scroll offset under sticky nav */
+[id]{scroll-margin-top:84px}
+/* consistent trust icons */
+.trust span svg{width:15px;height:15px;vertical-align:-2px;margin-right:4px;color:var(--lilac)}
+/* stats strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:34px auto 0}
+.stat{text-align:center;background:rgba(160,32,240,.06);border:1px solid rgba(160,32,240,.2);border-radius:16px;padding:22px 12px}
+.stat .num{font-family:'Cinzel',serif;font-weight:800;font-size:clamp(26px,4vw,38px);background:linear-gradient(180deg,#fff,var(--lilac));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat .lbl{font-family:'Rajdhani';font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:12px;color:var(--muted);margin-top:4px}
+/* dla kogo */
+.dk{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dk .c{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px;text-align:center}
+.dk .e{font-size:34px;margin-bottom:10px;display:block}
+.dk h4{font-family:'Rajdhani';font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:17px;color:#fff;margin-bottom:6px}
+.dk p{font-size:14px;color:var(--muted)}
+/* jak stosowac */
+.howto{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.step{position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(160,32,240,.2);border-radius:16px;padding:28px 24px 24px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:24px;width:36px;height:36px;border-radius:50%;background:linear-gradient(120deg,var(--purple),var(--magenta));color:#fff;font-family:'Cinzel';font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step h4{font-family:'Rajdhani';font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:16px;color:#fff;margin:8px 0 6px}
+.step p{font-size:14px;color:var(--muted)}
+.howto-note{text-align:center;font-size:12px;color:rgba(224,214,255,.4);margin-top:20px}
+/* porownanie */
+.cmp{max-width:760px;margin:0 auto;border:1px solid rgba(160,32,240,.25);border-radius:18px;overflow:hidden}
+.cmp .row{display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid rgba(255,255,255,.07)}
+.cmp .row:first-child{border-top:none;background:rgba(160,32,240,.12)}
+.cmp .cell{padding:15px 16px;font-size:14px;color:var(--muted)}
+.cmp .row:first-child .cell{font-family:'Rajdhani';font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;font-size:13px}
+.cmp .kp{color:var(--lilac2);font-weight:600;background:rgba(160,32,240,.05)}
+.cmp .cell.feat{color:#efe8ff;font-weight:500}
+/* faq */
+.faq{max-width:800px;margin:0 auto}
+.q{border:1px solid rgba(255,255,255,.09);border-radius:14px;margin-bottom:12px;overflow:hidden;background:rgba(255,255,255,.02)}
+.q summary{cursor:pointer;padding:20px 22px;font-family:'Rajdhani';font-weight:700;letter-spacing:.5px;font-size:17px;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.q summary::-webkit-details-marker{display:none}
+.q summary::after{content:"+";color:var(--lilac);font-size:24px;transition:.2s}
+.q[open] summary::after{transform:rotate(45deg)}
+.q .a{padding:0 22px 20px;color:var(--muted);font-size:14.5px}
+/* countdown */
+.countdown{display:flex;justify-content:center;gap:14px;margin:6px 0 22px}
+.cd{text-align:center;min-width:66px}
+.cd .v{font-family:'Cinzel',serif;font-weight:800;font-size:32px;color:#fff;background:rgba(160,32,240,.1);border:1px solid var(--purple);border-radius:12px;padding:8px 0}
+.cd .u{font-family:'Rajdhani';font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:11px;color:var(--muted);margin-top:5px}
+.lim{display:inline-block;font-family:'Rajdhani';font-weight:700;font-size:11px;letter-spacing:1px;color:#fff;background:var(--purple);border-radius:20px;padding:3px 10px;margin-bottom:8px;text-transform:uppercase}
+/* sticky mobile CTA */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:10px;padding:10px 14px;background:rgba(10,6,18,.92);backdrop-filter:blur(12px);border-top:1px solid rgba(160,32,240,.3)}
+.sticky-cta a{flex:1;text-align:center;font-family:'Rajdhani';font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:14px;padding:13px;border-radius:10px}
+.sticky-cta .s1{background:linear-gradient(120deg,var(--purple),var(--magenta));color:#fff}
+.sticky-cta .s2{background:linear-gradient(120deg,#25d366,#128c4a);color:#04140a}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}.dk,.howto{grid-template-columns:1fr}.cmp .row{grid-template-columns:1.2fr 1fr 1fr}.sticky-cta{display:flex}body{padding-bottom:66px}}
 </style>
+<script>
+/* Analityka — wstaw swoje ID i gotowe. GA4: G-XXXX, Meta Pixel: 15-cyfr */
+var GA_ID="G-XXXXXXXXXX", FB_ID="XXXXXXXXXXXXXXX";
+if(GA_ID.indexOf("XXXX")<0){var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id="+GA_ID;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config",GA_ID);}
+if(FB_ID.indexOf("XXXX")<0){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",FB_ID);fbq("track","PageView");}
+</script>
 </head>
 <body>
 
@@ -250,7 +307,7 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
       <a href="#purtier">Purtier</a>
       <a href="#akademia">Akademia</a>
       <a href="#opinie">Opinie</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt">Kontakt</a><a href="/regulamin.html">Regulamin</a><a href="/polityka.html">Prywatność</a>
     </div>
     <a href="#akademia" class="nav-cta">Szkolenia</a>
     <div class="burger" id="burger" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
@@ -267,7 +324,7 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
 
 <section class="hero">
   <div class="stars"></div>
-  <img class="hero-stag" src="kp-stag.jpg" alt="Kod Purpury — jeleń">
+  <img class="hero-stag" src="kp-stag.webp" alt="Kod Purpury — jeleń">
   <div class="hero-body wrap">
     <div class="eyebrow">Energia <b>·</b> Regeneracja <b>·</b> Świadomość</div>
     <h1>KOD PURPURY</h1>
@@ -277,10 +334,10 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
       <a href="#akademia" class="btn btn-ghost">Zobacz szkolenia</a>
     </div>
     <div class="trust">
-      <span>🦌 <b>Premium</b> skład</span>
-      <span>🌿 Czysty skład</span>
-      <span>🏔️ Jakość premium</span>
-      <span>💜 Fundacja Zdrowie z Pasją</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/></svg><b>Premium</b> skład</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c4 5 6 8 6 11a6 6 0 01-12 0c0-3 2-6 6-11z"/></svg>Czysty skład</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l6-9 4 5 3-4 3 8z"/></svg>Jakość premium</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 018-1 4 4 0 018 1c0 5.5-7 10-7 10z"/></svg>Fundacja</span>
     </div>
   </div>
 </section>
@@ -288,6 +345,13 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
 <div class="creed wrap">
   <p>Wejdź na <em>wyższy poziom</em> energii i świadomości.<br>Dbając o siebie — pomagasz innym.</p>
 </div>
+
+<div class="wrap"><div class="stats">
+  <div class="stat reveal"><div class="num">5</div><div class="lbl">Filarów protokołu</div></div>
+  <div class="stat reveal"><div class="num">7</div><div class="lbl">Dni wyzwania</div></div>
+  <div class="stat reveal"><div class="num">100:1</div><div class="lbl">Koncentrat</div></div>
+  <div class="stat reveal"><div class="num">💜</div><div class="lbl">Misja Fundacji</div></div>
+</div></div>
 
 <!-- GREEN -->
 <section class="zone zone-green" id="protokol">
@@ -344,7 +408,7 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
     <h2>Regeneracja na poziomie <span class="pc">komórkowym</span></h2>
     <p class="zone-lead">Serce protokołu. Kod Purpury łączy premium łożysko jelenia z bogactwem składników wspierających naturalną regenerację, energię i witalność.</p>
     <div class="pt-grid">
-      <div class="caps-box reveal"><img src="kp-caps.png" alt="Kapsułki Kod Purpury"></div>
+      <div class="caps-box reveal"><img src="kp-caps.webp" alt="Kapsułki Kod Purpury"></div>
       <div class="pt-copy reveal">
         <h3>Purtier — technologia premium</h3>
         <p>Formuła oparta na świeżym łożysku jelenia z Nowej Zelandii, łączona z zestawem starannie dobranych składników. Zaawansowane technologie (liofilizacja, powłoka dojelitowa, atmosfera azotowa) mają chronić aktywność składników i wspierać ich przyswajanie.</p>
@@ -361,6 +425,50 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
       <div class="ing reveal"><div class="ii"><svg viewBox="0 0 46 46" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M23 8v30M23 8c-3 3-8 4-8 4M23 8c3 3 8 4 8 4M23 20c-4 1-9 2-9 2M23 20c4 1 9 2 9 2"/></svg></div><h4>Aloes i oleje</h4><p>Wiesiołek, ogórecznik, awokado — bogactwo kwasów.</p></div>
     </div>
     <div class="regen-note reveal">Kod Purpury — regeneracja jutra zaczyna się dziś.</div>
+  </div>
+</section>
+
+<!-- JAK STOSOWAC -->
+<section class="zone zone-purple center" style="padding-top:20px">
+  <div class="wrap">
+    <span class="zone-tab tab-p">Rytuał dnia</span>
+    <h2>Jak stosować <span class="pc">Kod Purpury</span></h2>
+    <p class="zone-lead">Trzy proste momenty, które wpisują protokół w Twój dzień.</p>
+    <div class="howto" style="text-align:left">
+      <div class="step reveal"><h4>Rano</h4><p>Szklanka wody ze szczyptą soli niejodowanej + kilka świadomych oddechów. Reset i nawodnienie na start.</p></div>
+      <div class="step reveal"><h4>W ciągu dnia</h4><p>Kapsułka Kod Purpury zgodnie z zaleceniem — najlepiej na czczo, popić wodą.</p></div>
+      <div class="step reveal"><h4>Wieczorem</h4><p>15 minut uziemnienia lub spaceru, mniej ekranów. Czas na regenerację.</p></div>
+    </div>
+    <p class="howto-note">Dokładne dawkowanie ustala Kowal i etykieta produktu. Suplement wspiera zdrowy tryb życia — nie zastępuje diety ani leczenia.</p>
+  </div>
+</section>
+
+<!-- DLA KOGO -->
+<section class="zone zone-blue center">
+  <div class="wrap">
+    <span class="zone-tab tab-b">Dla kogo</span>
+    <h2>Kod Purpury jest dla <span class="bc">świadomych</span></h2>
+    <div class="dk" style="text-align:center">
+      <div class="c reveal"><span class="e">⚡</span><h4>Aktywni i zapracowani</h4><p>Którzy chcą więcej energii i lepszego fokusu na co dzień.</p></div>
+      <div class="c reveal"><span class="e">🌙</span><h4>Dojrzali</h4><p>Szukający wsparcia regeneracji, witalności i spokojnego snu.</p></div>
+      <div class="c reveal"><span class="e">🌿</span><h4>Świadomi</h4><p>Którzy stawiają na jakość, profilaktykę i czysty skład.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- POROWNANIE -->
+<section class="zone zone-purple center" style="padding-top:20px">
+  <div class="wrap">
+    <span class="zone-tab tab-p">Dlaczego premium</span>
+    <h2>Zwykły suplement <span class="pc">vs</span> Kod Purpury</h2>
+    <div class="cmp reveal" style="margin-top:30px">
+      <div class="row"><div class="cell"></div><div class="cell">Zwykły suplement</div><div class="cell kp">Kod Purpury</div></div>
+      <div class="row"><div class="cell feat">Skład</div><div class="cell">Podstawowy</div><div class="cell kp">Premium, starannie dobrany</div></div>
+      <div class="row"><div class="cell feat">Podejście</div><div class="cell">Pojedynczy produkt</div><div class="cell kp">Protokół 5 filarów</div></div>
+      <div class="row"><div class="cell feat">Wsparcie</div><div class="cell">Brak</div><div class="cell kp">Kowal + Akademia Energii</div></div>
+      <div class="row"><div class="cell feat">Jakość</div><div class="cell">Masowa</div><div class="cell kp">Nowa Zelandia, liofilizacja</div></div>
+      <div class="row"><div class="cell feat">Misja</div><div class="cell">—</div><div class="cell kp">Fundacja Zdrowie z Pasją</div></div>
+    </div>
   </div>
 </section>
 
@@ -410,7 +518,7 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
       </div>
       <div class="tier reveal">
         <div class="lvl">Na żywo · Gdańsk</div>
-        <h3>Warsztat w Under Beer</h3>
+        <span class="lim">Ograniczone miejsca</span><h3>Warsztat w Under Beer</h3>
         <div class="price">149 zł</div>
         <ul><li>3h stacjonarnie</li><li>Praktyka: oddech, woda, uziemnianie</li><li>W cenie próbka + drink</li><li>Limitowane miejsca</li></ul>
         <a href="#kontakt" class="t-cta ghost">Rezerwuję miejsce</a>
@@ -446,6 +554,7 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
         <span>🎟️ Warsztat „Akademia Energii"</span>
         <span>🍺 Drink w Under Beer</span>
       </div>
+      <div class="countdown" id="countdown" aria-label="Do końca konkursu"></div>
       <form class="cform" id="chalForm" novalidate>
         <input type="text" id="cName" placeholder="Imię (opcjonalnie)" autocomplete="given-name">
         <input type="email" id="cEmail" placeholder="Twój e-mail" required autocomplete="email" inputmode="email">
@@ -482,6 +591,22 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
           <div class="mapc map-blue"><h4>Mapa Diety</h4><p>Codzienne wybory, które wspierają energię.</p><span class="soon">Wkrótce</span></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="zone zone-blue center" id="faq">
+  <div class="wrap">
+    <span class="zone-tab tab-b">FAQ</span>
+    <h2>Najczęstsze <span class="bc">pytania</span></h2>
+    <div class="faq" style="text-align:left;margin-top:30px">
+      <details class="q"><summary>Czym jest Kod Purpury?</summary><div class="a">To premium suplement wspierający regenerację i energię oraz protokół pięciu filarów zdrowego stylu życia: natlenienia, detoksu, nawodnienia, mineralizacji i regeneracji.</div></details>
+      <details class="q"><summary>Jak stosować i jakie dawkowanie?</summary><div class="a">Najlepiej na czczo, popić wodą, zgodnie z zaleceniem na etykiecie. Dokładny plan dobierze Kowal indywidualnie.</div></details>
+      <details class="q"><summary>Czy to bezpieczne? Czy zastępuje leki?</summary><div class="a">To suplement diety, nie lek. Nie zastępuje leczenia ani konsultacji lekarskiej. W ciąży, przy karmieniu lub chorobach przewlekłych skonsultuj się z lekarzem.</div></details>
+      <details class="q"><summary>Dla kogo jest Kod Purpury?</summary><div class="a">Dla osób aktywnych, dojrzałych i świadomych, które chcą wspierać energię, regenerację i witalność oraz dbać o siebie profilaktycznie.</div></details>
+      <details class="q"><summary>Gdzie mogę zamówić?</summary><div class="a">Bezpośrednio u Kowala przez WhatsApp (doradzi i skompletuje pakiet) lub na miejscu w Under Beer, Garbary 6/7 w Gdańsku.</div></details>
+      <details class="q"><summary>Ile trwa wyzwanie i czy jest płatne?</summary><div class="a">Wyzwanie „7 Dni Kodu Purpury" jest darmowe — codziennie jeden rytuał na mail. Zapisani biorą udział w konkursie.</div></details>
     </div>
   </div>
 </section>
@@ -588,6 +713,20 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
       btn.disabled=false; btn.textContent=old;
     });
   })();
+
+  // countdown do konca konkursu (zmień datę wg potrzeb)
+  (function(){
+    var el=document.getElementById('countdown'); if(!el) return;
+    var end=new Date('2026-07-27T23:59:59');
+    function tick(){
+      var d=end-new Date();
+      if(d<=0){ el.innerHTML='<div class="cd"><div class="v">✦</div><div class="u">Zapisy otwarte</div></div>'; return; }
+      var dd=Math.floor(d/864e5),hh=Math.floor(d/36e5)%24,mm=Math.floor(d/6e4)%60,ss=Math.floor(d/1e3)%60;
+      el.innerHTML='<div class="cd"><div class="v">'+dd+'</div><div class="u">dni</div></div><div class="cd"><div class="v">'+hh+'</div><div class="u">godz</div></div><div class="cd"><div class="v">'+mm+'</div><div class="u">min</div></div><div class="cd"><div class="v">'+ss+'</div><div class="u">sek</div></div>';
+    }
+    tick(); setInterval(tick,1000);
+  })();
 </script>
+<div class="sticky-cta"><a class="s1" href="#wyzwanie">Dołącz do wyzwania</a><a class="s2" href="https://wa.me/48536828393" target="_blank" rel="noopener">Zamów u Kowala</a></div>
 </body>
 </html>
