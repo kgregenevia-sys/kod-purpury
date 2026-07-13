@@ -358,6 +358,31 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 @media(max-width:860px){.oddech-banner{background-attachment:scroll}}
 @media(max-width:700px){.seals-in{grid-template-columns:1fr}}
 </style>
+<style>
+.howworks{padding:66px 0}
+.howworks .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+.howworks .step{background:rgba(160,32,240,.05);border:1px solid rgba(160,32,240,.2);border-radius:16px;padding:24px}
+.howworks .sn{font-family:Cinzel,serif;font-size:34px;color:#c77dff;opacity:.55;margin-bottom:6px}
+.howworks .step h3{color:#efe8ff;font-size:17px;margin-bottom:6px}
+.howworks .step p{color:rgba(224,214,255,.7);font-size:14px}
+.quiz{padding:60px 0}
+.quizbox{max-width:640px;margin:24px auto 0;background:rgba(160,32,240,.05);border:1px solid rgba(160,32,240,.22);border-radius:20px;padding:28px}
+.q-step .q-title{font-family:Cinzel,serif;color:#e0aaff;font-size:20px;margin-bottom:16px;text-align:center}
+.q-opts{display:grid;gap:10px}
+.q-opt{background:#0e0820;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:15px;color:#efe8ff;cursor:pointer;font-size:15px;font-weight:600;text-align:left;transition:.15s}
+.q-opt:hover{border-color:#c77dff;background:rgba(160,32,240,.12)}
+.q-prog{display:flex;gap:6px;justify-content:center;margin-bottom:18px}
+.q-dot{width:26px;height:4px;border-radius:2px;background:rgba(255,255,255,.15)}
+.q-dot.on{background:linear-gradient(90deg,#a020f0,#e0398b)}
+.q-result h3{font-family:Cinzel,serif;color:#e0aaff;font-size:22px;text-align:center;margin-bottom:10px}
+.q-result p{color:rgba(224,214,255,.85);text-align:center;font-size:15px;margin-bottom:8px}
+.q-result .rec{background:rgba(160,32,240,.12);border:1px solid rgba(160,32,240,.3);border-radius:12px;padding:16px;margin:16px 0;text-align:center;color:#fff;font-weight:600}
+.q-cta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.q-cta a{flex:1;min-width:180px;text-align:center;border-radius:12px;padding:14px;font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:14px}
+.q-cta .f{background:linear-gradient(120deg,#a020f0,#e0398b);color:#fff}
+.q-cta .w{background:linear-gradient(120deg,#25d366,#128c4a);color:#04140a}
+@media(max-width:820px){.howworks .steps{grid-template-columns:repeat(2,1fr)}}
+</style>
 </head>
 <body>
 
@@ -369,7 +394,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
       <a href="#produkt">Premium</a>
       <a href="#akademia">Akademia</a>
       <a href="#opinie">Opinie</a>
-      <a href="#kontakt">Kontakt</a><a href="/regulamin.html">Regulamin</a><a href="/polityka.html">Prywatność</a>
+      <a href="#kontakt">Kontakt</a><a href="/blog.html">Blog</a><a href="/regulamin.html">Regulamin</a><a href="/polityka.html">Prywatność</a>
     </div>
     <a href="#akademia" class="nav-cta">Szkolenia</a>
     <div class="burger" id="burger" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
@@ -382,6 +407,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
   <a href="#opinie">Opinie</a>
   <a href="#wyzwanie">Wyzwanie</a>
   <a href="#kontakt">Kontakt</a>
+  <a href="/blog.html">Blog</a>
   <a href="/regulamin.html">Regulamin</a>
   <a href="/polityka.html">Polityka prywatności</a>
 </div>
@@ -519,6 +545,19 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
   <div class="seal"><div class="seal-ic">🌿</div><b>Nowa Zelandia</b><span>Czyste źródło surowca</span></div>
   <div class="seal"><div class="seal-ic">💳</div><b>Bez opłat z góry</b><span>Płacisz za produkt, nie obietnice</span></div>
 </div></section>
+<section class="howworks">
+  <div class="wrap">
+    <span class="zone-tab tab-p">Jak to działa</span>
+    <h2>Twoja droga do <span class="pc">regeneracji</span></h2>
+    <div class="steps">
+      <div class="step reveal"><div class="sn">01</div><h3>Oddychasz świadomie</h3><p>Dotlenienie — pierwsze paliwo każdej komórki.</p></div>
+      <div class="step reveal"><div class="sn">02</div><h3>Nawadniasz komórki</h3><p>Żywa woda z minerałami trafia tam, gdzie trzeba.</p></div>
+      <div class="step reveal"><div class="sn">03</div><h3>Odżywiasz od środka</h3><p>Kod Purpury dostarcza głębokie, komórkowe dożywienie.</p></div>
+      <div class="step reveal"><div class="sn">04</div><h3>Regenerujesz się</h3><p>Energia i witalność wracają — dzień po dniu.</p></div>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- JAK STOSOWAC -->
@@ -635,6 +674,12 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
   </div>
 </section>
 
+<section class="quiz" id="quiz"><div class="wrap">
+  <span class="zone-tab tab-p">Dobierz protokół</span>
+  <h2>Jaki protokół jest <span class="pc">dla Ciebie?</span></h2>
+  <p class="zone-lead">Odpowiedz na 3 pytania — podpowiemy, od czego zacząć.</p>
+  <div class="quizbox" id="quizbox"></div>
+</div></section>
 <!-- WYZWANIE -->
 <section class="zone zone-purple" id="wyzwanie" style="padding-top:20px">
   <div class="wrap">
@@ -666,14 +711,14 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 <section class="zone zone-blue" id="wiedza">
   <div class="wrap">
     <span class="zone-tab tab-b">Wiedza</span>
-    <h2>Blog i mapy — <span class="bc">wkrótce</span></h2>
+    <h2>Blog i mapy <span class="bc">zdrowia</span></h2>
     <p class="zone-lead">Praktyczna wiedza o energii, regeneracji i świadomym stylu życia. Zapisz się, by dostać pierwsze materiały.</p>
     <div class="duo">
       <div class="invite reveal">
         <div class="k">Blog Kodu Purpury</div>
-        <h3>Zaproszenie na bloga</h3>
-        <p>Artykuły o oddechu, nawodnieniu, uziemnianiu, detoksie i regeneracji — konkretnie i bez ściemy. Ruszamy wkrótce.</p>
-        <a href="#wyzwanie" class="lnk">Zapisz się na start →</a>
+        <h3>Czytaj bloga</h3>
+        <p>Artykuły o oddechu, żywej wodzie i regeneracji na poziomie komórkowym — konkretnie i bez ściemy. Pierwsze wpisy już są.</p>
+        <a href="/blog.html" class="lnk">Czytaj artykuły →</a>
       </div>
       <div class="invite reveal">
         <div class="k">Fundacja Zdrowie z Pasją</div>
@@ -801,7 +846,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
   <div class="wrap">
     <div class="f-brand">KOD <span>PURPURY</span></div>
     <div class="f-links">
-      <a href="#protokol">Protokół</a><a href="#produkt">Premium</a><a href="#akademia">Akademia</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a>
+      <a href="#protokol">Protokół</a><a href="#produkt">Premium</a><a href="#akademia">Akademia</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a><a href="/blog.html">Blog</a>
     </div>
     <p class="disclaimer">Suplement diety. Nie może być stosowany jako substytut zróżnicowanej diety i zdrowego trybu życia. Nie przekraczaj zalecanej porcji dziennej. Produkt nie ma właściwości leczniczych i nie zastępuje konsultacji lekarskiej ani leczenia. W przypadku ciąży, karmienia lub chorób przewlekłych skonsultuj się z lekarzem. Przechowuj w miejscu niedostępnym dla małych dzieci.</p>
     <p class="sources">Materiały edukacyjne opracowano m.in. na podstawie: Journal of Inflammation Research (2015), ScienceDirect, WebMD, MD Anderson Cancer Center, iHerb oraz informacji producenta. Twierdzenia dotyczące „komórek macierzystych" i „odwracania starzenia" pochodzą od producenta i nie stanowią potwierdzonych medycznie obietnic. Traktuj treści jako wsparcie zdrowego stylu życia, nie poradę medyczną.</p>
@@ -872,6 +917,34 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 if(!c){box.style.display="block";}
 document.getElementById("kpCookieYes").onclick=function(){try{localStorage.setItem("kp_cookie_consent","granted")}catch(e){}box.style.display="none";if(window.kpLoadTrackers)window.kpLoadTrackers();};
 document.getElementById("kpCookieNo").onclick=function(){try{localStorage.setItem("kp_cookie_consent","denied")}catch(e){}box.style.display="none";};
+})();
+</script>
+<script>
+(function(){
+ var Q=[
+  {t:"Co jest teraz Twoim celem?",o:["Więcej energii na co dzień","Regeneracja i odbudowa","Odporność i profilaktyka"]},
+  {t:"Jak opisujesz swój etap?",o:["Aktywny/a, 25–40 lat","Dojrzały/a, 40–60 lat","60+ i świadome dbanie o siebie"]},
+  {t:"Największy nawyk do poprawy?",o:["Sen i stres","Nawodnienie","Odżywianie"]}
+ ];
+ var box=document.getElementById('quizbox'); if(!box) return;
+ var ans=[],cur=0;
+ function dots(){var h='<div class="q-prog">';for(var i=0;i<Q.length;i++)h+='<div class="q-dot'+(i<=cur?' on':'')+'"></div>';return h+'</div>';}
+ function render(){
+  var q=Q[cur];
+  var h=dots()+'<div class="q-step"><div class="q-title">'+q.t+'</div><div class="q-opts">';
+  q.o.forEach(function(op,idx){h+='<button class="q-opt" data-i="'+idx+'">'+op+'</button>';});
+  h+='</div></div>';
+  box.innerHTML=h;
+  box.querySelectorAll('.q-opt').forEach(function(b){b.onclick=function(){ans[cur]=parseInt(b.dataset.i);cur++;if(cur<Q.length)render();else result();};});
+ }
+ function result(){
+  var cel=ans[0], rec, msg;
+  if(cel===0){rec="Kod Purpury + rytuał energii";msg="Postaw na dotlenienie i nawodnienie rano, a Kod Purpury doda komórkowego paliwa.";}
+  else if(cel===1){rec="Kod Purpury — protokół regeneracji";msg="Skup się na odżywianiu na poziomie komórkowym i regularności.";}
+  else{rec="Kod Purpury + profilaktyka";msg="Zbuduj fundamenty i wspieraj organizm profilaktycznie, każdego dnia.";}
+  box.innerHTML=dots().replace(/q-dot"/g,'q-dot on"')+'<div class="q-result"><h3>Gotowe ✦</h3><p>'+msg+'</p><div class="rec">Rekomendacja: <b>'+rec+'</b></div><p>Zacznij od darmowego wyzwania albo napisz do swojego managera zdrowia — wyliczy suplementy pod Ciebie.</p><div class="q-cta"><a class="f" href="#wyzwanie">Dołącz do wyzwania</a><a class="w" href="https://wa.me/48536828393" target="_blank" rel="noopener">Napisz do managera</a></div></div>';
+ }
+ render();
 })();
 </script>
 </body>
