@@ -330,6 +330,17 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 .svg-fig img{animation:kpPulse 6.5s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.hero-svg,.svg-fig img{animation:none}}
 </style>
+<style>
+.hero-svg,.svg-fig img{border-radius:18px}
+.svg-fig img{object-fit:cover;max-height:420px;margin:0 auto}
+.hero-svg.hero-photo{max-height:420px;object-fit:cover;border:1px solid rgba(255,255,255,.12)}
+.gallery{max-width:1040px;margin:54px auto;padding:0 22px;text-align:center}
+.gallery .k{font-family:'Rajdhani',sans-serif;letter-spacing:2px;text-transform:uppercase;color:#c77dff;font-size:13px;font-weight:600}
+.gallery h2{font-family:Cinzel,serif;color:#e0aaff;font-size:clamp(22px,4vw,30px);margin:6px 0 20px}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;display:block;filter:brightness(.94)}
+@media(max-width:700px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
 </head>
 <body>
 
@@ -360,7 +371,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 
 <section class="hero">
   <div class="stars"></div>
-  <img class="hero-svg" src="kp-hero.svg" alt="Kod Purpury — regeneracja komórkowa" aria-hidden="true">
+  <img class="hero-svg hero-photo" src="kp-photo-hero.webp" alt="Kod Purpury — regeneracja od środka">
   <div class="hero-body wrap">
     <div class="eyebrow">Energia <b>·</b> Regeneracja <b>·</b> Świadomość</div>
     <h1>KOD PURPURY</h1>
@@ -418,7 +429,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
     </div>
   </div>
 
-    <figure class="svg-fig reveal"><img src="kp-cell.svg" alt="Sieć komórkowa" loading="lazy"></figure>
+    <figure class="svg-fig reveal"><img src="kp-photo-natura.webp" alt="Kapsuła Kod Purpury na mchu — natura ma kod" loading="lazy"></figure>
 </section>
 
 <!-- BLUE -->
@@ -446,7 +457,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
     </div>
   </div>
 
-    <figure class="svg-fig reveal"><img src="kp-hydro.svg" alt="Nawodnienie komórkowe" loading="lazy"></figure>
+    <figure class="svg-fig reveal"><img src="kp-photo-woda.webp" alt="Nawodnienie — makro kropli wody" loading="lazy"></figure>
 </section>
 
 <!-- PRODUKT PREMIUM -->
@@ -457,7 +468,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
     <h2>Odżywienie i regeneracja na poziomie <span class="pc">komórkowym</span></h2>
     <p class="zone-lead">Serce protokołu. Kod Purpury łączy zaawansowany ekstrakt komórkowy premium z bogactwem składników wspierających naturalną witalność, energię i dobre samopoczucie.</p>
     <div class="pt-grid">
-      <div class="caps-box reveal"><img src="kp-capsule.svg" alt="Kapsuła premium — regeneracja komórkowa"></div>
+      <div class="caps-box reveal"><img src="kp-photo-produkt.webp" alt="Kapsuła Kod Purpury w dłoni"></div>
       <div class="pt-copy reveal">
         <h3>Technologia premium — odżywienie komórkowe</h3>
         <p>Zaawansowany, liofilizowany koncentrat komórkowy premium z Nowej Zelandii, łączony ze starannie dobranym zestawem składników. Celem formuły jest głębokie dożywienie organizmu wspierające jego naturalną witalność i regenerację „od środka".</p>
@@ -476,6 +487,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
     <div class="regen-note reveal">Kod Purpury — regeneracja jutra zaczyna się dziś.</div>
   </div>
 
+    <figure class="svg-fig reveal"><img src="kp-photo-nauka.webp" alt="Technologia i badania" loading="lazy"></figure>
 </section>
 
 <!-- JAK STOSOWAC -->
@@ -740,6 +752,17 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
       </div>
     </div>
     <p class="tiers-note" style="margin-top:20px">Chcesz wiedzieć pierwszy, gdy ruszamy? Napisz do nas na WhatsApp.</p>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="k">W harmonii z naturą</div>
+  <h2>Rytuał, który wpisuje się w Twój dzień</h2>
+  <div class="gallery-grid">
+    <img src="kp-photo-oddech.webp" alt="Oddech i wschód słońca" loading="lazy">
+    <img src="kp-photo-woda.webp" alt="Żywa woda" loading="lazy">
+    <img src="kp-photo-med.webp" alt="Medytacja w naturze" loading="lazy">
+    <img src="kp-photo-laka.webp" alt="Wschód nad łąką" loading="lazy">
   </div>
 </section>
 
