@@ -291,10 +291,14 @@ footer{border-top:1px solid rgba(160,32,240,.18);padding:50px 0 38px;text-align:
 @media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}.dk,.howto{grid-template-columns:1fr}.cmp .row{grid-template-columns:1.2fr 1fr 1fr}.sticky-cta{display:flex}body{padding-bottom:66px}}
 </style>
 <script>
-/* Analityka — wstaw swoje ID i gotowe. GA4: G-XXXX, Meta Pixel: 15-cyfr */
+/* Analityka odpala sie TYLKO po zgodzie na cookies (RODO/ePrivacy) */
 var GA_ID="G-XXXXXXXXXX", FB_ID="XXXXXXXXXXXXXXX";
-if(GA_ID.indexOf("XXXX")<0){var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id="+GA_ID;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config",GA_ID);}
-if(FB_ID.indexOf("XXXX")<0){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",FB_ID);fbq("track","PageView");}
+window.kpLoadTrackers=function(){
+  if(window.__kpTL)return; window.__kpTL=true;
+  if(GA_ID.indexOf("XXXX")<0){var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id="+GA_ID;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config",GA_ID);}
+  if(FB_ID.indexOf("XXXX")<0){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",FB_ID);fbq("track","PageView");}
+};
+try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrackers();}}catch(e){}
 </script>
 <link rel="canonical" href="https://kodpurpury.kgregenevia.pro/">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -303,6 +307,21 @@ if(FB_ID.indexOf("XXXX")<0){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=fun
 .cyber-fig{margin:34px auto 0;max-width:330px;text-align:center}
 .cyber-fig .cyber-img{width:100%;border-radius:16px;border:1px solid rgba(255,255,255,.14);box-shadow:0 14px 55px rgba(180,40,120,.38);display:block}
 .cyber-fig figcaption{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;letter-spacing:1.5px;color:#e6a6cc;margin-top:9px;opacity:.85}
+</style>
+<style>
+.kp-cookie{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:rgba(12,6,20,.97);border-top:1px solid rgba(160,32,240,.45);backdrop-filter:blur(8px);padding:16px 20px}
+.kp-cookie-in{max-width:920px;margin:0 auto;display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.kp-cookie p{color:rgba(224,214,255,.85);font-size:13px;margin:0;flex:1;min-width:240px;line-height:1.55}
+.kp-cookie a{color:#c77dff}
+.kp-cookie-btns{display:flex;gap:10px;flex-wrap:wrap}
+.kp-cookie button{border:none;border-radius:10px;padding:11px 18px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit}
+.kp-c-ghost{background:transparent;border:1px solid rgba(255,255,255,.28)!important;color:#efe8ff}
+.kp-c-fill{background:linear-gradient(120deg,#a020f0,#e0398b);color:#fff}
+</style>
+<style>
+.hero-svg{width:min(400px,82vw);margin:2px auto 0;display:block;filter:drop-shadow(0 12px 55px rgba(160,32,240,.4))}
+.svg-fig{max-width:300px;margin:32px auto 0}
+.svg-fig img{width:100%;display:block;filter:drop-shadow(0 10px 40px rgba(160,32,240,.28))}
 </style>
 </head>
 <body>
@@ -334,6 +353,7 @@ if(FB_ID.indexOf("XXXX")<0){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=fun
 
 <section class="hero">
   <div class="stars"></div>
+  <img class="hero-svg" src="kp-hero.svg" alt="Kod Purpury — regeneracja komórkowa" aria-hidden="true">
   <div class="hero-body wrap">
     <div class="eyebrow">Energia <b>·</b> Regeneracja <b>·</b> Świadomość</div>
     <h1>KOD PURPURY</h1>
@@ -391,6 +411,7 @@ if(FB_ID.indexOf("XXXX")<0){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=fun
     </div>
   </div>
 
+    <figure class="svg-fig reveal"><img src="kp-cell.svg" alt="Sieć komórkowa" loading="lazy"></figure>
 </section>
 
 <!-- BLUE -->
@@ -418,6 +439,7 @@ if(FB_ID.indexOf("XXXX")<0){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=fun
     </div>
   </div>
 
+    <figure class="svg-fig reveal"><img src="kp-hydro.svg" alt="Nawodnienie komórkowe" loading="lazy"></figure>
 </section>
 
 <!-- PURPLE: REGENERACJA + PURTIER -->
@@ -447,6 +469,7 @@ if(FB_ID.indexOf("XXXX")<0){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=fun
     <div class="regen-note reveal">Kod Purpury — regeneracja jutra zaczyna się dziś.</div>
   </div>
 
+    <figure class="svg-fig reveal"><img src="kp-capsule.svg" alt="Kapsuła premium" loading="lazy"></figure>
 </section>
 
 <!-- JAK STOSOWAC -->
@@ -775,5 +798,21 @@ if(FB_ID.indexOf("XXXX")<0){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=fun
   })();
 </script>
 <div class="sticky-cta"><a class="s1" href="#wyzwanie">Dołącz do wyzwania</a><a class="s2" href="https://wa.me/48536828393" target="_blank" rel="noopener">Zamów u Kowala</a></div>
+<div id="kpCookie" class="kp-cookie" style="display:none" role="dialog" aria-label="Zgoda na pliki cookies">
+  <div class="kp-cookie-in">
+    <p>Używamy plików cookies do działania strony oraz — za Twoją zgodą — do analityki i marketingu (Google, Meta). Szczegóły w <a href="/polityka.html">Polityce prywatności</a>.</p>
+    <div class="kp-cookie-btns">
+      <button id="kpCookieNo" class="kp-c-ghost">Tylko niezbędne</button>
+      <button id="kpCookieYes" class="kp-c-fill">Akceptuję wszystkie</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){var box=document.getElementById("kpCookie");var c=null;try{c=localStorage.getItem("kp_cookie_consent")}catch(e){}
+if(!c){box.style.display="block";}
+document.getElementById("kpCookieYes").onclick=function(){try{localStorage.setItem("kp_cookie_consent","granted")}catch(e){}box.style.display="none";if(window.kpLoadTrackers)window.kpLoadTrackers();};
+document.getElementById("kpCookieNo").onclick=function(){try{localStorage.setItem("kp_cookie_consent","denied")}catch(e){}box.style.display="none";};
+})();
+</script>
 </body>
 </html>
