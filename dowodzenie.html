@@ -94,7 +94,7 @@ body::before{content:"";position:fixed;inset:0;background:repeating-linear-gradi
 <script>
 const API="https://mdsvcobwuezriexyqqby.supabase.co/functions/v1/agents-status";
 let AG=[], cur=null;
-function face(a){return a.photo?`<img src="${a.photo}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`:a.emoji}
+function face(a){return a.photo?`<img src="${a.photo.split('?')[0]}?cb=${Date.now()}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`:a.emoji}
 function av(a){return `<div class="ava"><div class="head">${face(a)}</div><div class="body"></div></div>`}
 async function boot(){
   try{
