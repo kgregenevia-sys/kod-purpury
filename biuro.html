@@ -1,0 +1,69 @@
+<!doctype html><html lang=pl><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Biuro · Centrum Operacyjne</title>
+<style>
+:root{--bg:#0c0b12;--desk:#1b1830;--line:#2a2740;--ink:#ece9f5;--muted:#9b93b8;--pur:#b06cff;--gold:#c6a15b;--led:#54e08a}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:radial-gradient(1200px 500px at 50% -10%,#241a3a,var(--bg));color:var(--ink);min-height:100vh}
+.top{padding:22px 20px 6px;text-align:center}
+.sign{display:inline-block;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#0c0b12;background:linear-gradient(90deg,var(--gold),#e6c988);padding:6px 18px;border-radius:4px;font-weight:800}
+.top h1{font-size:20px;margin:12px 0 2px;font-weight:700}
+.top p{color:var(--muted);font-size:13px;margin:0}
+.floor{max-width:1080px;margin:20px auto 60px;padding:0 16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.desk{position:relative;background:linear-gradient(180deg,var(--desk),#161327);border:1px solid var(--line);border-radius:14px;padding:16px 14px 14px;cursor:pointer;transition:.18s;overflow:hidden}
+.desk:hover{border-color:var(--pur);transform:translateY(-3px);box-shadow:0 10px 30px rgba(176,108,255,.18)}
+.desk::before{content:'';position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--pur),var(--gold))}
+.led{position:absolute;top:14px;right:14px;width:9px;height:9px;border-radius:50%;background:var(--led);box-shadow:0 0 10px var(--led)}
+.who{display:flex;align-items:center;gap:12px}
+.av{width:52px;height:52px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:26px;background:#241f3c;border:2px solid var(--pur);overflow:hidden}
+.av img{width:100%;height:100%;object-fit:cover}
+.nm{font-weight:800;letter-spacing:.04em;font-size:16px}
+.rl{color:var(--muted);font-size:11.5px;margin-top:2px;line-height:1.35}
+.bubble{margin-top:12px;background:#0f0d1c;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:12px;color:#d7d0ee;line-height:1.45;position:relative}
+.bubble::before{content:'';position:absolute;top:-6px;left:22px;width:10px;height:10px;background:#0f0d1c;border-left:1px solid var(--line);border-top:1px solid var(--line);transform:rotate(45deg)}
+.cta{margin-top:9px;font-size:11px;color:var(--gold);font-weight:700}
+.ov{position:fixed;inset:0;background:rgba(6,5,12,.72);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:18px;z-index:40}
+.ov.on{display:flex}
+.card{background:linear-gradient(180deg,#1b1830,#141126);border:1px solid var(--line);border-radius:16px;max-width:460px;width:100%;padding:22px;max-height:88vh;overflow-y:auto}
+.card .who{margin-bottom:6px}
+.spk{background:transparent;border:1px solid var(--pur);color:var(--pur);border-radius:20px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;margin:6px 0 4px}
+.spk.playing{background:var(--pur);color:#150c22}
+.h{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px}
+.say{background:#0f0d1c;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:13.5px;line-height:1.5;color:#e3ddf5}
+.mtx{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.mt{background:#0f0d1c;border:1px solid var(--line);border-radius:10px;padding:10px}
+.mt .v{font-size:20px;font-weight:800;color:var(--gold)}
+.mt .l{font-size:11px;color:var(--muted);margin-top:2px}
+.ask{display:flex;gap:8px;margin-top:14px}
+.ask input{flex:1;background:#0f0d1c;border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:10px;font-size:13px}
+.ask button,.close{background:var(--pur);color:#150c22;border:none;border-radius:9px;padding:10px 14px;font-weight:800;cursor:pointer;font-family:inherit}
+.close{background:transparent;color:var(--muted);border:1px solid var(--line);width:100%;margin-top:14px}
+.reply{margin-top:12px;background:#120f22;border:1px solid var(--pur);border-radius:10px;padding:12px;font-size:13.5px;line-height:1.5;display:none}
+.reply.on{display:block}
+@media(max-width:520px){.mtx{grid-template-columns:1fr}}
+</style></head><body>
+<div class=top><a href="dowodzenie.html" style="position:fixed;top:12px;left:14px;color:#c6a15b;text-decoration:none;font-size:13px;font-weight:700;z-index:60">← Panel</a><span class=sign>Biuro · Centrum Operacyjne</span><h1>Ekipa na stanowiskach</h1><p>Kliknij agenta — zamelduje swoim studyjnym głosem, czym się zajmuje i jakie ma efekty.</p></div>
+<div class=floor id=floor></div>
+<div class=ov id=ov><div class=card id=card></div></div>
+<script>
+var EP='https://mdsvcobwuezriexyqqby.supabase.co/functions/v1/agents-status';
+var TTS='https://mdsvcobwuezriexyqqby.supabase.co/functions/v1/biuro-tts';
+var AG=[],VOICES=[],LAST='',CUR=null,AUDIO=null;
+var PROF={cobroker:[0.82,1.0,'m'],kliniki:[0.72,1.06,'m'],lejek:[1.24,1.06,'k'],social:[0.98,1.12,'m'],whatsapp:[1.08,1.16,'m'],mykolaj:[0.86,0.97,'m'],analityk:[0.62,0.9,'m'],watchdog:[0.58,1.0,'m'],yaroslav:[0.9,1.0,'m'],ruslan:[1.02,1.09,'m']};
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function avatar(a){return a.photo? '<div class=av><img src="'+a.photo+'"></div>' : '<div class=av>'+(a.emoji||'👤')+'</div>';}
+function greet(a){return 'Dzień dobry szefie! '+esc(a.name)+' się melduje. Dla ścisłości — dajemy z siebie wszystko. Czy mam powiedzieć, czym się zajmuję i jakie są efekty mojej pracy?';}
+function loadV(){VOICES=window.speechSynthesis?window.speechSynthesis.getVoices():[];}
+if(window.speechSynthesis){loadV();window.speechSynthesis.onvoiceschanged=loadV;}
+function plVoices(){return VOICES.filter(function(v){return /pl/i.test(v.lang);});}
+function prof(a,i){return PROF[a.id]||[0.7+((i*0.11)%0.55),1.0,'m'];}
+function voiceFor(a,i){var pl=plVoices();if(!pl.length)return null;var p=prof(a,i);var fem=/(zosia|female|ewa|maja|agnieszka|paulina|kobiet|woman|zofia)/i;if(p[2]==='k'){var f=pl.find(function(v){return fem.test(v.name);});if(f)return f;}else{var m=pl.filter(function(v){return !fem.test(v.name);});if(m.length)return m[i % m.length];}return pl[i % pl.length];}
+function norm(t){return (t||'').replace(/24\/7/g,'dwadzieścia cztery godziny na dobę').replace(/\bzł\b/g,'złotych').replace(/MV Automation/g,'EM WU Automejszyn').replace(/co-brokerage/gi,'kobrokeridż').replace(/→/g,' ').replace(/[·•]/g,', ');}
+function stopAudio(){try{if(AUDIO){AUDIO.pause();AUDIO=null;}}catch(e){}if(window.speechSynthesis)window.speechSynthesis.cancel();}
+function webSpeak(t,btn,a,i){if(!window.speechSynthesis)return;window.speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(norm(t));var p=prof(a,i);var v=voiceFor(a,i);if(v){u.voice=v;u.lang=v.lang;}else u.lang='pl-PL';u.pitch=p[0];u.rate=p[1];if(btn){u.onstart=function(){btn.classList.add('playing');};u.onend=function(){btn.classList.remove('playing');};}window.speechSynthesis.speak(u);}
+function speak(t,btn,a,i){stopAudio();if(btn)btn.classList.add('playing');fetch(TTS,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({agent_id:a.id,text:t})}).then(function(r){var ct=r.headers.get('content-type')||'';if(!r.ok||ct.indexOf('audio')<0)throw 0;return r.blob();}).then(function(b){var url=URL.createObjectURL(b);AUDIO=new Audio(url);AUDIO.onended=function(){if(btn)btn.classList.remove('playing');URL.revokeObjectURL(url);};AUDIO.onerror=function(){if(btn)btn.classList.remove('playing');webSpeak(t,btn,a,i);};var pr=AUDIO.play();if(pr&&pr.catch)pr.catch(function(){if(btn)btn.classList.remove('playing');webSpeak(t,btn,a,i);});}).catch(function(){if(btn)btn.classList.remove('playing');webSpeak(t,btn,a,i);});}
+function render(){var f=document.getElementById('floor');f.innerHTML='';AG.forEach(function(a,i){var d=document.createElement('div');d.className='desk';d.onclick=function(){open(i);};d.innerHTML='<div class=led></div><div class=who>'+avatar(a)+'<div><div class=nm>'+esc(a.name)+'</div><div class=rl>'+esc(a.role)+'</div></div></div><div class=bubble>'+greet(a)+'</div><div class=cta>→ Tak, meldujcie</div>';f.appendChild(d);});}
+function open(i){var a=AG[i];CUR=i;var mtx=(a.metrics||[]).map(function(m){return '<div class=mt><div class=v>'+esc(String(m.v))+'</div><div class=l>'+esc(m.l)+'</div></div>';}).join('');var effV=(a.metrics||[]).map(function(m){return m.l+': '+m.v;}).join(', ');var intro='Dzień dobry szefie, '+a.name+' melduje. Dajemy z siebie wszystko. Zajmuję się: '+a.role+'.';LAST=intro+' Efekty mojej pracy: '+(effV||'brak danych na teraz')+'.';var c=document.getElementById('card');c.innerHTML='<div class=who>'+avatar(a)+'<div><div class=nm>'+esc(a.name)+'</div><div class=rl>'+esc(a.role)+'</div></div></div><button class=spk id=spk onclick="speak(LAST,this,AG[CUR],CUR)">🔊 Posłuchaj meldunku</button><div class=say>'+esc(intro)+'</div><div class=h>Czym się zajmuję</div><div class=say>'+esc(a.role)+', harmonogram: '+esc(a.cron||'—')+'</div><div class=h>Efekty mojej pracy</div><div class=mtx>'+(mtx||'<div class=mt><div class=v>—</div><div class=l>brak danych</div></div>')+'</div><div class=ask><input id=q placeholder="Zapytaj '+esc(a.name)+'..."><button onclick="ask(\''+a.id+'\')">Zapytaj</button></div><div class=reply id=reply></div><button class=close onclick="stopAll()">Zamknij</button>';document.getElementById('ov').classList.add('on');speak(LAST,document.getElementById('spk'),a,i);}
+function ask(id){var q=document.getElementById('q').value.trim();if(!q)return;var r=document.getElementById('reply');r.className='reply on';r.textContent='…';fetch(EP,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({agent_id:id,question:q})}).then(function(x){return x.json();}).then(function(j){var t=j.reply||j.err||'Brak odpowiedzi.';r.textContent=t;speak(t,null,AG[CUR],CUR);}).catch(function(){r.textContent='Błąd połączenia.';});}
+function stopAll(){stopAudio();document.getElementById('ov').classList.remove('on');}
+document.getElementById('ov').addEventListener('click',function(e){if(e.target.id==='ov')stopAll();});
+fetch(EP).then(function(x){return x.json();}).then(function(j){AG=j.agents||[];render();}).catch(function(){document.getElementById('floor').innerHTML='<p style=color:#9b93b8>Nie udało się pobrać ekipy.</p>';});
+</script></body></html>
