@@ -85,7 +85,8 @@ body.locked{overflow:hidden}
 <div class="teren">
   <div class="fence"></div>
   <div id="loglist" style="display:none;background:rgba(160,32,240,.12);border:1px solid rgba(199,125,255,.3);border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#e0aaff;font-family:'Rajdhani'"></div>
-  <div style="text-align:center;margin:2px 0 18px"><a href="biuro.html" style="display:inline-block;background:linear-gradient(90deg,#a020f0,#c6a15b);color:#150c22;font-weight:800;text-decoration:none;padding:11px 22px;border-radius:24px;letter-spacing:.04em;box-shadow:0 6px 20px rgba(160,32,240,.35)">🏢 BIURO — agenci mówią głosem</a></div>
+  <div style="text-align:center;margin:2px 0 18px"><a href="biuro.html" style="display:inline-block;background:linear-gradient(90deg,#a020f0,#c6a15b);color:#150c22;font-weight:800;text-decoration:none;padding:11px 22px;border-radius:24px;letter-spacing:.04em;box-shadow:0 6px 20px rgba(160,32,240,.35)">🏢 BIURO — agenci mówią głosem</a> <a href="zatwierdzanie.html" style="display:inline-block;background:#1c1730;border:1px solid #b06cff;color:#e0aaff;font-weight:800;text-decoration:none;padding:11px 22px;border-radius:24px;margin-top:8px">📋 Do zatwierdzenia</a></div>
+<div style="background:#171326;border:1px solid #2a2740;border-radius:16px;padding:14px;margin:0 0 16px"><div style="color:#c6a15b;font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px">📊 Wykonane prace / zwiad · 7 dni</div><canvas id="chart" height="120"></canvas></div>
 <div id="grid" class="grid"><div class="load">◍ Łączę z agentami…</div></div>
 </div>
 
@@ -157,13 +158,13 @@ async function unlock(){
   try{
     const r=await fetch(ACCESS,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code:v})});
     const d=await r.json();
-    if(d.ok){ try{localStorage.setItem('cd_auth','ok');localStorage.setItem('cd_name',d.name)}catch(e){}; enter(d.name); }
+    if(d.ok){ try{localStorage.setItem('cd_auth','ok');localStorage.setItem('cd_name',d.name);localStorage.setItem('cd_ts',Date.now())}catch(e){}; enter(d.name); }
     else err.textContent='Błędny kod dostępu.';
   }catch(e){ err.textContent='Błąd połączenia.'; }
 }
 function enter(name){
   document.getElementById('gate').style.display='none'; document.body.classList.remove('locked');
-  boot(); setInterval(boot,60000);
+  boot(); setInterval(boot,60000); drawChart(); setInterval(drawChart,300000);
   const who=name||(function(){try{return localStorage.getItem('cd_name')}catch(e){return ''}})();
   if(who==='SZEF') showLog();
 }
@@ -175,7 +176,8 @@ async function showLog(){
     box.style.display='block';
   }catch(e){}
 }
-(function(){ try{ if(localStorage.getItem('cd_auth')==='ok'){ enter(localStorage.getItem('cd_name')); } }catch(e){} })();
+function drawChart(){var run=function(){fetch("https://mdsvcobwuezriexyqqby.supabase.co/functions/v1/panel-data").then(function(r){return r.json()}).then(function(d){var s=d.stats||[];if(!window.Chart||!s.length)return;var ctx=document.getElementById('chart');if(!ctx)return;if(window._ch)window._ch.destroy();window._ch=new Chart(ctx,{type:'bar',data:{labels:s.map(function(x){return x.dzien}),datasets:[{label:'Wykonane prace',data:s.map(function(x){return x.prace}),backgroundColor:'#b06cff'},{label:'Zwiad Stratega',data:s.map(function(x){return x.wglady}),backgroundColor:'#c6a15b'}]},options:{responsive:true,plugins:{legend:{labels:{color:'#ece9f5'}}},scales:{x:{ticks:{color:'#9b93b8'}},y:{beginAtZero:true,ticks:{color:'#9b93b8'}}}})}).catch(function(){})};if(window.Chart){run()}else{var sc=document.createElement('script');sc.src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js";sc.onload=run;document.head.appendChild(sc)}}
+(function(){ try{ var _ts=+(localStorage.getItem('cd_ts')||0); if(localStorage.getItem('cd_auth')==='ok' && (Date.now()-_ts)<43200000){ enter(localStorage.getItem('cd_name')); } else { try{localStorage.removeItem('cd_auth')}catch(e2){} } }catch(e){} })();
 
 </script>
 </body></html>
