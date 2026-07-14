@@ -94,14 +94,15 @@ body::before{content:"";position:fixed;inset:0;background:repeating-linear-gradi
 <script>
 const API="https://mdsvcobwuezriexyqqby.supabase.co/functions/v1/agents-status";
 let AG=[], cur=null;
-function av(e){return `<div class="ava"><div class="head">${e}</div><div class="body"></div></div>`}
+function face(a){return a.photo?`<img src="${a.photo}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`:a.emoji}
+function av(a){return `<div class="ava"><div class="head">${face(a)}</div><div class="body"></div></div>`}
 async function boot(){
   try{
     const r=await fetch(API); const d=await r.json(); AG=d.agents||[];
     document.getElementById('grid').innerHTML=AG.map((a,i)=>`
       <div class="st" onclick="open_(${i})">
         <div class="light"></div>
-        ${av(a.emoji)}
+        ${av(a)}
         <div class="nm">${a.name}</div>
         <div class="rl">${a.role}</div>
         <div class="mini">${a.metrics[0].l}: ${a.metrics[0].v}</div>
@@ -110,8 +111,8 @@ async function boot(){
 }
 function open_(i){
   cur=AG[i]; const a=cur;
-  document.getElementById('bH').textContent=a.emoji;
-  document.getElementById('bFaceH').textContent=a.emoji;
+  document.getElementById('bH').innerHTML=face(a);
+  document.getElementById('bFaceH').innerHTML=face(a);
   document.getElementById('bT').firstChild.textContent=a.name;
   document.getElementById('bR').textContent=a.role+' · '+a.cron;
   document.getElementById('bRep').innerHTML=a.metrics.map(m=>`<li><span>${m.l}</span><b>${m.v}</b></li>`).join('');
