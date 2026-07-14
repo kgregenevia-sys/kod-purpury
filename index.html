@@ -919,7 +919,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg.className='cmsg err'; msg.textContent='Podaj poprawny adres e-mail.'; return; }
       btn.disabled=true; var old=btn.textContent; btn.textContent='Zapisuję…'; msg.className='cmsg'; msg.textContent='';
       try{
-        var r=await fetch('https://mdsvcobwuezriexyqqby.supabase.co/functions/v1/kp-signup',{
+        var r=await fetch('https://mdsvcobwuezriexyqqby.supabase.co/functions/v1/challenge-signup',{
           method:'POST', headers:{'Content-Type':'application/json'},
           body:JSON.stringify({email:email,name:name,source:'landing',utm:location.search})
         });
