@@ -177,7 +177,7 @@ async function showLog(){
   }catch(e){}
 }
 function drawChart(){var run=function(){fetch("https://mdsvcobwuezriexyqqby.supabase.co/functions/v1/panel-data").then(function(r){return r.json()}).then(function(d){var s=d.stats||[];if(!window.Chart||!s.length)return;var ctx=document.getElementById('chart');if(!ctx)return;if(window._ch)window._ch.destroy();window._ch=new Chart(ctx,{type:'bar',data:{labels:s.map(function(x){return x.dzien}),datasets:[{label:'Wykonane prace',data:s.map(function(x){return x.prace}),backgroundColor:'#b06cff'},{label:'Zwiad Stratega',data:s.map(function(x){return x.wglady}),backgroundColor:'#c6a15b'}]},options:{responsive:true,plugins:{legend:{labels:{color:'#ece9f5'}}},scales:{x:{ticks:{color:'#9b93b8'}},y:{beginAtZero:true,ticks:{color:'#9b93b8'}}}})}).catch(function(){})};if(window.Chart){run()}else{var sc=document.createElement('script');sc.src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js";sc.onload=run;document.head.appendChild(sc)}}
-(function(){ try{ var _ts=+(localStorage.getItem('cd_ts')||0); if(localStorage.getItem('cd_auth')==='ok' && (Date.now()-_ts)<43200000){ enter(localStorage.getItem('cd_name')); } else { try{localStorage.removeItem('cd_auth')}catch(e2){} } }catch(e){} })();
+(function(){ try{ enter(localStorage.getItem('cd_name')||''); }catch(e){} })();
 
 </script>
 </body></html>
