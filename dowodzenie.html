@@ -84,6 +84,7 @@ body.locked{overflow:hidden}
 
 <div class="teren">
   <div class="fence"></div>
+  <div id="loglist" style="display:none;background:rgba(160,32,240,.12);border:1px solid rgba(199,125,255,.3);border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#e0aaff;font-family:'Rajdhani'"></div>
   <div id="grid" class="grid"><div class="load">◍ Łączę z agentami…</div></div>
 </div>
 
@@ -148,14 +149,32 @@ async function ask(){
   }catch(e){ box.textContent='⚠ Utrata łączności z agentem.'; }
 }
 
-const CODE="7815"; // kod dostepu Michal + Kowal
-function unlock(){
+const ACCESS="https://mdsvcobwuezriexyqqby.supabase.co/functions/v1/panel-access";
+async function unlock(){
   const v=(document.getElementById('gcode').value||'').trim();
-  if(v===CODE){ try{localStorage.setItem('cd_auth','ok')}catch(e){}; enter(); }
-  else{ document.getElementById('gerr').textContent='Błędny kod dostępu.'; }
+  const err=document.getElementById('gerr'); err.textContent='◍ sprawdzam…';
+  try{
+    const r=await fetch(ACCESS,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code:v})});
+    const d=await r.json();
+    if(d.ok){ try{localStorage.setItem('cd_auth','ok');localStorage.setItem('cd_name',d.name)}catch(e){}; enter(d.name); }
+    else err.textContent='Błędny kod dostępu.';
+  }catch(e){ err.textContent='Błąd połączenia.'; }
 }
-function enter(){ document.getElementById('gate').style.display='none'; document.body.classList.remove('locked'); boot(); setInterval(boot,60000); }
-(function(){ try{ if(localStorage.getItem('cd_auth')==='ok'){ enter(); return; } }catch(e){} })();
+function enter(name){
+  document.getElementById('gate').style.display='none'; document.body.classList.remove('locked');
+  boot(); setInterval(boot,60000);
+  const who=name||(function(){try{return localStorage.getItem('cd_name')}catch(e){return ''}})();
+  if(who==='SZEF') showLog();
+}
+async function showLog(){
+  try{
+    const r=await fetch(ACCESS); const d=await r.json();
+    const box=document.getElementById('loglist'); if(!box)return;
+    box.innerHTML='<b>👑 Ostatnie wejścia:</b> '+(d.logins||[]).map(l=>`${l.name} (${new Date(l.created_at).toLocaleString('pl-PL',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})})`).join(' · ');
+    box.style.display='block';
+  }catch(e){}
+}
+(function(){ try{ if(localStorage.getItem('cd_auth')==='ok'){ enter(localStorage.getItem('cd_name')); } }catch(e){} })();
 
 </script>
 </body></html>
