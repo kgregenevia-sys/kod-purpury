@@ -948,7 +948,7 @@ document.getElementById("kpCookieNo").onclick=function(){try{localStorage.setIte
 })();
 </script>
 <style>
-.kp-chat-btn{position:fixed;right:20px;bottom:20px;z-index:9998;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#a020f0,#e0398b);color:#fff;font-size:27px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 30px rgba(160,32,240,.5);border:none;animation:kpChatPulse 2.6s ease-in-out infinite}
+.kp-chat-btn{position:fixed;right:20px;bottom:20px;z-index:9998;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#a020f0,#e0398b);color:#fff;font-size:27px;display:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 30px rgba(160,32,240,.5);border:none;animation:kpChatPulse 2.6s ease-in-out infinite}
 @keyframes kpChatPulse{0%,100%{box-shadow:0 8px 30px rgba(160,32,240,.5)}50%{box-shadow:0 8px 44px rgba(224,57,139,.75)}}
 .kp-chat{position:fixed;right:20px;bottom:20px;z-index:9999;width:min(360px,92vw);height:min(560px,72vh);background:#0e0820;border:1px solid rgba(160,32,240,.35);border-radius:18px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 70px rgba(0,0,0,.6)}
 .kp-chat-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:linear-gradient(135deg,#a020f0,#e0398b);color:#fff}
@@ -966,7 +966,7 @@ document.getElementById("kpCookieNo").onclick=function(){try{localStorage.setIte
 </style>
 <div id="kpChatBtn" class="kp-chat-btn" title="Napisz do nas">💬</div>
 <div id="kpChat" class="kp-chat">
-  <div class="kp-chat-head"><div><b>Konsultant Kod Purpury</b><span>zwykle odpowiada od razu</span></div><button id="kpChatClose" aria-label="Zamknij">✕</button></div>
+  <div class="kp-chat-head"><div><b>Konsultant Kod Purpury</b><span>zwykle odpowiada od razu</span></div><button id="kpChatVoice" aria-label="Głos" style="font-size:16px;margin-right:8px;background:transparent;border:none;color:#fff;cursor:pointer">🔊</button><button id="kpChatClose" aria-label="Zamknij">✕</button></div>
   <div class="kp-chat-msgs" id="kpChatMsgs"></div>
   <div class="kp-chat-in"><input id="kpChatInput" placeholder="Napisz wiadomość…" autocomplete="off"><button id="kpChatSend" aria-label="Wyślij">➤</button></div>
 </div>
@@ -975,13 +975,21 @@ document.getElementById("kpCookieNo").onclick=function(){try{localStorage.setIte
  var API='https://mdsvcobwuezriexyqqby.supabase.co/functions/v1/web-chat';
  var sid='w'+Math.random().toString(36).slice(2,10); var msgs=[]; var greeted=false;
  var btn=document.getElementById('kpChatBtn'),panel=document.getElementById('kpChat'),box=document.getElementById('kpChatMsgs'),inp=document.getElementById('kpChatInput');
+ var voiceOn=true, voices=[];
+ function loadVoices(){try{voices=window.speechSynthesis.getVoices()}catch(e){voices=[]}}
+ if(window.speechSynthesis){loadVoices();window.speechSynthesis.onvoiceschanged=loadVoices;}
+ function pickVoice(){var pl=voices.filter(function(v){return /^pl/i.test(v.lang)});var f=pl.filter(function(v){return /zosia|paulina|ewa|maja|agnieszka|female|kobie/i.test(v.name)});return f[0]||pl[0]||null;}
+ function speak(t){if(!voiceOn||!window.speechSynthesis)return;var clean=(t||'').replace(/[\u{1F000}-\u{1FAFF}\u2190-\u27BF\u2600-\u26FF]/gu,'').trim();if(!clean)return;window.speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(clean);u.lang='pl-PL';var v=pickVoice();if(v)u.voice=v;u.rate=1.03;u.pitch=1.1;window.speechSynthesis.speak(u);}
+ var vbtn=document.getElementById('kpChatVoice');if(vbtn)vbtn.onclick=function(){voiceOn=!voiceOn;vbtn.textContent=voiceOn?'🔊':'🔇';if(!voiceOn&&window.speechSynthesis)window.speechSynthesis.cancel();};
+ function showBtn(){btn.style.display='flex';}
+ try{if(localStorage.getItem('kp_cookie_consent')){showBtn();}else{var cy=document.getElementById('kpCookieYes'),cn=document.getElementById('kpCookieNo');if(cy)cy.addEventListener('click',showBtn);if(cn)cn.addEventListener('click',showBtn);setTimeout(showBtn,9000);}}catch(e){showBtn();}
  function add(role,text){var d=document.createElement('div');d.className='kp-m '+(role==='user'?'kp-user':'kp-bot');d.textContent=text;box.appendChild(d);box.scrollTop=box.scrollHeight;return d;}
- function openC(){panel.style.display='flex';btn.style.display='none';if(!greeted){greeted=true;add('bot','Cześć! ⚡ Chcesz więcej energii i lepszej regeneracji? Zapytaj o cokolwiek albo zacznij od darmowego wyzwania 7 dni.');}inp.focus();}
+ function openC(){panel.style.display='flex';btn.style.display='none';if(!greeted){greeted=true;add('bot','Cześć! ⚡ Chcesz więcej energii i lepszej regeneracji? Zapytaj o cokolwiek albo zacznij od darmowego wyzwania 7 dni.');speak('Cześć! Chcesz więcej energii i lepszej regeneracji? Zapytaj o cokolwiek, albo zacznij od darmowego wyzwania siedem dni.');}inp.focus();}
  function closeC(){panel.style.display='none';btn.style.display='flex';}
  btn.onclick=openC; document.getElementById('kpChatClose').onclick=closeC;
  async function send(){var t=inp.value.trim();if(!t)return;inp.value='';add('user',t);msgs.push({role:'user',content:t});
    var tp=add('bot','…');tp.classList.add('kp-typing');
-   try{var r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session:sid,messages:msgs})});var j=await r.json();tp.remove();add('bot',j.reply);msgs.push({role:'assistant',content:j.reply});}
+   try{var r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session:sid,messages:msgs})});var j=await r.json();tp.remove();add('bot',j.reply);speak(j.reply);msgs.push({role:'assistant',content:j.reply});}
    catch(e){tp.remove();add('bot','Chwilowy problem — napisz do managera: +48 536 828 393.');}
  }
  document.getElementById('kpChatSend').onclick=send;
