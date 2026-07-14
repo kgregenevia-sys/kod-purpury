@@ -1,0 +1,47 @@
+<!doctype html><html lang=pl><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Lejki monetyzacyjne</title>
+<style>
+:root{--bg:#0b0a12;--pur:#b06cff;--gold:#c6a15b;--ink:#ece9f5;--mut:#9b93b8;--card:#171326;--line:#2a2740;--ok:#3ecf8e}
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+body{background:radial-gradient(900px 400px at 50% -5%,#241a3a,var(--bg));color:var(--ink);min-height:100vh;padding:20px 14px 60px}
+.wrap{max-width:600px;margin:0 auto}
+a.back{color:var(--mut);font-size:13px;text-decoration:none}
+h1{font-size:23px;margin:8px 0 2px}.sub{color:var(--mut);font-size:13px;margin-bottom:16px}
+.gen{background:linear-gradient(90deg,#a020f0,var(--gold));color:#150c22;font-weight:800;border:none;padding:12px 22px;border-radius:22px;font-size:15px;cursor:pointer;margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--pur),var(--gold))}
+.nz{font-size:17px;font-weight:800;margin-bottom:2px}
+.pot{display:inline-block;background:rgba(62,207,142,.12);color:var(--ok);border:1px solid var(--ok);border-radius:14px;padding:3px 12px;font-weight:800;font-size:14px;margin:4px 0}
+.nis{color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.mod{color:#d7d0ee;font-size:13.5px;line-height:1.45;margin-bottom:12px}
+.step{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-top:1px solid #201c33;font-size:13px}
+.step .n{color:var(--pur);font-weight:800;flex:none}
+.step .who{color:var(--gold);font-weight:700}
+.step .tool{color:var(--mut)}
+.why{margin-top:10px;color:var(--mut);font-size:12.5px;font-style:italic}
+.empty{color:var(--mut);text-align:center;padding:30px}
+.load{color:var(--mut);text-align:center;padding:20px}
+</style></head><body>
+<div class=wrap>
+<a class=back href="dowodzenie.html">← Panel</a>
+<h1>💰 Lejki monetyzacyjne</h1>
+<div class=sub>Pełna analiza zespołu — kto, czym, ile. Auto co godzinę.</div>
+<button class=gen id=gen onclick="gen()">⚡ Wygeneruj świeże lejki</button>
+<div id=list><div class=load>◍ Ładuję…</div></div>
+</div>
+<script>
+const B="https://mdsvcobwuezriexyqqby.supabase.co/functions/v1";
+function esc(s){return (s||'').replace(/</g,'&lt;');}
+async function load(){
+  const j=await (await fetch(B+'/lejki')).json();
+  const L=j.lejki||[]; let h='';
+  if(!L.length){document.getElementById('list').innerHTML='<div class=empty>Brak lejków — kliknij „Wygeneruj”.</div>';return;}
+  for(const l of L){
+    let steps='';
+    (l.etapy||[]).forEach((e,i)=>{steps+=`<div class=step><span class=n>${i+1}</span><div>${esc(e.krok)} <span class=who>→ ${esc(e.agent)}</span> <span class=tool>(${esc(e.narzedzie)})</span></div></div>`;});
+    h+=`<div class=card><div class=nz>${esc(l.nazwa)}</div><div class=pot>${esc(l.potencjal)}</div><div class=nis>${esc(l.nisza)}</div><div class=mod>${esc(l.model)}</div>${steps}${l.dlaczego?`<div class=why>💡 ${esc(l.dlaczego)}</div>`:''}</div>`;
+  }
+  document.getElementById('list').innerHTML=h;
+}
+async function gen(){const b=document.getElementById('gen');b.textContent='◍ Zespół analizuje…';b.disabled=true;try{await fetch(B+'/lejki',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});}catch(e){}b.textContent='⚡ Wygeneruj świeże lejki';b.disabled=false;load();}
+load();
+</script></body></html>
