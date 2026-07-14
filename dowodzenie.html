@@ -58,7 +58,24 @@ body::before{content:"";position:fixed;inset:0;background:repeating-linear-gradi
 .close{position:absolute;top:-14px;right:-6px;background:#1a0e33;border:1px solid var(--neon);color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;z-index:2}
 .foot{text-align:center;color:rgba(224,214,255,.4);font-size:11px;margin:20px;font-family:'Orbitron';letter-spacing:2px}
 .load{text-align:center;padding:40px;color:var(--neon);font-family:'Orbitron'}
-</style></head><body>
+
+#gate{position:fixed;inset:0;background:radial-gradient(ellipse at top,#160a2e,#07040f 70%);z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+#gate h2{font-family:'Orbitron',sans-serif;color:#fff;font-size:22px;letter-spacing:3px;text-shadow:0 0 12px #c77dff;margin-bottom:6px}
+#gate p{color:#c77dff;font-family:'Rajdhani';letter-spacing:2px;margin-bottom:22px;font-size:13px}
+#gate input{background:#0d0620;border:1px solid rgba(199,125,255,.5);border-radius:12px;padding:14px 16px;color:#fff;font-family:'Rajdhani';font-size:18px;text-align:center;letter-spacing:4px;outline:none;width:min(280px,80vw)}
+#gate input:focus{border-color:#e0398b}
+#gate button{margin-top:14px;background:linear-gradient(135deg,#a020f0,#e0398b);border:none;border-radius:12px;color:#fff;font-family:'Orbitron';font-weight:700;padding:13px 30px;cursor:pointer;letter-spacing:2px}
+#gate .err{color:#ff6b8a;font-size:13px;margin-top:12px;min-height:16px;font-family:'Rajdhani'}
+body.locked{overflow:hidden}
+</style></head><body class="locked">
+<div id="gate">
+  <h2>⚡ CENTRUM DOWODZENIA</h2>
+  <p>DOSTĘP AUTORYZOWANY · KOD PURPURY / AUREU</p>
+  <input id="gcode" type="password" inputmode="numeric" placeholder="• • • •" onkeydown="if(event.key==='Enter')unlock()" autofocus>
+  <button onclick="unlock()">WEJDŹ</button>
+  <div class="err" id="gerr"></div>
+</div>
+
 
 <div class="gate">
   <div class="sign">⚡ CENTRUM DOWODZENIA ⚡</div>
@@ -130,6 +147,15 @@ async function ask(){
     const d=await r.json(); box.textContent=d.reply||'(brak odpowiedzi)';
   }catch(e){ box.textContent='⚠ Utrata łączności z agentem.'; }
 }
-boot(); setInterval(boot, 60000);
+
+const CODE="7815"; // kod dostepu Michal + Kowal
+function unlock(){
+  const v=(document.getElementById('gcode').value||'').trim();
+  if(v===CODE){ try{localStorage.setItem('cd_auth','ok')}catch(e){}; enter(); }
+  else{ document.getElementById('gerr').textContent='Błędny kod dostępu.'; }
+}
+function enter(){ document.getElementById('gate').style.display='none'; document.body.classList.remove('locked'); boot(); setInterval(boot,60000); }
+(function(){ try{ if(localStorage.getItem('cd_auth')==='ok'){ enter(); return; } }catch(e){} })();
+
 </script>
 </body></html>
