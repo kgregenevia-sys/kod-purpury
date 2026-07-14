@@ -1,0 +1,59 @@
+<!doctype html><html lang=pl><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Jak to działa</title>
+<style>
+:root{--bg:#0b0a12;--pur:#b06cff;--pur2:#7a5cff;--gold:#c6a15b;--ink:#ece9f5;--mut:#9b93b8;--card:#171326;--line:#2a2740}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:radial-gradient(1000px 500px at 50% -5%,#241a3a,var(--bg));color:var(--ink);min-height:100vh;padding:26px 16px 40px;overflow-x:hidden}
+.wrap{max-width:520px;margin:0 auto;text-align:center}
+.badge{display:inline-block;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#0b0a12;background:linear-gradient(90deg,var(--gold),#e6c988);padding:6px 16px;border-radius:4px;font-weight:800}
+h1{font-size:26px;margin:14px 0 2px;font-weight:800}
+.sub{color:var(--mut);font-size:13px;margin-bottom:26px}
+.pipe{position:relative;display:flex;flex-direction:column;gap:0}
+.stage{position:relative;background:linear-gradient(180deg,var(--card),#120f20);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;align-items:center;gap:16px;text-align:left;z-index:2;opacity:.55;transform:scale(.98);animation:wave 7s infinite ease-in-out}
+.stage .ic{font-size:30px;width:52px;height:52px;flex:none;display:flex;align-items:center;justify-content:center;background:#241f3c;border:2px solid var(--pur);border-radius:14px;box-shadow:0 0 0 rgba(176,108,255,0)}
+.stage .t{font-weight:800;font-size:17px}
+.stage .d{color:var(--mut);font-size:12.5px;margin-top:2px;line-height:1.35}
+.conn{height:34px;width:4px;margin:0 auto;background:linear-gradient(180deg,var(--pur),var(--pur2));position:relative;z-index:1;border-radius:4px;overflow:hidden;opacity:.5}
+.conn::after{content:'';position:absolute;left:-3px;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold);animation:drop 7s infinite linear}
+.stage:nth-child(1){animation-delay:0s}.conn:nth-child(2)::after{animation-delay:.4s}
+.stage:nth-child(3){animation-delay:1s}.conn:nth-child(4)::after{animation-delay:1.4s}
+.stage:nth-child(5){animation-delay:2s}.conn:nth-child(6)::after{animation-delay:2.4s}
+.stage:nth-child(7){animation-delay:3s}.conn:nth-child(8)::after{animation-delay:3.4s}
+.stage:nth-child(9){animation-delay:4s}.conn:nth-child(10)::after{animation-delay:4.4s}
+.stage:nth-child(11){animation-delay:5s}
+@keyframes wave{0%,100%{opacity:.5;transform:scale(.98)}8%{opacity:1;transform:scale(1.02);border-color:var(--pur)}18%{opacity:.7;transform:scale(1);border-color:var(--line)}}
+@keyframes drop{0%{top:-12px;opacity:0}10%{opacity:1}90%{opacity:1}100%{top:34px;opacity:0}}
+.stage.hl{border-color:var(--pur)}
+.foot{margin-top:26px;background:#120f20;border:1px solid var(--line);border-radius:16px;padding:16px}
+.foot .k{font-size:11px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}
+.chip{font-size:12px;background:#1c1730;border:1px solid var(--line);color:#d7d0ee;padding:6px 11px;border-radius:20px}
+.you{margin-top:18px;font-size:15px;font-weight:700}
+.you b{color:var(--gold)}
+.loop{margin-top:10px;color:var(--mut);font-size:12px;letter-spacing:.08em}
+.pill{display:inline-block;background:#1c1730;border:1px solid var(--pur);color:var(--pur);border-radius:20px;padding:4px 12px;font-weight:700;font-size:12px}
+</style></head><body>
+<div class=wrap>
+<span class=badge>Centrum Dowodzenia</span>
+<h1>Jak to działa</h1>
+<div class=sub>Zespół agentów pracuje sam, 24 godziny na dobę</div>
+<div class=pipe>
+  <div class=stage><div class=ic>🌐</div><div><div class=t>RYNEK</div><div class=d>Skanujemy całą sieć — świeże okazje</div></div></div>
+  <div class=conn></div>
+  <div class=stage><div class=ic>🛰️</div><div><div class=t>STRATEG</div><div class=d>Wyłapuje, jak zarobić naszymi narzędziami</div></div></div>
+  <div class=conn></div>
+  <div class=stage><div class=ic>🎖️</div><div><div class=t>KIEROWNIK</div><div class=d>Rozdaje zadania, pilnuje, łapie błędy</div></div></div>
+  <div class=conn></div>
+  <div class=stage><div class=ic>⚙️</div><div><div class=t>AGENCI</div><div class=d>Dowożą robotę — każdy swoją działką</div></div></div>
+  <div class=conn></div>
+  <div class=stage><div class=ic>📦</div><div><div class=t>GOTOWCE</div><div class=d>Wszystko gotowe — czeka na Twoje „odpalaj”</div></div></div>
+  <div class=conn></div>
+  <div class=stage><div class=ic>📧</div><div><div class=t>RAPORT</div><div class=d>Co 2h na maila — co zrobione</div></div></div>
+</div>
+<div class=foot>
+  <div class=k>Zasila to realny biznes</div>
+  <div class=chips><span class=chip>Recepcja AI · kliniki</span><span class=chip>Aureu · lux</span><span class=chip>Sipply</span><span class=chip>Bazy leadów</span><span class=chip>Co-brokering</span></div>
+  <div class=you>Ty pilnujesz tylko <b>co odpalić</b>.</div>
+  <div class=loop><span class=pill>◍ 24/7</span> &nbsp;maszyna kręci się w kółko sama</div>
+</div>
+</div>
+</body></html>
