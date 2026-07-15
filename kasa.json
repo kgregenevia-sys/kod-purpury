@@ -88,14 +88,14 @@
       "actions": 5,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 2
+      "odrzucone": 3
     },
     {
       "agent": "MYKOLA",
       "actions": 4,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 2
+      "odrzucone": 3
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T11:40:00.404497+00:00",
+  "updated_at": "2026-07-15T11:50:00.145431+00:00",
   "money_lines": [
     {
       "leady": 30270,
