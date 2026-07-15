@@ -60,7 +60,7 @@
       "actions": 8,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 2
+      "odrzucone": 3
     },
     {
       "agent": "Sebastian",
@@ -81,21 +81,21 @@
       "actions": 4,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 1
+      "odrzucone": 2
     },
     {
       "agent": "OKSANA",
       "actions": 4,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 0
+      "odrzucone": 1
     },
     {
       "agent": "MYKOLA",
       "actions": 3,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 1
+      "odrzucone": 2
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T07:40:00.377577+00:00",
+  "updated_at": "2026-07-15T07:50:00.178686+00:00",
   "money_lines": [
     {
       "leady": 30270,
