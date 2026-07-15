@@ -67,7 +67,7 @@
       "actions": 11,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 5
+      "odrzucone": 6
     },
     {
       "agent": "Mykola",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T14:40:00.256412+00:00",
+  "updated_at": "2026-07-15T14:50:00.153442+00:00",
   "money_lines": [
     {
       "leady": 30270,
