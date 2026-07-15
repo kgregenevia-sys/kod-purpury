@@ -18,7 +18,7 @@
       "actions": 20,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 13
+      "odrzucone": 14
     },
     {
       "agent": "Oksana",
@@ -32,7 +32,7 @@
       "actions": 18,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 12
+      "odrzucone": 13
     },
     {
       "agent": "Sebastian",
@@ -46,7 +46,7 @@
       "actions": 16,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 12
+      "odrzucone": 13
     },
     {
       "agent": "Bohdan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T19:10:00.140353+00:00",
+  "updated_at": "2026-07-15T19:20:00.162991+00:00",
   "money_lines": [
     {
       "leady": 30270,
