@@ -1,1 +1,152 @@
-{"gora": {"spotkania": 0, "transakcje": 0, "kontakty_24h": 0, "pipeline_pln": 0, "zweryfikowane": 29850, "nowe_leady_24h": 0, "oferty_wyslane": 1, "przychod_30d_pln": 0, "przychod_dzis_pln": 0, "odpowiedzi_zweryfikowane": 2, "odpowiedzi_odrzucone_bez_dowodu": 11}, "agenci": [{"agent": "Taras", "actions": 7, "results": 0, "revenue": 0, "odrzucone": 0}, {"agent": "Bohdan", "actions": 7, "results": 0, "revenue": 0, "odrzucone": 0}, {"agent": "Dmytro", "actions": 6, "results": 0, "revenue": 0, "odrzucone": 1}, {"agent": "Rusłan", "actions": 6, "results": 0, "revenue": 0, "odrzucone": 0}, {"agent": "TARAS", "actions": 6, "results": 0, "revenue": 0, "odrzucone": 1}, {"agent": "Oksana", "actions": 6, "results": 0, "revenue": 0, "odrzucone": 0}, {"agent": "Mykola", "actions": 5, "results": 0, "revenue": 0, "odrzucone": 1}, {"agent": "Sebastian", "actions": 4, "results": 0, "revenue": 0, "odrzucone": 0}, {"agent": "Jarosław", "actions": 4, "results": 0, "revenue": 0, "odrzucone": 1}, {"agent": "DMYTRO", "actions": 3, "results": 0, "revenue": 0, "odrzucone": 1}, {"agent": "OKSANA", "actions": 3, "results": 0, "revenue": 0, "odrzucone": 0}, {"agent": "JAROSŁAW", "actions": 3, "results": 0, "revenue": 0, "odrzucone": 1}], "prawda": {"odpowiedzi_deklarowane": 64, "zadania_done_bez_dowodu": 57, "odpowiedzi_z_dowodem_gmail": 2}, "updated_at": "2026-07-15T02:41:34.071165+00:00", "money_lines": [{"leady": 30270, "nazwa": "1 · AI AUTOMATION", "status": "AKTYWNA - test RAI_V2_001", "produkt": "Recepcja AI 9000 + 2500/mc", "przychod": 0, "kontakty_24h": 0}, {"hot": 8, "nazwa": "2 · LUX BROKERAGE", "aktywa": 44, "status": "SKALPER OLX dziala; portale lux 403 - brak proxy", "produkt": "posrednictwo aktywa premium", "przychod": 0}, {"nazwa": "3 · DIGITAL ASSETS", "status": "payment links live, zero sprzedazy", "produkt": "bazy B2B, raporty, automatyzacje", "przychod": 0, "produktow": 8}], "warianty_oferty": [{"code": "A1_strata", "wyslane": 0, "pozytywne": 0, "odpowiedzi": 0}, {"code": "A2_konkret", "wyslane": 0, "pozytywne": 0, "odpowiedzi": 0}, {"code": "A3_krotka", "wyslane": 0, "pozytywne": 0, "odpowiedzi": 0}]}
+{
+  "gora": {
+    "spotkania": 0,
+    "transakcje": 0,
+    "kontakty_24h": 0,
+    "pipeline_pln": 0,
+    "zweryfikowane": 29850,
+    "nowe_leady_24h": 0,
+    "oferty_wyslane": 1,
+    "przychod_30d_pln": 0,
+    "przychod_dzis_pln": 0,
+    "odpowiedzi_zweryfikowane": 2,
+    "odpowiedzi_odrzucone_bez_dowodu": 11
+  },
+  "agenci": [
+    {
+      "agent": "Taras",
+      "actions": 7,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 1
+    },
+    {
+      "agent": "Bohdan",
+      "actions": 7,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 1
+    },
+    {
+      "agent": "Dmytro",
+      "actions": 6,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 1
+    },
+    {
+      "agent": "Rusłan",
+      "actions": 6,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 0
+    },
+    {
+      "agent": "TARAS",
+      "actions": 6,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 1
+    },
+    {
+      "agent": "Oksana",
+      "actions": 6,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 0
+    },
+    {
+      "agent": "Mykola",
+      "actions": 5,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 1
+    },
+    {
+      "agent": "Sebastian",
+      "actions": 4,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 0
+    },
+    {
+      "agent": "Jarosław",
+      "actions": 4,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 1
+    },
+    {
+      "agent": "DMYTRO",
+      "actions": 3,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 1
+    },
+    {
+      "agent": "OKSANA",
+      "actions": 3,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 0
+    },
+    {
+      "agent": "JAROSŁAW",
+      "actions": 3,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 1
+    }
+  ],
+  "prawda": {
+    "odpowiedzi_deklarowane": 64,
+    "zadania_done_bez_dowodu": 57,
+    "odpowiedzi_z_dowodem_gmail": 2
+  },
+  "updated_at": "2026-07-15T02:50:00.140412+00:00",
+  "money_lines": [
+    {
+      "leady": 30270,
+      "nazwa": "1 · AI AUTOMATION",
+      "status": "AKTYWNA - test RAI_V2_001",
+      "produkt": "Recepcja AI 9000 + 2500/mc",
+      "przychod": 0,
+      "kontakty_24h": 0
+    },
+    {
+      "hot": 8,
+      "nazwa": "2 · LUX BROKERAGE",
+      "aktywa": 44,
+      "status": "SKALPER OLX dziala; portale lux 403 - brak proxy",
+      "produkt": "posrednictwo aktywa premium",
+      "przychod": 0
+    },
+    {
+      "nazwa": "3 · DIGITAL ASSETS",
+      "status": "payment links live, zero sprzedazy",
+      "produkt": "bazy B2B, raporty, automatyzacje",
+      "przychod": 0,
+      "produktow": 8
+    }
+  ],
+  "warianty_oferty": [
+    {
+      "code": "A1_strata",
+      "wyslane": 0,
+      "pozytywne": 0,
+      "odpowiedzi": 0
+    },
+    {
+      "code": "A2_konkret",
+      "wyslane": 0,
+      "pozytywne": 0,
+      "odpowiedzi": 0
+    },
+    {
+      "code": "A3_krotka",
+      "wyslane": 0,
+      "pozytywne": 0,
+      "odpowiedzi": 0
+    }
+  ]
+}
