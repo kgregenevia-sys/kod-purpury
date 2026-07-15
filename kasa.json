@@ -15,7 +15,14 @@
   "agenci": [
     {
       "agent": "Taras",
-      "actions": 8,
+      "actions": 9,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 2
+    },
+    {
+      "agent": "Mykola",
+      "actions": 7,
       "results": 0,
       "revenue": 0,
       "odrzucone": 2
@@ -28,8 +35,22 @@
       "odrzucone": 2
     },
     {
+      "agent": "Oksana",
+      "actions": 7,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 0
+    },
+    {
       "agent": "Bohdan",
       "actions": 7,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 1
+    },
+    {
+      "agent": "Sebastian",
+      "actions": 6,
       "results": 0,
       "revenue": 0,
       "odrzucone": 1
@@ -42,43 +63,15 @@
       "odrzucone": 0
     },
     {
-      "agent": "Mykola",
+      "agent": "Jarosław",
       "actions": 6,
       "results": 0,
       "revenue": 0,
       "odrzucone": 2
-    },
-    {
-      "agent": "Oksana",
-      "actions": 6,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 0
     },
     {
       "agent": "TARAS",
       "actions": 6,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 1
-    },
-    {
-      "agent": "Jarosław",
-      "actions": 5,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 2
-    },
-    {
-      "agent": "Sebastian",
-      "actions": 5,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 1
-    },
-    {
-      "agent": "DMYTRO",
-      "actions": 3,
       "results": 0,
       "revenue": 0,
       "odrzucone": 1
@@ -96,6 +89,13 @@
       "results": 0,
       "revenue": 0,
       "odrzucone": 1
+    },
+    {
+      "agent": "DMYTRO",
+      "actions": 3,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 1
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T03:30:00.238193+00:00",
+  "updated_at": "2026-07-15T03:40:00.298856+00:00",
   "money_lines": [
     {
       "leady": 30270,
@@ -114,9 +114,9 @@
       "kontakty_24h": 0
     },
     {
-      "hot": 8,
+      "hot": 9,
       "nazwa": "2 · LUX BROKERAGE",
-      "aktywa": 44,
+      "aktywa": 50,
       "status": "SKALPER OLX dziala; portale lux 403 - brak proxy",
       "produkt": "posrednictwo aktywa premium",
       "przychod": 0
