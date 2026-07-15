@@ -49,6 +49,13 @@
       "odrzucone": 4
     },
     {
+      "agent": "TARAS",
+      "actions": 10,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 4
+    },
+    {
       "agent": "Rusłan",
       "actions": 10,
       "results": 0,
@@ -63,13 +70,6 @@
       "odrzucone": 6
     },
     {
-      "agent": "TARAS",
-      "actions": 9,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 4
-    },
-    {
       "agent": "Mykola",
       "actions": 8,
       "results": 0,
@@ -78,7 +78,7 @@
     },
     {
       "agent": "DMYTRO",
-      "actions": 4,
+      "actions": 5,
       "results": 0,
       "revenue": 0,
       "odrzucone": 2
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T10:30:00.214896+00:00",
+  "updated_at": "2026-07-15T10:40:00.378756+00:00",
   "money_lines": [
     {
       "leady": 30270,
