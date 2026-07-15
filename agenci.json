@@ -1,5 +1,5 @@
 {
-  "uwaga": "Zdolnosci faktyczne. Liczby z zywej bazy, nie z zalozen.",
+  "uwaga": "Zdolnosci faktyczne z zywej bazy. Wszystkie niewygodne liczby zostawione celowo.",
   "agenci": [
     {
       "agent": "rpwdl-daily-sync",
@@ -172,11 +172,6 @@
       "harmonogram": "15 * * * *"
     },
     {
-      "agent": "send-burst-day",
-      "aktywny": true,
-      "harmonogram": "0 7-16 * * *"
-    },
-    {
       "agent": "sponsor_burst_h",
       "aktywny": true,
       "harmonogram": "25 6-15 * * *"
@@ -195,89 +190,122 @@
       "agent": "mv_release_queue_d",
       "aktywny": true,
       "harmonogram": "10 5 * * *"
+    },
+    {
+      "agent": "raport_agentow_refresh",
+      "aktywny": true,
+      "harmonogram": "*/10 * * * *"
+    },
+    {
+      "agent": "coldmail_v2_burst",
+      "aktywny": true,
+      "harmonogram": "*/20 8-17 * * *"
     }
   ],
   "system": "KOD PURPURY / MV Automation",
+  "wersja": "2 - po przelaczeniu silnika i audycie odpowiedzi",
+  "OFFER_LAB": {
+    "analiza": "SELECT * FROM mv_offer_lab()",
+    "warianty": [
+      {
+        "code": "A1_strata",
+        "wyslane": 0,
+        "hipoteza": "Kat A: strata pacjentow. Konkret + liczba + cena wprost.",
+        "pozytywne": 0,
+        "odpowiedzi": 0
+      },
+      {
+        "code": "A2_konkret",
+        "wyslane": 0,
+        "hipoteza": "Kat A: dowod spoleczny + liczba 23.",
+        "pozytywne": 0,
+        "odpowiedzi": 0
+      },
+      {
+        "code": "A3_krotka",
+        "wyslane": 0,
+        "hipoteza": "Kat A: BEZ CENY, maly pierwszy krok. Test hipotezy: cena w cold mailu odstrasza?",
+        "pozytywne": 0,
+        "odpowiedzi": 0
+      }
+    ],
+    "mechanizm": "tabela campaign_message_variants -> mv_coldmail_burst() -> pg_net -> Resend. Zero deployu.",
+    "jak_zmienic_oferte": "UPDATE campaign_message_variants SET body_tpl=... WHERE code=..."
+  },
   "jakosc_bazy": {
+    "diagnoza": "90,8% odbic = martwy DNS odbiorcy, nie reputacja. Spam/blokada tylko 2,3%. Baza zdrowa.",
     "w_supresji": 648,
     "bounce_trwaly_pct": 0.17,
     "reputacja_odroczenia_pct": 1.38,
     "martwych_domen_wyrzuconych": 349
   },
   "lejek_fakty": {
-    "komentarz": "19927 wyslanych -> 64 odpowiedzi (0,32%) -> 0 sprzedazy. Waskie gardlo = OFERTA I TRESC, nie liczba agentow.",
+    "komentarz": "Cold mail byl MARTWY 09-15.07 (cron nie wysylal naglowka x-burst-key, raportowal succeeded). Naprawione.",
     "leadow_w_bazie": 30270,
     "sprzedazy_total": 0,
     "odpowiedzi_total": 64,
-    "ostatnia_wysylka": "2026-07-09T08:30:30.016125+00:00",
     "przychod_total_pln": 0,
-    "maili_wyslanych_total": 19927
+    "maili_wyslanych_total": 19927,
+    "ostatnia_wysylka_starym_silnikiem": "2026-07-09T08:30:30.016125+00:00"
   },
-  "skalper_lux": {
-    "hot": 8,
-    "zrodla": [
-      "olx_domy_lux",
-      "olx_dzialki_lux",
-      "olx_mieszkania_lux"
-    ],
-    "aktywow": 44,
-    "progi_eur": {
-      "jet": 3000000,
-      "hotel": 5000000,
-      "jacht": 1000000,
-      "nieruchomosc": 2000000
-    }
-  },
-  "wygenerowano": "2026-07-15T01:43:55.560361+00:00",
+  "wygenerowano": "2026-07-15T02:30:05.297193+00:00",
   "produkty_live": {
+    "setup_pln": 9000,
     "link_setup": "https://buy.stripe.com/fZuaEPgZm8oZejxgkPdQQ08",
     "link_abonament": "https://buy.stripe.com/4gMaEP7oM8oZejx5GbdQQ07",
-    "recepcja_setup_pln": 9000,
-    "recepcja_abonament_pln_mc": 2500
+    "abonament_pln_mc": 2500
   },
-  "prawda_o_agentach": {
-    "komentarz": "Do 15.07.2026: 57 zadan done, ZERO z dowodem. To byly plany, nie wykonanie.",
-    "z_policzalnym_dowodem": 0,
-    "zadan_done_deklarowanych": 57
-  },
-  "kontrakt_operacyjny": {
-    "zasada": "status done wymaga evidence z policzalnym dowodem (database_rows/message_id/url/stripe_id)",
-    "bez_dowodu": "automatyczny downgrade do PLANNED + powod odrzucenia",
-    "bramka_evidence": "AKTYWNA - trigger mv_evidence_gate na agent_tasks",
-    "dozwolone_action_type": [
-      "LEADS_IMPORTED",
-      "CONTACT_VERIFIED",
-      "DISTRIBUTION_ACTION",
-      "CONVERSATION_STARTED",
-      "BUYER_QUALIFIED",
-      "MEETING_BOOKED",
-      "OFFER_SENT",
-      "DEAL_CLOSED",
-      "TECH_FIXED"
-    ]
-  },
+  "PYTANIA_DO_CIEBIE": [
+    "Czy A3 (bez ceny) powinno miec inny nastepny krok niz A1/A2 (z cena)? Jak porownac je uczciwie skoro obiecuja co innego?",
+    "Jak odpowiedziec 4 osobom ktore prosily o oferte 10 dni temu, nie tlumaczac sie z opoznienia i nie tracac ich?",
+    "Czy 51 odpowiedzi bez zapisanej tresci warto odzyskiwac z Gmaila, czy odpuscic?",
+    "Segmentacja testu: czy 150 leadow z rpwdl to jedna grupa, czy rozbic na stomatologia/estetyczna/POZ?"
+  ],
+  "CO_SIE_ZMIENILO_OD_v1": [
+    "OFFER LAB: tresc cold maila WYSZLA z zablokowanej edge function do tabeli campaign_message_variants. Oferta = konfiguracja, nie kod. Spend cap juz NIE blokuje sprzedazy.",
+    "Silnik przelaczony: send-burst-day (edge, tresc z maja, zaszyta) WYLACZONY. Nowy coldmail_v2_burst (SQL + pg_net -> Resend) AKTYWNY, */20 8-17.",
+    "Test kontrolowany RAI_V2_001: 150/dobe, 50/wariant, round-robin (rowny rozklad, nie random).",
+    "KPI zmienione: zwyciezca wg POZYTYWNYCH odpowiedzi, nie reply rate.",
+    "Atrybucja: experiment_id + msg_variant + send_domain na kazdym drafcie.",
+    "Kill switch: bounce > 5% -> silnik sam sie wylacza.",
+    "Utworzony produkt 9000 PLN w Stripe - WCZESNIEJ NIE ISTNIAL (byly ceny 10000/4999/2500/499/149/99/49, zero 9000).",
+    "Bramka evidence na agent_tasks: status done bez policzalnego dowodu -> auto-downgrade do PLANNED."
+  ],
   "narzedzia_ZABLOKOWANE": {
-    "apify": "brak konta i klucza",
-    "firecrawl": "brak konta i klucza",
-    "scraperapi": "0 kredytow (1078/1000) - kazde pobranie 403",
-    "portale_lux": "YachtWorld / JamesEdition / LoopNet = 403 bez proxy",
+    "apify": "brak konta",
+    "firecrawl": "brak konta",
+    "scraperapi": "0 kredytow (1078/1000)",
+    "portale_lux": "YachtWorld/JamesEdition/LoopNet = 403",
     "google_maps_places": "PERMISSION_DENIED - brak billingu",
-    "supabase_edge_deploy": "spend cap - NIE MOZNA wgrac ani nadpisac funkcji; obejscie = wszystko w SQL"
+    "supabase_edge_deploy": "spend cap - OBEJSCIE ZNALEZIONE: wszystko w SQL/pg_net"
+  },
+  "OPERACJA_64_ZNALEZISKO": {
+    "mit": "64 odpowiedzi",
+    "reszta": "51 draftow ma status=replied ale ZERO zapisanej tresci odpowiedzi",
+    "wniosek": "Najszybsza droga do pierwszej sprzedazy to NIE nowa kampania, tylko odpowiedz tym, ktorzy juz poprosili o oferte.",
+    "przyczyna_gnicia": "wszystkie hot_replies maja awaiting_you=false - system twierdzi ze nic nie wymaga uwagi czlowieka",
+    "BLAD_KLASYFIKATORA": "CTA brzmi \"odpisz TAK\". Dwie firmy odpisaly TAK. System zaklasyfikowal je jako rejected_price i cold_no_engagement. Leady wyrzucone.",
+    "przyklady_zignorowanych": [
+      "Prosze przeslac oferte + numer telefonu -> 05.07, brak odpowiedzi 10 dni",
+      "Prosze o wiecej szczegolow + numer telefonu -> 05.07, brak odpowiedzi"
+    ],
+    "gorace_ignorowane_10_dni": 4,
+    "fakt_tresc_mamy_tylko_dla": 13
   },
   "czego_system_NIE_potrafi": [
-    "Zbudowac i sprzedac gry/aplikacji autonomicznie bez czlowieka",
-    "Skrobac duzych portali lux bez platnego proxy (403)",
-    "Wgrac nowej funkcji edge (spend cap) - obejscie: SQL/pg_cron",
-    "Zmienic tresci maili cold (zaszyte w edge function, deploy zablokowany)",
-    "Konwertowac: 0 sprzedazy przy 19927 mailach"
+    "Autonomicznie zbudowac i sprzedac gry/aplikacji bez czlowieka",
+    "Skrobac portali lux bez platnego proxy",
+    "Wgrac funkcji edge (spend cap) - obejscie: SQL",
+    "Konwertowac: 0 sprzedazy przy 19927 mailach",
+    "Rozpoznac \"TAK\" jako pozytywna odpowiedz (klasyfikator do naprawy)"
   ],
   "narzedzia_ktore_DZIALAJA": [
-    "Supabase Postgres + pg_cron + pg_net (39 aktywnych cronow)",
-    "Resend - 5 domen nadawczych",
-    "Stripe LIVE - produkty, ceny, payment links (przez pg_net)",
-    "Telegram Bot API - alerty (dostarczenie potwierdzone)",
-    "n8n self-hosted - workflow SDK + execute",
-    "GitHub Pages - publikacja stron",
-    "HTTP scraping bez proxy - dziala TYLKO na OLX"
+    "Supabase Postgres + pg_cron + pg_net (wysylka mail/Stripe/Telegram BEZ edge functions)",
+    "Resend - 4 domeny w rotacji (mvautoai.net wykluczony - partially_failed)",
+    "Stripe LIVE - produkty/ceny/payment links tworzone przez pg_net",
+    "Telegram Bot API - dostarczenie potwierdzone",
+    "n8n self-hosted - SDK + execute",
+    "GitHub Pages",
+    "HTTP scraping bez proxy - TYLKO OLX (200 + karty l-card)"
   ]
 }
