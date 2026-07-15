@@ -2,8 +2,8 @@
   "gora": {
     "spotkania": 0,
     "transakcje": 0,
-    "kontakty_24h": 50,
-    "pipeline_pln": 575000,
+    "kontakty_24h": 75,
+    "pipeline_pln": 862500,
     "zweryfikowane": 29850,
     "nowe_leady_24h": 0,
     "oferty_wyslane": 1,
@@ -53,7 +53,7 @@
       "actions": 9,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 3
+      "odrzucone": 4
     },
     {
       "agent": "Bohdan",
@@ -88,7 +88,7 @@
       "actions": 4,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 1
+      "odrzucone": 2
     },
     {
       "agent": "OKSANA",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T08:40:00.286264+00:00",
+  "updated_at": "2026-07-15T08:50:00.123358+00:00",
   "money_lines": [
     {
       "leady": 30270,
@@ -111,7 +111,7 @@
       "status": "AKTYWNA - test RAI_V2_001",
       "produkt": "Recepcja AI 9000 + 2500/mc",
       "przychod": 0,
-      "kontakty_24h": 50
+      "kontakty_24h": 75
     },
     {
       "hot": 9,
@@ -131,20 +131,20 @@
   ],
   "warianty_oferty": [
     {
-      "code": "A3_krotka",
-      "wyslane": 16,
-      "pozytywne": 0,
-      "odpowiedzi": 0
-    },
-    {
       "code": "A1_strata",
-      "wyslane": 17,
+      "wyslane": 25,
       "pozytywne": 0,
       "odpowiedzi": 0
     },
     {
       "code": "A2_konkret",
-      "wyslane": 17,
+      "wyslane": 25,
+      "pozytywne": 0,
+      "odpowiedzi": 0
+    },
+    {
+      "code": "A3_krotka",
+      "wyslane": 25,
       "pozytywne": 0,
       "odpowiedzi": 0
     }
