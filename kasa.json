@@ -28,20 +28,6 @@
       "odrzucone": 3
     },
     {
-      "agent": "Bohdan",
-      "actions": 8,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 2
-    },
-    {
-      "agent": "Dmytro",
-      "actions": 8,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 3
-    },
-    {
       "agent": "Jarosław",
       "actions": 8,
       "results": 0,
@@ -49,11 +35,25 @@
       "odrzucone": 5
     },
     {
+      "agent": "Bohdan",
+      "actions": 8,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 2
+    },
+    {
       "agent": "Sebastian",
       "actions": 8,
       "results": 0,
       "revenue": 0,
       "odrzucone": 4
+    },
+    {
+      "agent": "Dmytro",
+      "actions": 8,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 3
     },
     {
       "agent": "Mykola",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T06:00:00.435748+00:00",
+  "updated_at": "2026-07-15T06:10:00.22841+00:00",
   "money_lines": [
     {
       "leady": 30270,
