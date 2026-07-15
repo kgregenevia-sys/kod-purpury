@@ -28,11 +28,11 @@
       "odrzucone": 3
     },
     {
-      "agent": "Dmytro",
+      "agent": "Bohdan",
       "actions": 8,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 3
+      "odrzucone": 2
     },
     {
       "agent": "Sebastian",
@@ -42,18 +42,18 @@
       "odrzucone": 4
     },
     {
+      "agent": "Dmytro",
+      "actions": 8,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 3
+    },
+    {
       "agent": "Jarosław",
       "actions": 8,
       "results": 0,
       "revenue": 0,
       "odrzucone": 5
-    },
-    {
-      "agent": "Bohdan",
-      "actions": 8,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 2
     },
     {
       "agent": "Mykola",
@@ -63,13 +63,6 @@
       "odrzucone": 3
     },
     {
-      "agent": "TARAS",
-      "actions": 6,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 1
-    },
-    {
       "agent": "Rusłan",
       "actions": 6,
       "results": 0,
@@ -77,11 +70,11 @@
       "odrzucone": 0
     },
     {
-      "agent": "OKSANA",
-      "actions": 3,
+      "agent": "TARAS",
+      "actions": 6,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 0
+      "odrzucone": 1
     },
     {
       "agent": "DMYTRO",
@@ -89,6 +82,13 @@
       "results": 0,
       "revenue": 0,
       "odrzucone": 1
+    },
+    {
+      "agent": "OKSANA",
+      "actions": 3,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 0
     },
     {
       "agent": "JAROSŁAW",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T05:00:00.241+00:00",
+  "updated_at": "2026-07-15T05:10:00.253787+00:00",
   "money_lines": [
     {
       "leady": 30270,
