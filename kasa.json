@@ -2,8 +2,8 @@
   "gora": {
     "spotkania": 0,
     "transakcje": 0,
-    "kontakty_24h": 75,
-    "pipeline_pln": 862500,
+    "kontakty_24h": 100,
+    "pipeline_pln": 1150000,
     "zweryfikowane": 29850,
     "nowe_leady_24h": 0,
     "oferty_wyslane": 1,
@@ -15,24 +15,31 @@
   "agenci": [
     {
       "agent": "Taras",
-      "actions": 12,
+      "actions": 13,
       "results": 0,
       "revenue": 0,
       "odrzucone": 6
     },
     {
+      "agent": "Oksana",
+      "actions": 11,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 4
+    },
+    {
       "agent": "Dmytro",
-      "actions": 10,
+      "actions": 11,
       "results": 0,
       "revenue": 0,
       "odrzucone": 5
     },
     {
-      "agent": "Oksana",
+      "agent": "Sebastian",
       "actions": 10,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 4
+      "odrzucone": 5
     },
     {
       "agent": "Jarosław",
@@ -42,11 +49,18 @@
       "odrzucone": 6
     },
     {
-      "agent": "Sebastian",
+      "agent": "Bohdan",
       "actions": 9,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 5
+      "odrzucone": 3
+    },
+    {
+      "agent": "Rusłan",
+      "actions": 9,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 2
     },
     {
       "agent": "TARAS",
@@ -56,25 +70,11 @@
       "odrzucone": 4
     },
     {
-      "agent": "Bohdan",
-      "actions": 9,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 3
-    },
-    {
       "agent": "Mykola",
       "actions": 8,
       "results": 0,
       "revenue": 0,
       "odrzucone": 4
-    },
-    {
-      "agent": "Rusłan",
-      "actions": 8,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 2
     },
     {
       "agent": "DMYTRO",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T09:00:00.29637+00:00",
+  "updated_at": "2026-07-15T09:10:00.334138+00:00",
   "money_lines": [
     {
       "leady": 30270,
@@ -111,7 +111,7 @@
       "status": "AKTYWNA - test RAI_V2_001",
       "produkt": "Recepcja AI 9000 + 2500/mc",
       "przychod": 0,
-      "kontakty_24h": 75
+      "kontakty_24h": 100
     },
     {
       "hot": 9,
@@ -131,20 +131,20 @@
   ],
   "warianty_oferty": [
     {
-      "code": "A1_strata",
-      "wyslane": 25,
-      "pozytywne": 0,
-      "odpowiedzi": 0
-    },
-    {
       "code": "A2_konkret",
-      "wyslane": 25,
+      "wyslane": 33,
       "pozytywne": 0,
       "odpowiedzi": 0
     },
     {
       "code": "A3_krotka",
-      "wyslane": 25,
+      "wyslane": 33,
+      "pozytywne": 0,
+      "odpowiedzi": 0
+    },
+    {
+      "code": "A1_strata",
+      "wyslane": 34,
       "pozytywne": 0,
       "odpowiedzi": 0
     }
