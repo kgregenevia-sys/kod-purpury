@@ -1,0 +1,283 @@
+{
+  "uwaga": "Zdolnosci faktyczne. Liczby z zywej bazy, nie z zalozen.",
+  "agenci": [
+    {
+      "agent": "rpwdl-daily-sync",
+      "aktywny": true,
+      "harmonogram": "0 3 * * *"
+    },
+    {
+      "agent": "rpwdl-weekly-refresh",
+      "aktywny": true,
+      "harmonogram": "0 4 * * 1"
+    },
+    {
+      "agent": "kodpurpury-social",
+      "aktywny": true,
+      "harmonogram": "0 8 * * *"
+    },
+    {
+      "agent": "kodpurpury-drip",
+      "aktywny": true,
+      "harmonogram": "0 7 * * *"
+    },
+    {
+      "agent": "sipply-guard",
+      "aktywny": true,
+      "harmonogram": "*/20 * * * *"
+    },
+    {
+      "agent": "health-watchdog",
+      "aktywny": true,
+      "harmonogram": "*/15 * * * *"
+    },
+    {
+      "agent": "mx-gate",
+      "aktywny": true,
+      "harmonogram": "*/5 * * * *"
+    },
+    {
+      "agent": "ops_refresh_min",
+      "aktywny": true,
+      "harmonogram": "*/10 * * * *"
+    },
+    {
+      "agent": "stripe-poll",
+      "aktywny": true,
+      "harmonogram": "*/10 * * * *"
+    },
+    {
+      "agent": "mv-safety",
+      "aktywny": true,
+      "harmonogram": "*/30 * * * *"
+    },
+    {
+      "agent": "aureu-expire",
+      "aktywny": true,
+      "harmonogram": "17 4 * * *"
+    },
+    {
+      "agent": "aureu-alerts",
+      "aktywny": true,
+      "harmonogram": "30 6 * * *"
+    },
+    {
+      "agent": "agent3-guard",
+      "aktywny": true,
+      "harmonogram": "0 */3 * * *"
+    },
+    {
+      "agent": "wolodymyr-watch",
+      "aktywny": true,
+      "harmonogram": "0 * * * *"
+    },
+    {
+      "agent": "sasza-kombajn-am",
+      "aktywny": true,
+      "harmonogram": "0 6 * * *"
+    },
+    {
+      "agent": "sasza-kombajn-pm",
+      "aktywny": true,
+      "harmonogram": "0 18 * * *"
+    },
+    {
+      "agent": "komornik-daily",
+      "aktywny": true,
+      "harmonogram": "0 7 * * *"
+    },
+    {
+      "agent": "mykolaj-match",
+      "aktywny": true,
+      "harmonogram": "30 18 * * *"
+    },
+    {
+      "agent": "cobroker-agent-daily",
+      "aktywny": true,
+      "harmonogram": "0 9 * * 1-5"
+    },
+    {
+      "agent": "ops-digest-daily",
+      "aktywny": true,
+      "harmonogram": "0 6 * * *"
+    },
+    {
+      "agent": "hot-clinic-daily",
+      "aktywny": true,
+      "harmonogram": "0 8,13 * * 1-5"
+    },
+    {
+      "agent": "przetargi-skalper",
+      "aktywny": true,
+      "harmonogram": "0 7,12,17 * * *"
+    },
+    {
+      "agent": "agency-skalper",
+      "aktywny": true,
+      "harmonogram": "0 6,15 * * *"
+    },
+    {
+      "agent": "yaroslav_run",
+      "aktywny": true,
+      "harmonogram": "*/30 * * * *"
+    },
+    {
+      "agent": "ruslan_run",
+      "aktywny": true,
+      "harmonogram": "5-59/30 * * * *"
+    },
+    {
+      "agent": "lux_yaroslav_llm",
+      "aktywny": true,
+      "harmonogram": "10-59/30 * * * *"
+    },
+    {
+      "agent": "lux_ruslan_send",
+      "aktywny": true,
+      "harmonogram": "15-59/30 * * * *"
+    },
+    {
+      "agent": "kierownik_tick",
+      "aktywny": true,
+      "harmonogram": "7,37 * * * *"
+    },
+    {
+      "agent": "strateg_tick",
+      "aktywny": true,
+      "harmonogram": "23 */2 * * *"
+    },
+    {
+      "agent": "executor_tick",
+      "aktywny": true,
+      "harmonogram": "12,42 * * * *"
+    },
+    {
+      "agent": "kierownik_mail_2h",
+      "aktywny": true,
+      "harmonogram": "50 */2 * * *"
+    },
+    {
+      "agent": "brain_watchdog_tick",
+      "aktywny": true,
+      "harmonogram": "17,47 * * * *"
+    },
+    {
+      "agent": "lejki_tick",
+      "aktywny": true,
+      "harmonogram": "33 * * * *"
+    },
+    {
+      "agent": "coldmail_autotopper",
+      "aktywny": true,
+      "harmonogram": "15 * * * *"
+    },
+    {
+      "agent": "send-burst-day",
+      "aktywny": true,
+      "harmonogram": "0 7-16 * * *"
+    },
+    {
+      "agent": "sponsor_burst_h",
+      "aktywny": true,
+      "harmonogram": "25 6-15 * * *"
+    },
+    {
+      "agent": "mv_learning_tick",
+      "aktywny": true,
+      "harmonogram": "*/20 * * * *"
+    },
+    {
+      "agent": "mv_weekly_review_mon",
+      "aktywny": true,
+      "harmonogram": "0 7 * * 1"
+    },
+    {
+      "agent": "mv_release_queue_d",
+      "aktywny": true,
+      "harmonogram": "10 5 * * *"
+    }
+  ],
+  "system": "KOD PURPURY / MV Automation",
+  "jakosc_bazy": {
+    "w_supresji": 648,
+    "bounce_trwaly_pct": 0.17,
+    "reputacja_odroczenia_pct": 1.38,
+    "martwych_domen_wyrzuconych": 349
+  },
+  "lejek_fakty": {
+    "komentarz": "19927 wyslanych -> 64 odpowiedzi (0,32%) -> 0 sprzedazy. Waskie gardlo = OFERTA I TRESC, nie liczba agentow.",
+    "leadow_w_bazie": 30270,
+    "sprzedazy_total": 0,
+    "odpowiedzi_total": 64,
+    "ostatnia_wysylka": "2026-07-09T08:30:30.016125+00:00",
+    "przychod_total_pln": 0,
+    "maili_wyslanych_total": 19927
+  },
+  "skalper_lux": {
+    "hot": 8,
+    "zrodla": [
+      "olx_domy_lux",
+      "olx_dzialki_lux",
+      "olx_mieszkania_lux"
+    ],
+    "aktywow": 44,
+    "progi_eur": {
+      "jet": 3000000,
+      "hotel": 5000000,
+      "jacht": 1000000,
+      "nieruchomosc": 2000000
+    }
+  },
+  "wygenerowano": "2026-07-15T01:43:55.560361+00:00",
+  "produkty_live": {
+    "link_setup": "https://buy.stripe.com/fZuaEPgZm8oZejxgkPdQQ08",
+    "link_abonament": "https://buy.stripe.com/4gMaEP7oM8oZejx5GbdQQ07",
+    "recepcja_setup_pln": 9000,
+    "recepcja_abonament_pln_mc": 2500
+  },
+  "prawda_o_agentach": {
+    "komentarz": "Do 15.07.2026: 57 zadan done, ZERO z dowodem. To byly plany, nie wykonanie.",
+    "z_policzalnym_dowodem": 0,
+    "zadan_done_deklarowanych": 57
+  },
+  "kontrakt_operacyjny": {
+    "zasada": "status done wymaga evidence z policzalnym dowodem (database_rows/message_id/url/stripe_id)",
+    "bez_dowodu": "automatyczny downgrade do PLANNED + powod odrzucenia",
+    "bramka_evidence": "AKTYWNA - trigger mv_evidence_gate na agent_tasks",
+    "dozwolone_action_type": [
+      "LEADS_IMPORTED",
+      "CONTACT_VERIFIED",
+      "DISTRIBUTION_ACTION",
+      "CONVERSATION_STARTED",
+      "BUYER_QUALIFIED",
+      "MEETING_BOOKED",
+      "OFFER_SENT",
+      "DEAL_CLOSED",
+      "TECH_FIXED"
+    ]
+  },
+  "narzedzia_ZABLOKOWANE": {
+    "apify": "brak konta i klucza",
+    "firecrawl": "brak konta i klucza",
+    "scraperapi": "0 kredytow (1078/1000) - kazde pobranie 403",
+    "portale_lux": "YachtWorld / JamesEdition / LoopNet = 403 bez proxy",
+    "google_maps_places": "PERMISSION_DENIED - brak billingu",
+    "supabase_edge_deploy": "spend cap - NIE MOZNA wgrac ani nadpisac funkcji; obejscie = wszystko w SQL"
+  },
+  "czego_system_NIE_potrafi": [
+    "Zbudowac i sprzedac gry/aplikacji autonomicznie bez czlowieka",
+    "Skrobac duzych portali lux bez platnego proxy (403)",
+    "Wgrac nowej funkcji edge (spend cap) - obejscie: SQL/pg_cron",
+    "Zmienic tresci maili cold (zaszyte w edge function, deploy zablokowany)",
+    "Konwertowac: 0 sprzedazy przy 19927 mailach"
+  ],
+  "narzedzia_ktore_DZIALAJA": [
+    "Supabase Postgres + pg_cron + pg_net (39 aktywnych cronow)",
+    "Resend - 5 domen nadawczych",
+    "Stripe LIVE - produkty, ceny, payment links (przez pg_net)",
+    "Telegram Bot API - alerty (dostarczenie potwierdzone)",
+    "n8n self-hosted - workflow SDK + execute",
+    "GitHub Pages - publikacja stron",
+    "HTTP scraping bez proxy - dziala TYLKO na OLX"
+  ]
+}
