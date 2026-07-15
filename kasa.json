@@ -43,21 +43,21 @@
     },
     {
       "agent": "Jarosław",
-      "actions": 13,
+      "actions": 14,
       "results": 0,
       "revenue": 0,
       "odrzucone": 10
     },
     {
       "agent": "Bohdan",
-      "actions": 13,
+      "actions": 14,
       "results": 0,
       "revenue": 0,
       "odrzucone": 7
     },
     {
       "agent": "Rusłan",
-      "actions": 13,
+      "actions": 14,
       "results": 0,
       "revenue": 0,
       "odrzucone": 7
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T16:50:00.182557+00:00",
+  "updated_at": "2026-07-15T17:10:00.224882+00:00",
   "money_lines": [
     {
       "leady": 30270,
