@@ -2,8 +2,8 @@
   "gora": {
     "spotkania": 0,
     "transakcje": 0,
-    "kontakty_24h": 100,
-    "pipeline_pln": 1150000,
+    "kontakty_24h": 125,
+    "pipeline_pln": 1437500,
     "zweryfikowane": 29850,
     "nowe_leady_24h": 0,
     "oferty_wyslane": 1,
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T09:20:00.25005+00:00",
+  "updated_at": "2026-07-15T09:30:00.396505+00:00",
   "money_lines": [
     {
       "leady": 30270,
@@ -111,7 +111,7 @@
       "status": "AKTYWNA - test RAI_V2_001",
       "produkt": "Recepcja AI 9000 + 2500/mc",
       "przychod": 0,
-      "kontakty_24h": 100
+      "kontakty_24h": 125
     },
     {
       "hot": 9,
@@ -131,20 +131,20 @@
   ],
   "warianty_oferty": [
     {
-      "code": "A2_konkret",
-      "wyslane": 33,
-      "pozytywne": 0,
-      "odpowiedzi": 0
-    },
-    {
       "code": "A3_krotka",
-      "wyslane": 33,
+      "wyslane": 41,
       "pozytywne": 0,
       "odpowiedzi": 0
     },
     {
       "code": "A1_strata",
-      "wyslane": 34,
+      "wyslane": 42,
+      "pozytywne": 0,
+      "odpowiedzi": 0
+    },
+    {
+      "code": "A2_konkret",
+      "wyslane": 42,
       "pozytywne": 0,
       "odpowiedzi": 0
     }
