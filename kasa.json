@@ -71,7 +71,7 @@
     },
     {
       "agent": "TARAS",
-      "actions": 11,
+      "actions": 12,
       "results": 0,
       "revenue": 0,
       "odrzucone": 6
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T16:30:00.253928+00:00",
+  "updated_at": "2026-07-15T16:40:00.378459+00:00",
   "money_lines": [
     {
       "leady": 30270,
