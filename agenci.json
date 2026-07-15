@@ -1,5 +1,13 @@
 {
-  "uwaga": "Zdolnosci faktyczne z zywej bazy. Wszystkie niewygodne liczby zostawione celowo.",
+  "AUREU": {
+    "url": "https://aureu.kgregenevia.pro",
+    "diagnoza": "Ladna witryna bez paliwa. Problem nie w pomyslach - w danych.",
+    "baza_okazji": 7,
+    "podstron_200": 7,
+    "subskrybenci": 0,
+    "przycisk_99zl": "NAPRAWIONY 15.07 - prowadzil do wylaczonego linku Stripe"
+  },
+  "uwaga": "Liczby z zywej bazy. Niewygodne zostawione celowo. Firmy zanonimizowane.",
   "agenci": [
     {
       "agent": "rpwdl-daily-sync",
@@ -200,112 +208,131 @@
       "agent": "coldmail_v2_burst",
       "aktywny": true,
       "harmonogram": "*/20 8-17 * * *"
+    },
+    {
+      "agent": "panel_kasa_refresh",
+      "aktywny": true,
+      "harmonogram": "*/10 * * * *"
+    },
+    {
+      "agent": "gmail_router_5min",
+      "aktywny": true,
+      "harmonogram": "*/5 * * * *"
+    },
+    {
+      "agent": "sla_rescue_5min",
+      "aktywny": true,
+      "harmonogram": "*/5 * * * *"
+    },
+    {
+      "agent": "przychod_attribution",
+      "aktywny": true,
+      "harmonogram": "7 * * * *"
+    },
+    {
+      "agent": "deal_score_h",
+      "aktywny": true,
+      "harmonogram": "13 * * * *"
+    },
+    {
+      "agent": "ceo_raport_8",
+      "aktywny": true,
+      "harmonogram": "2 6 * * *"
     }
   ],
   "system": "KOD PURPURY / MV Automation",
-  "wersja": "2 - po przelaczeniu silnika i audycie odpowiedzi",
-  "OFFER_LAB": {
-    "analiza": "SELECT * FROM mv_offer_lab()",
+  "wersja": "3 - po pierwszym kontrolowanym tescie 150 maili",
+  "MONEY_LOOP": {
+    "5_pozytywne": 1,
+    "7_transakcje": 0,
+    "2_wyslane_24h": 150,
+    "waskie_gardlo": "ODPOWIEDZI SA, ZERO SPRZEDAZY - oferta nie domyka",
+    "1_okazje_leady": 30270,
+    "8_przychod_pln": 0,
+    "6_oferty_wyslane": 1,
+    "3_dostarczone_24h": 128,
+    "wazony_pipeline_pln": 6300,
+    "4_odpowiedzi_z_dowodem": 2
+  },
+  "wygenerowano": "2026-07-15T17:45:31.493287+00:00",
+  "TEST_RAI_V2_001": {
+    "UWAGA": "Odczyt reply rate dopiero po 24-72h. Zero po 12h nie jest jeszcze wynikiem.",
+    "odbite": 14,
+    "status": "WYKONANY 15.07, start 08:00",
+    "rozklad": "rowny po 50 na wariant (round-robin)",
     "warianty": [
       {
         "code": "A1_strata",
-        "wyslane": 0,
+        "wyslane": 50,
         "hipoteza": "Kat A: strata pacjentow. Konkret + liczba + cena wprost.",
         "pozytywne": 0,
         "odpowiedzi": 0
       },
       {
         "code": "A2_konkret",
-        "wyslane": 0,
+        "wyslane": 50,
         "hipoteza": "Kat A: dowod spoleczny + liczba 23.",
         "pozytywne": 0,
         "odpowiedzi": 0
       },
       {
         "code": "A3_krotka",
-        "wyslane": 0,
+        "wyslane": 50,
         "hipoteza": "Kat A: BEZ CENY, maly pierwszy krok. Test hipotezy: cena w cold mailu odstrasza?",
         "pozytywne": 0,
         "odpowiedzi": 0
       }
     ],
-    "mechanizm": "tabela campaign_message_variants -> mv_coldmail_burst() -> pg_net -> Resend. Zero deployu.",
-    "jak_zmienic_oferte": "UPDATE campaign_message_variants SET body_tpl=... WHERE code=..."
-  },
-  "jakosc_bazy": {
-    "diagnoza": "90,8% odbic = martwy DNS odbiorcy, nie reputacja. Spam/blokada tylko 2,3%. Baza zdrowa.",
-    "w_supresji": 648,
-    "bounce_trwaly_pct": 0.17,
-    "reputacja_odroczenia_pct": 1.38,
-    "martwych_domen_wyrzuconych": 349
-  },
-  "lejek_fakty": {
-    "komentarz": "Cold mail byl MARTWY 09-15.07 (cron nie wysylal naglowka x-burst-key, raportowal succeeded). Naprawione.",
-    "leadow_w_bazie": 30270,
-    "sprzedazy_total": 0,
-    "odpowiedzi_total": 64,
-    "przychod_total_pln": 0,
-    "maili_wyslanych_total": 19927,
-    "ostatnia_wysylka_starym_silnikiem": "2026-07-09T08:30:30.016125+00:00"
-  },
-  "wygenerowano": "2026-07-15T02:30:05.297193+00:00",
-  "produkty_live": {
-    "setup_pln": 9000,
-    "link_setup": "https://buy.stripe.com/fZuaEPgZm8oZejxgkPdQQ08",
-    "link_abonament": "https://buy.stripe.com/4gMaEP7oM8oZejx5GbdQQ07",
-    "abonament_pln_mc": 2500
+    "odroczone": 20,
+    "dostarczone": 120,
+    "wyslane_dzis": 150,
+    "KPI_ZWYCIEZCY": "pozytywne odpowiedzi, NIE reply rate",
+    "bounce_trwaly_pct": 0.31,
+    "odpowiedzi_po_12h": 0
   },
   "PYTANIA_DO_CIEBIE": [
-    "Czy A3 (bez ceny) powinno miec inny nastepny krok niz A1/A2 (z cena)? Jak porownac je uczciwie skoro obiecuja co innego?",
-    "Jak odpowiedziec 4 osobom ktore prosily o oferte 10 dni temu, nie tlumaczac sie z opoznienia i nie tracac ich?",
-    "Czy 51 odpowiedzi bez zapisanej tresci warto odzyskiwac z Gmaila, czy odpuscic?",
-    "Segmentacja testu: czy 150 leadow z rpwdl to jedna grupa, czy rozbic na stomatologia/estetyczna/POZ?"
-  ],
-  "CO_SIE_ZMIENILO_OD_v1": [
-    "OFFER LAB: tresc cold maila WYSZLA z zablokowanej edge function do tabeli campaign_message_variants. Oferta = konfiguracja, nie kod. Spend cap juz NIE blokuje sprzedazy.",
-    "Silnik przelaczony: send-burst-day (edge, tresc z maja, zaszyta) WYLACZONY. Nowy coldmail_v2_burst (SQL + pg_net -> Resend) AKTYWNY, */20 8-17.",
-    "Test kontrolowany RAI_V2_001: 150/dobe, 50/wariant, round-robin (rowny rozklad, nie random).",
-    "KPI zmienione: zwyciezca wg POZYTYWNYCH odpowiedzi, nie reply rate.",
-    "Atrybucja: experiment_id + msg_variant + send_domain na kazdym drafcie.",
-    "Kill switch: bounce > 5% -> silnik sam sie wylacza.",
-    "Utworzony produkt 9000 PLN w Stripe - WCZESNIEJ NIE ISTNIAL (byly ceny 10000/4999/2500/499/149/99/49, zero 9000).",
-    "Bramka evidence na agent_tasks: status done bez policzalnego dowodu -> auto-downgrade do PLANNED."
+    "Przy jakiej liczbie pozytywnych na 50 uznajemy wariant za zwyciezce, a przy jakiej caly segment za martwy?",
+    "Jesli 3 warianty dadza 0 pozytywnych na 150 - to problem tresci czy segmentu (kliniki z RPWDL)?",
+    "Aureu: legalne zrodlo hurtowe? ool.komornik.pl (archiwum) czy wniosek do KRK?",
+    "Intent LLM: uruchamiac przy 2 prawdziwych odpowiedziach czy czekac na probke?"
   ],
   "narzedzia_ZABLOKOWANE": {
     "apify": "brak konta",
     "firecrawl": "brak konta",
-    "scraperapi": "0 kredytow (1078/1000)",
-    "portale_lux": "YachtWorld/JamesEdition/LoopNet = 403",
-    "google_maps_places": "PERMISSION_DENIED - brak billingu",
-    "supabase_edge_deploy": "spend cap - OBEJSCIE ZNALEZIONE: wszystko w SQL/pg_net"
+    "scraperapi": "0 kredytow",
+    "google_maps": "PERMISSION_DENIED",
+    "komornik_pl": "API 401 + recaptcha. Paginacja SSR nie dziala (page 1,2,7,40 = te same 10 ogloszen). Obejscia zabezpieczen ODMOWIONE.",
+    "portale_lux": "403 bez proxy",
+    "supabase_edge_deploy": "spend cap - OBEJSCIE: wszystko w SQL/pg_net"
   },
-  "OPERACJA_64_ZNALEZISKO": {
-    "mit": "64 odpowiedzi",
-    "reszta": "51 draftow ma status=replied ale ZERO zapisanej tresci odpowiedzi",
-    "wniosek": "Najszybsza droga do pierwszej sprzedazy to NIE nowa kampania, tylko odpowiedz tym, ktorzy juz poprosili o oferte.",
-    "przyczyna_gnicia": "wszystkie hot_replies maja awaiting_you=false - system twierdzi ze nic nie wymaga uwagi czlowieka",
-    "BLAD_KLASYFIKATORA": "CTA brzmi \"odpisz TAK\". Dwie firmy odpisaly TAK. System zaklasyfikowal je jako rejected_price i cold_no_engagement. Leady wyrzucone.",
-    "przyklady_zignorowanych": [
-      "Prosze przeslac oferte + numer telefonu -> 05.07, brak odpowiedzi 10 dni",
-      "Prosze o wiecej szczegolow + numer telefonu -> 05.07, brak odpowiedzi"
+  "PRAWDA_O_ODPOWIEDZIACH": {
+    "jak_wykryto": "4 firmy \"odpisaly\" 05.07 12:09:09 co do sekundy - 19 minut PRZED wyslaniem do nich maila. Fizycznie niemozliwe.",
+    "z_dowodem_gmail": 2,
+    "jedyne_prawdziwe": [
+      "KLIENT_A (stomatologia): TAK w godzine po mailu 27.05, zaklasyfikowany jako rejected_price - ceny w tym mailu NIE BYLO. Czekal 1171h. Oferta wyslana 15.07.",
+      "KLIENT_B (klinika): \"tak\" na pytanie \"odezwac sie za 3 miesiace?\" = later. Follow-up 29.08.2026."
     ],
-    "gorace_ignorowane_10_dni": 4,
-    "fakt_tresc_mamy_tylko_dla": 13
+    "deklarowane_w_bazie": 64,
+    "odrzucone_jako_fikcja": 11
   },
   "czego_system_NIE_potrafi": [
-    "Autonomicznie zbudowac i sprzedac gry/aplikacji bez czlowieka",
-    "Skrobac portali lux bez platnego proxy",
-    "Wgrac funkcji edge (spend cap) - obejscie: SQL",
-    "Konwertowac: 0 sprzedazy przy 19927 mailach",
-    "Rozpoznac \"TAK\" jako pozytywna odpowiedz (klasyfikator do naprawy)"
+    "Konwertowac - 0 sprzedazy przy 20077 mailach",
+    "Skrobac komornik.pl masowo ani portali lux",
+    "Wgrac funkcji edge (spend cap)",
+    "Budowac i sprzedawac produktow bez czlowieka"
   ],
-  "narzedzia_ktore_DZIALAJA": [
-    "Supabase Postgres + pg_cron + pg_net (wysylka mail/Stripe/Telegram BEZ edge functions)",
-    "Resend - 4 domeny w rotacji (mvautoai.net wykluczony - partially_failed)",
-    "Stripe LIVE - produkty/ceny/payment links tworzone przez pg_net",
-    "Telegram Bot API - dostarczenie potwierdzone",
-    "n8n self-hosted - SDK + execute",
-    "GitHub Pages",
-    "HTTP scraping bez proxy - TYLKO OLX (200 + karty l-card)"
+  "CO_ZBUDOWANO_W_NOCY_14_15_07": [
+    "OFFER LAB - tresc maila wyszla z zablokowanej edge function do tabeli campaign_message_variants. Oferta = konfiguracja, nie kod.",
+    "Silnik coldmail_v2_burst (SQL+pg_net->Resend) zastapil martwy send-burst-day.",
+    "PRE-FLIGHT GATE - 10 kontroli przed wysylka; przy blokadzie silnik sam sie wylacza + alarm.",
+    "GMAIL ROUTER co 5 min - Atom feed, tylko nadawcy do ktorych pisalismy, dedup po gmail_message_id.",
+    "BRAMKA ANTY-FIKCJI - odpowiedz bez gmail_message_id NIE liczy sie jako odpowiedz.",
+    "SLA RESCUE co 5 min - pozytywna odpowiedz = 15 min na reakcje, potem 4 eskalacje.",
+    "HUMAN APPROVAL CENTER + LEAD DIGITAL TWIN.",
+    "DEAL PROBABILITY - model punktowy, ZERO LLM.",
+    "AUTONOMOUS CEO + MONEY LOOP - dzialania wycenione w PLN.",
+    "EVENT BUS ops_events.",
+    "PANEL KASA - pieniadze zamiast aktywnosci, refresh n8n co 10 min.",
+    "AUREU FIX - przycisk 99 zl/mies prowadzil do WYLACZONEGO linku Stripe."
   ]
 }
