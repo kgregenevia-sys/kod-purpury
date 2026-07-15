@@ -81,21 +81,21 @@
       "actions": 8,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 6
+      "odrzucone": 7
     },
     {
       "agent": "DMYTRO",
       "actions": 8,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 5
+      "odrzucone": 6
     },
     {
       "agent": "JAROSŁAW",
       "actions": 8,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 5
+      "odrzucone": 6
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T20:40:00.206349+00:00",
+  "updated_at": "2026-07-15T20:50:00.147463+00:00",
   "money_lines": [
     {
       "leady": 30270,
