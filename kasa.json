@@ -15,7 +15,7 @@
   "agenci": [
     {
       "agent": "Taras",
-      "actions": 15,
+      "actions": 16,
       "results": 0,
       "revenue": 0,
       "odrzucone": 9
@@ -43,35 +43,35 @@
     },
     {
       "agent": "Rusłan",
-      "actions": 11,
+      "actions": 12,
       "results": 0,
       "revenue": 0,
       "odrzucone": 5
     },
     {
       "agent": "Bohdan",
-      "actions": 10,
+      "actions": 11,
       "results": 0,
       "revenue": 0,
       "odrzucone": 4
     },
     {
       "agent": "Jarosław",
-      "actions": 10,
+      "actions": 11,
       "results": 0,
       "revenue": 0,
       "odrzucone": 7
     },
     {
-      "agent": "TARAS",
+      "agent": "Mykola",
       "actions": 10,
       "results": 0,
       "revenue": 0,
       "odrzucone": 5
     },
     {
-      "agent": "Mykola",
-      "actions": 9,
+      "agent": "TARAS",
+      "actions": 10,
       "results": 0,
       "revenue": 0,
       "odrzucone": 5
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T12:30:00.303322+00:00",
+  "updated_at": "2026-07-15T12:40:00.393316+00:00",
   "money_lines": [
     {
       "leady": 30270,
