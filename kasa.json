@@ -18,7 +18,7 @@
       "actions": 21,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 14
+      "odrzucone": 15
     },
     {
       "agent": "Oksana",
@@ -39,7 +39,7 @@
       "actions": 18,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 14
+      "odrzucone": 15
     },
     {
       "agent": "Sebastian",
@@ -53,7 +53,7 @@
       "actions": 16,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 9
+      "odrzucone": 10
     },
     {
       "agent": "Rusłan",
@@ -67,7 +67,7 @@
       "actions": 14,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 9
+      "odrzucone": 10
     },
     {
       "agent": "TARAS",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 57,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-15T20:10:00.115353+00:00",
+  "updated_at": "2026-07-15T20:20:00.155817+00:00",
   "money_lines": [
     {
       "leady": 30270,
