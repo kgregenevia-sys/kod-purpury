@@ -14,9 +14,9 @@
   },
   "agenci": [
     {
-      "agent": "Taras",
-      "actions": 22,
-      "results": 0,
+      "agent": "Sebastian",
+      "actions": 23,
+      "results": 3,
       "revenue": 0,
       "odrzucone": 22
     },
@@ -28,9 +28,9 @@
       "odrzucone": 22
     },
     {
-      "agent": "Sebastian",
+      "agent": "Taras",
       "actions": 22,
-      "results": 3,
+      "results": 0,
       "revenue": 0,
       "odrzucone": 22
     },
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-16T21:20:00.152049+00:00",
+  "updated_at": "2026-07-16T21:30:00.230841+00:00",
   "money_lines": [
     {
       "leady": 30270,
