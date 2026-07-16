@@ -14,13 +14,6 @@
   },
   "agenci": [
     {
-      "agent": "Oksana",
-      "actions": 22,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 16
-    },
-    {
       "agent": "Taras",
       "actions": 22,
       "results": 0,
@@ -29,8 +22,22 @@
     },
     {
       "agent": "Dmytro",
-      "actions": 21,
+      "actions": 22,
       "results": 0,
+      "revenue": 0,
+      "odrzucone": 17
+    },
+    {
+      "agent": "Oksana",
+      "actions": 22,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 16
+    },
+    {
+      "agent": "Sebastian",
+      "actions": 20,
+      "results": 1,
       "revenue": 0,
       "odrzucone": 16
     },
@@ -42,16 +49,9 @@
       "odrzucone": 16
     },
     {
-      "agent": "Sebastian",
-      "actions": 19,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 15
-    },
-    {
       "agent": "Bohdan",
       "actions": 19,
-      "results": 0,
+      "results": 1,
       "revenue": 0,
       "odrzucone": 13
     },
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-16T17:20:00.177623+00:00",
+  "updated_at": "2026-07-16T17:30:00.208091+00:00",
   "money_lines": [
     {
       "leady": 30270,
