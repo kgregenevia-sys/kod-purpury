@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-16T03:30:00.206564+00:00",
+  "updated_at": "2026-07-16T03:40:00.16946+00:00",
   "money_lines": [
     {
       "leady": 30270,
@@ -114,9 +114,9 @@
       "kontakty_24h": 150
     },
     {
-      "hot": 9,
+      "hot": 11,
       "nazwa": "2 · LUX BROKERAGE",
-      "aktywa": 50,
+      "aktywa": 77,
       "status": "SKALPER OLX dziala; portale lux 403 - brak proxy",
       "produkt": "posrednictwo aktywa premium",
       "przychod": 0
