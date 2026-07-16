@@ -2,7 +2,7 @@
   "gora": {
     "spotkania": 0,
     "transakcje": 0,
-    "kontakty_24h": 103,
+    "kontakty_24h": 78,
     "pipeline_pln": 6300,
     "zweryfikowane": 29850,
     "nowe_leady_24h": 0,
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-16T08:40:00.248225+00:00",
+  "updated_at": "2026-07-16T08:50:00.121304+00:00",
   "money_lines": [
     {
       "leady": 30270,
@@ -111,7 +111,7 @@
       "status": "WYLACZONA",
       "produkt": "Recepcja AI 9000 + 2500/mc",
       "przychod": 0,
-      "kontakty_24h": 103
+      "kontakty_24h": 78
     },
     {
       "hot": 11,
