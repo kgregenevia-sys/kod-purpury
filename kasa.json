@@ -14,64 +14,71 @@
   },
   "agenci": [
     {
-      "agent": "Taras",
-      "actions": 22,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 16
-    },
-    {
       "agent": "Dmytro",
       "actions": 22,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 17
+      "odrzucone": 21
     },
     {
       "agent": "Oksana",
       "actions": 22,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 16
+      "odrzucone": 22
+    },
+    {
+      "agent": "Taras",
+      "actions": 22,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 22
     },
     {
       "agent": "Sebastian",
       "actions": 20,
       "results": 1,
       "revenue": 0,
-      "odrzucone": 16
+      "odrzucone": 20
     },
     {
       "agent": "Jarosław",
       "actions": 19,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 16
+      "odrzucone": 18
     },
     {
       "agent": "Bohdan",
       "actions": 19,
-      "results": 1,
+      "results": 0,
       "revenue": 0,
-      "odrzucone": 13
+      "odrzucone": 19
     },
     {
       "agent": "Rusłan",
       "actions": 16,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 10
+      "odrzucone": 14
     },
     {
       "agent": "Mykola",
       "actions": 15,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 11
+      "odrzucone": 14
     },
     {
       "agent": "TARAS",
       "actions": 13,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 13
+    },
+    {
+      "agent": "JAROSŁAW",
+      "actions": 8,
       "results": 0,
       "revenue": 0,
       "odrzucone": 8
@@ -81,21 +88,14 @@
       "actions": 8,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 7
+      "odrzucone": 8
     },
     {
       "agent": "DMYTRO",
       "actions": 8,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 6
-    },
-    {
-      "agent": "JAROSŁAW",
-      "actions": 8,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 6
+      "odrzucone": 8
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-16T17:50:00.144232+00:00",
+  "updated_at": "2026-07-16T18:00:00.53343+00:00",
   "money_lines": [
     {
       "leady": 30270,
