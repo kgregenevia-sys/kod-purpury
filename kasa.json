@@ -16,9 +16,9 @@
     {
       "agent": "Sebastian",
       "actions": 23,
-      "results": 3,
+      "results": 4,
       "revenue": 0,
-      "odrzucone": 22
+      "odrzucone": 23
     },
     {
       "agent": "Oksana",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-16T21:30:00.230841+00:00",
+  "updated_at": "2026-07-16T21:40:00.207751+00:00",
   "money_lines": [
     {
       "leady": 30270,
