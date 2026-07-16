@@ -14,11 +14,11 @@
   },
   "agenci": [
     {
-      "agent": "Dmytro",
+      "agent": "Taras",
       "actions": 22,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 21
+      "odrzucone": 22
     },
     {
       "agent": "Oksana",
@@ -28,16 +28,16 @@
       "odrzucone": 22
     },
     {
-      "agent": "Taras",
+      "agent": "Sebastian",
       "actions": 22,
-      "results": 0,
+      "results": 3,
       "revenue": 0,
       "odrzucone": 22
     },
     {
-      "agent": "Sebastian",
-      "actions": 21,
-      "results": 2,
+      "agent": "Dmytro",
+      "actions": 22,
+      "results": 0,
       "revenue": 0,
       "odrzucone": 21
     },
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-16T20:10:00.139861+00:00",
+  "updated_at": "2026-07-16T20:20:00.231726+00:00",
   "money_lines": [
     {
       "leady": 30270,
