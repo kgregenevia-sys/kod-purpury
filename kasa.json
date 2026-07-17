@@ -85,10 +85,10 @@
     },
     {
       "agent": "Kierownik",
-      "actions": 10,
+      "actions": 11,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 10
+      "odrzucone": 11
     },
     {
       "agent": "MYKOLA",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-17T08:30:00.364916+00:00",
+  "updated_at": "2026-07-17T08:40:00.338736+00:00",
   "money_lines": [
     {
       "leady": 30270,
