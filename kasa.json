@@ -3,7 +3,7 @@
     "spotkania": 0,
     "transakcje": 0,
     "kontakty_24h": 3,
-    "pipeline_pln": 4950,
+    "pipeline_pln": 1350,
     "zweryfikowane": 29850,
     "nowe_leady_24h": 0,
     "oferty_wyslane": 0,
@@ -21,11 +21,11 @@
       "odrzucone": 27
     },
     {
-      "agent": "Oksana",
+      "agent": "Dmytro",
       "actions": 22,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 22
+      "odrzucone": 21
     },
     {
       "agent": "Taras",
@@ -35,18 +35,11 @@
       "odrzucone": 22
     },
     {
-      "agent": "Dmytro",
+      "agent": "Oksana",
       "actions": 22,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 21
-    },
-    {
-      "agent": "Jarosław",
-      "actions": 19,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 18
+      "odrzucone": 22
     },
     {
       "agent": "Bohdan",
@@ -54,6 +47,13 @@
       "results": 0,
       "revenue": 0,
       "odrzucone": 19
+    },
+    {
+      "agent": "Jarosław",
+      "actions": 19,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 18
     },
     {
       "agent": "Rusłan",
@@ -77,13 +77,6 @@
       "odrzucone": 13
     },
     {
-      "agent": "JAROSŁAW",
-      "actions": 8,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 8
-    },
-    {
       "agent": "MYKOLA",
       "actions": 8,
       "results": 0,
@@ -96,6 +89,13 @@
       "results": 0,
       "revenue": 0,
       "odrzucone": 8
+    },
+    {
+      "agent": "JAROSŁAW",
+      "actions": 8,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 8
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-17T04:50:00.247977+00:00",
+  "updated_at": "2026-07-17T05:00:01.071605+00:00",
   "money_lines": [
     {
       "leady": 30270,
