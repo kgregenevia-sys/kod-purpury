@@ -2,7 +2,7 @@
   "gora": {
     "spotkania": 0,
     "transakcje": 0,
-    "kontakty_24h": 176,
+    "kontakty_24h": 199,
     "pipeline_pln": 4950,
     "zweryfikowane": 29850,
     "nowe_leady_24h": 0,
@@ -16,9 +16,9 @@
     {
       "agent": "Sebastian",
       "actions": 32,
-      "results": 12,
+      "results": 13,
       "revenue": 0,
-      "odrzucone": 31
+      "odrzucone": 32
     },
     {
       "agent": "Jarosław",
@@ -28,11 +28,11 @@
       "odrzucone": 21
     },
     {
-      "agent": "Dmytro",
+      "agent": "Oksana",
       "actions": 22,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 21
+      "odrzucone": 22
     },
     {
       "agent": "Taras",
@@ -42,11 +42,11 @@
       "odrzucone": 22
     },
     {
-      "agent": "Oksana",
+      "agent": "Dmytro",
       "actions": 22,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 22
+      "odrzucone": 21
     },
     {
       "agent": "Bohdan",
@@ -64,17 +64,17 @@
     },
     {
       "agent": "Ostap",
-      "actions": 19,
+      "actions": 20,
       "results": 0,
       "revenue": 0,
       "odrzucone": 3
     },
     {
       "agent": "Kierownik",
-      "actions": 15,
+      "actions": 16,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 15
+      "odrzucone": 16
     },
     {
       "agent": "Mykola",
@@ -84,18 +84,18 @@
       "odrzucone": 14
     },
     {
+      "agent": "Mykolaj",
+      "actions": 13,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 0
+    },
+    {
       "agent": "TARAS",
       "actions": 13,
       "results": 0,
       "revenue": 0,
       "odrzucone": 13
-    },
-    {
-      "agent": "Mykolaj",
-      "actions": 12,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 0
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-17T11:00:00.52466+00:00",
+  "updated_at": "2026-07-17T11:10:00.381787+00:00",
   "money_lines": [
     {
       "leady": 30270,
@@ -111,7 +111,7 @@
       "status": "WYLACZONA",
       "produkt": "Recepcja AI 9000 + 2500/mc",
       "przychod": 0,
-      "kontakty_24h": 176
+      "kontakty_24h": 199
     },
     {
       "hot": 14,
