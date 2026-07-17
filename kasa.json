@@ -1,14 +1,14 @@
 {
   "gora": {
     "spotkania": 0,
-    "transakcje": 0,
+    "transakcje": 1,
     "kontakty_24h": 199,
     "pipeline_pln": 4950,
     "zweryfikowane": 29852,
     "nowe_leady_24h": 2,
     "oferty_wyslane": 0,
-    "przychod_30d_pln": 0,
-    "przychod_dzis_pln": 0,
+    "przychod_30d_pln": 99,
+    "przychod_dzis_pln": 99,
     "odpowiedzi_zweryfikowane": 10,
     "odpowiedzi_odrzucone_bez_dowodu": 4
   },
@@ -30,9 +30,9 @@
     {
       "agent": "Mykolaj",
       "actions": 36,
-      "results": 0,
+      "results": 1,
       "revenue": 0,
-      "odrzucone": 4
+      "odrzucone": 6
     },
     {
       "agent": "Jarosław",
@@ -103,14 +103,14 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-17T22:10:00.261915+00:00",
+  "updated_at": "2026-07-17T22:20:00.314176+00:00",
   "money_lines": [
     {
       "leady": 30272,
       "nazwa": "1 · AI AUTOMATION",
       "status": "WYLACZONA",
       "produkt": "Recepcja AI 9000 + 2500/mc",
-      "przychod": 0,
+      "przychod": 99,
       "kontakty_24h": 199
     },
     {
@@ -125,7 +125,7 @@
       "nazwa": "3 · DIGITAL ASSETS",
       "status": "payment links live, zero sprzedazy",
       "produkt": "bazy B2B, raporty, automatyzacje",
-      "przychod": 0,
+      "przychod": 99,
       "produktow": 12
     }
   ],
