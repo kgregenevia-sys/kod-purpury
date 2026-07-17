@@ -15,7 +15,7 @@
   "agenci": [
     {
       "agent": "Sebastian",
-      "actions": 29,
+      "actions": 30,
       "results": 10,
       "revenue": 0,
       "odrzucone": 29
@@ -84,14 +84,14 @@
       "odrzucone": 3
     },
     {
-      "agent": "MYKOLA",
-      "actions": 8,
+      "agent": "Kierownik",
+      "actions": 9,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 8
+      "odrzucone": 9
     },
     {
-      "agent": "JAROSŁAW",
+      "agent": "MYKOLA",
       "actions": 8,
       "results": 0,
       "revenue": 0,
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-17T07:30:00.471855+00:00",
+  "updated_at": "2026-07-17T07:40:00.464299+00:00",
   "money_lines": [
     {
       "leady": 30270,
