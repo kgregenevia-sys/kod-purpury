@@ -22,7 +22,7 @@
     },
     {
       "agent": "Ostap",
-      "actions": 28,
+      "actions": 29,
       "results": 0,
       "revenue": 0,
       "odrzucone": 3
@@ -42,11 +42,11 @@
       "odrzucone": 16
     },
     {
-      "agent": "Oksana",
-      "actions": 22,
+      "agent": "Mykolaj",
+      "actions": 23,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 22
+      "odrzucone": 0
     },
     {
       "agent": "Bohdan",
@@ -56,11 +56,11 @@
       "odrzucone": 19
     },
     {
-      "agent": "Mykolaj",
+      "agent": "Oksana",
       "actions": 22,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 0
+      "odrzucone": 22
     },
     {
       "agent": "Taras",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-17T15:00:01.30167+00:00",
+  "updated_at": "2026-07-17T15:10:00.277124+00:00",
   "money_lines": [
     {
       "leady": 30272,
