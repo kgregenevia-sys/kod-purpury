@@ -15,7 +15,7 @@
   "agenci": [
     {
       "agent": "Sebastian",
-      "actions": 26,
+      "actions": 27,
       "results": 7,
       "revenue": 0,
       "odrzucone": 26
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-17T03:10:00.241748+00:00",
+  "updated_at": "2026-07-17T03:20:00.233969+00:00",
   "money_lines": [
     {
       "leady": 30270,
