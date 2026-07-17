@@ -71,14 +71,14 @@
     },
     {
       "agent": "Kierownik",
-      "actions": 17,
+      "actions": 18,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 17
+      "odrzucone": 18
     },
     {
       "agent": "Mykolaj",
-      "actions": 15,
+      "actions": 16,
       "results": 0,
       "revenue": 0,
       "odrzucone": 0
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-17T12:00:00.568425+00:00",
+  "updated_at": "2026-07-17T12:10:00.214084+00:00",
   "money_lines": [
     {
       "leady": 30270,
