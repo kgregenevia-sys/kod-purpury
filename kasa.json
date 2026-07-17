@@ -2,7 +2,7 @@
   "gora": {
     "spotkania": 0,
     "transakcje": 0,
-    "kontakty_24h": 3,
+    "kontakty_24h": 53,
     "pipeline_pln": 4950,
     "zweryfikowane": 29850,
     "nowe_leady_24h": 0,
@@ -28,13 +28,6 @@
       "odrzucone": 21
     },
     {
-      "agent": "Oksana",
-      "actions": 22,
-      "results": 0,
-      "revenue": 0,
-      "odrzucone": 22
-    },
-    {
       "agent": "Dmytro",
       "actions": 22,
       "results": 0,
@@ -49,6 +42,13 @@
       "odrzucone": 22
     },
     {
+      "agent": "Oksana",
+      "actions": 22,
+      "results": 0,
+      "revenue": 0,
+      "odrzucone": 22
+    },
+    {
       "agent": "Bohdan",
       "actions": 20,
       "results": 0,
@@ -57,7 +57,7 @@
     },
     {
       "agent": "Rusłan",
-      "actions": 19,
+      "actions": 20,
       "results": 0,
       "revenue": 0,
       "odrzucone": 16
@@ -78,7 +78,7 @@
     },
     {
       "agent": "Ostap",
-      "actions": 9,
+      "actions": 10,
       "results": 0,
       "revenue": 0,
       "odrzucone": 3
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-17T07:00:01.362493+00:00",
+  "updated_at": "2026-07-17T07:10:00.43605+00:00",
   "money_lines": [
     {
       "leady": 30270,
@@ -111,7 +111,7 @@
       "status": "WYLACZONA",
       "produkt": "Recepcja AI 9000 + 2500/mc",
       "przychod": 0,
-      "kontakty_24h": 3
+      "kontakty_24h": 53
     },
     {
       "hot": 14,
