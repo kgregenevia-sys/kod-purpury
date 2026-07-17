@@ -22,14 +22,14 @@
     },
     {
       "agent": "Jarosław",
-      "actions": 25,
+      "actions": 26,
       "results": 0,
       "revenue": 0,
       "odrzucone": 21
     },
     {
       "agent": "Ostap",
-      "actions": 23,
+      "actions": 24,
       "results": 0,
       "revenue": 0,
       "odrzucone": 3
@@ -71,14 +71,14 @@
     },
     {
       "agent": "Kierownik",
-      "actions": 19,
+      "actions": 20,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 19
+      "odrzucone": 20
     },
     {
       "agent": "Mykolaj",
-      "actions": 18,
+      "actions": 19,
       "results": 0,
       "revenue": 0,
       "odrzucone": 0
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-17T13:00:00.598238+00:00",
+  "updated_at": "2026-07-17T13:10:00.319368+00:00",
   "money_lines": [
     {
       "leady": 30270,
