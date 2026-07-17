@@ -43,10 +43,10 @@
     },
     {
       "agent": "Jarosław",
-      "actions": 21,
+      "actions": 22,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 20
+      "odrzucone": 21
     },
     {
       "agent": "Bohdan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 2
   },
-  "updated_at": "2026-07-17T05:10:00.227691+00:00",
+  "updated_at": "2026-07-17T05:20:00.288244+00:00",
   "money_lines": [
     {
       "leady": 30270,
