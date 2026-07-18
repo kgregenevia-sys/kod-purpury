@@ -25,7 +25,7 @@
       "actions": 70,
       "results": 1,
       "revenue": 0,
-      "odrzucone": 29
+      "odrzucone": 30
     },
     {
       "agent": "Sebastian",
@@ -63,6 +63,13 @@
       "odrzucone": 23
     },
     {
+      "agent": "Wołodymyr",
+      "actions": 23,
+      "results": 2,
+      "revenue": 0,
+      "odrzucone": 9
+    },
+    {
       "agent": "Oksana",
       "actions": 22,
       "results": 0,
@@ -84,13 +91,6 @@
       "odrzucone": 22
     },
     {
-      "agent": "Wołodymyr",
-      "actions": 22,
-      "results": 2,
-      "revenue": 0,
-      "odrzucone": 9
-    },
-    {
       "agent": "Sasza",
       "actions": 20,
       "results": 1,
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-18T12:40:00.32484+00:00",
+  "updated_at": "2026-07-18T12:50:00.313535+00:00",
   "money_lines": [
     {
       "leady": 30282,
