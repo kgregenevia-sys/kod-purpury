@@ -93,9 +93,9 @@
     {
       "agent": "Sasza",
       "actions": 20,
-      "results": 1,
+      "results": 2,
       "revenue": 0,
-      "odrzucone": 10
+      "odrzucone": 11
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-18T14:30:00.460092+00:00",
+  "updated_at": "2026-07-18T14:40:00.375981+00:00",
   "money_lines": [
     {
       "leady": 30282,
