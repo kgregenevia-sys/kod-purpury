@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-18T14:10:00.294142+00:00",
+  "updated_at": "2026-07-18T14:20:00.318457+00:00",
   "money_lines": [
     {
       "leady": 30282,
@@ -126,7 +126,7 @@
       "status": "payment links live, zero sprzedazy",
       "produkt": "bazy B2B, raporty, automatyzacje",
       "przychod": 99,
-      "produktow": 12
+      "produktow": 33
     }
   ],
   "warianty_oferty": [
