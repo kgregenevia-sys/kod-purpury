@@ -29,7 +29,7 @@
     },
     {
       "agent": "Sebastian",
-      "actions": 50,
+      "actions": 51,
       "results": 31,
       "revenue": 0,
       "odrzucone": 50
@@ -60,7 +60,7 @@
       "actions": 25,
       "results": 3,
       "revenue": 0,
-      "odrzucone": 11
+      "odrzucone": 12
     },
     {
       "agent": "Dmytro",
@@ -93,9 +93,9 @@
     {
       "agent": "Sasza",
       "actions": 20,
-      "results": 2,
+      "results": 3,
       "revenue": 0,
-      "odrzucone": 11
+      "odrzucone": 12
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-18T15:10:00.346008+00:00",
+  "updated_at": "2026-07-18T15:20:00.338667+00:00",
   "money_lines": [
     {
       "leady": 30282,
