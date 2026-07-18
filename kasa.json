@@ -15,17 +15,17 @@
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 108,
+      "actions": 109,
       "results": 0,
       "revenue": 0,
       "odrzucone": 12
     },
     {
       "agent": "Mykolaj",
-      "actions": 86,
+      "actions": 87,
       "results": 1,
       "revenue": 0,
-      "odrzucone": 41
+      "odrzucone": 42
     },
     {
       "agent": "Sebastian",
@@ -64,7 +64,7 @@
     },
     {
       "agent": "Sasza",
-      "actions": 26,
+      "actions": 27,
       "results": 4,
       "revenue": 0,
       "odrzucone": 14
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-18T21:00:00.464264+00:00",
+  "updated_at": "2026-07-18T21:10:00.352168+00:00",
   "money_lines": [
     {
       "leady": 30282,
