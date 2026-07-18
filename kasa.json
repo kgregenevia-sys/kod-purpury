@@ -95,7 +95,7 @@
       "actions": 17,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 8
+      "odrzucone": 9
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 10
   },
-  "updated_at": "2026-07-18T08:10:00.31671+00:00",
+  "updated_at": "2026-07-18T08:20:00.409596+00:00",
   "money_lines": [
     {
       "leady": 30272,
