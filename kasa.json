@@ -25,14 +25,14 @@
       "actions": 88,
       "results": 1,
       "revenue": 0,
-      "odrzucone": 42
+      "odrzucone": 43
     },
     {
       "agent": "Sebastian",
       "actions": 55,
-      "results": 35,
+      "results": 36,
       "revenue": 0,
-      "odrzucone": 54
+      "odrzucone": 55
     },
     {
       "agent": "Jarosław",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-18T21:30:00.378255+00:00",
+  "updated_at": "2026-07-18T21:40:00.233168+00:00",
   "money_lines": [
     {
       "leady": 30282,
