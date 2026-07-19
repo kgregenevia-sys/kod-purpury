@@ -22,7 +22,7 @@
     },
     {
       "agent": "Mykolaj",
-      "actions": 96,
+      "actions": 97,
       "results": 1,
       "revenue": 0,
       "odrzucone": 48
@@ -30,13 +30,13 @@
     {
       "agent": "Sebastian",
       "actions": 58,
-      "results": 38,
+      "results": 39,
       "revenue": 0,
-      "odrzucone": 57
+      "odrzucone": 58
     },
     {
       "agent": "Jarosław",
-      "actions": 36,
+      "actions": 37,
       "results": 2,
       "revenue": 0,
       "odrzucone": 24
@@ -46,7 +46,7 @@
       "actions": 33,
       "results": 3,
       "revenue": 0,
-      "odrzucone": 17
+      "odrzucone": 18
     },
     {
       "agent": "Bohdan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T02:00:00.556372+00:00",
+  "updated_at": "2026-07-19T02:10:00.283775+00:00",
   "money_lines": [
     {
       "leady": 30282,
