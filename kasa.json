@@ -46,7 +46,7 @@
       "actions": 34,
       "results": 3,
       "revenue": 0,
-      "odrzucone": 18
+      "odrzucone": 19
     },
     {
       "agent": "Bohdan",
@@ -67,7 +67,7 @@
       "actions": 30,
       "results": 4,
       "revenue": 0,
-      "odrzucone": 17
+      "odrzucone": 18
     },
     {
       "agent": "Dmytro",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T05:10:00.255853+00:00",
+  "updated_at": "2026-07-19T05:20:00.296006+00:00",
   "money_lines": [
     {
       "leady": 30282,
