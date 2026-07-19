@@ -2,7 +2,7 @@
   "gora": {
     "spotkania": 0,
     "transakcje": 1,
-    "kontakty_24h": 50,
+    "kontakty_24h": 0,
     "pipeline_pln": 6750,
     "zweryfikowane": 29862,
     "nowe_leady_24h": 0,
@@ -15,7 +15,7 @@
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 150,
+      "actions": 151,
       "results": 0,
       "revenue": 0,
       "odrzucone": 16
@@ -30,16 +30,16 @@
     {
       "agent": "Sebastian",
       "actions": 66,
-      "results": 46,
+      "results": 47,
       "revenue": 0,
-      "odrzucone": 65
+      "odrzucone": 66
     },
     {
       "agent": "Jarosław",
       "actions": 45,
       "results": 2,
       "revenue": 0,
-      "odrzucone": 24
+      "odrzucone": 25
     },
     {
       "agent": "Wołodymyr",
@@ -64,7 +64,7 @@
     },
     {
       "agent": "Sasza",
-      "actions": 32,
+      "actions": 33,
       "results": 5,
       "revenue": 0,
       "odrzucone": 25
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T14:00:00.427899+00:00",
+  "updated_at": "2026-07-19T14:10:00.341993+00:00",
   "money_lines": [
     {
       "leady": 30282,
@@ -111,7 +111,7 @@
       "status": "WYLACZONA",
       "produkt": "Recepcja AI 9000 + 2500/mc",
       "przychod": 99,
-      "kontakty_24h": 50
+      "kontakty_24h": 0
     },
     {
       "hot": 18,
