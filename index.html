@@ -1307,5 +1307,30 @@ document.getElementById("kpCookieNo").onclick=function(){try{localStorage.setIte
  inp.addEventListener('keydown',function(e){if(e.key==='Enter')send();});
 })();
 </script>
+<script>
+/* keyeParallax: oko sledzi kursor */
+(function(){
+  var k=document.querySelector('.keye'),img=document.querySelector('.keye-img'),grid=document.querySelector('.keye-grid'),fl=document.querySelector('.keye-flash');
+  if(!k||!img) return;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  img.style.transition='background-position .25s ease-out';
+  if(grid) grid.style.transition='transform .25s ease-out';
+  var raf;
+  k.addEventListener('mousemove',function(e){
+    var r=k.getBoundingClientRect();
+    var dx=Math.max(-1,Math.min(1,(e.clientX-(r.left+r.width/2))/(r.width/2)));
+    var dy=Math.max(-1,Math.min(1,(e.clientY-(r.top+r.height/2))/(r.height/2)));
+    if(raf) cancelAnimationFrame(raf);
+    raf=requestAnimationFrame(function(){
+      img.style.backgroundPosition=(50 - dx*3.2)+'% '+(50 - dy*3.2)+'%';
+      if(grid) grid.style.transform='translate('+(dx*10)+'px,'+(dy*8)+'px)';
+    });
+  });
+  k.addEventListener('mouseleave',function(){
+    img.style.backgroundPosition='50% 50%';
+    if(grid) grid.style.transform='';
+  });
+})();
+</script>
 </body>
 </html>
