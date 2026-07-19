@@ -15,14 +15,14 @@
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 169,
+      "actions": 170,
       "results": 0,
       "revenue": 0,
       "odrzucone": 17
     },
     {
       "agent": "Mykolaj",
-      "actions": 137,
+      "actions": 138,
       "results": 1,
       "revenue": 0,
       "odrzucone": 74
@@ -56,18 +56,18 @@
       "odrzucone": 26
     },
     {
+      "agent": "Rusłan",
+      "actions": 38,
+      "results": 2,
+      "revenue": 0,
+      "odrzucone": 21
+    },
+    {
       "agent": "Bohdan",
       "actions": 38,
       "results": 0,
       "revenue": 0,
       "odrzucone": 19
-    },
-    {
-      "agent": "Rusłan",
-      "actions": 37,
-      "results": 2,
-      "revenue": 0,
-      "odrzucone": 21
     },
     {
       "agent": "Dmytro",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T21:00:00.457624+00:00",
+  "updated_at": "2026-07-19T21:10:00.461437+00:00",
   "money_lines": [
     {
       "leady": 30282,
