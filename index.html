@@ -500,6 +500,27 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 </div></div>
 
 <!-- GREEN -->
+<style>
+.kpf{position:relative;width:100%;min-height:clamp(440px,72vh,660px);display:flex;align-items:flex-end;overflow:hidden;background:#0a0612;border-top:1px solid rgba(160,32,240,.25);border-bottom:1px solid rgba(160,32,240,.25)}
+.kpf-media{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.03);animation:kpfZoom 20s ease-in-out infinite alternate;will-change:transform}
+@keyframes kpfZoom{from{transform:scale(1.03)}to{transform:scale(1.13)}}
+.kpf-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,6,18,.5) 0%,rgba(10,6,18,.12) 34%,rgba(10,6,18,.85) 100%),radial-gradient(120% 95% at 28% 25%,transparent,rgba(90,22,150,.38))}
+.kpf-in{position:relative;z-index:2;padding:0 26px 54px;max-width:1120px;margin:0 auto;width:100%}
+.kpf-h{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(34px,6.2vw,70px);line-height:1.02;color:#fff;letter-spacing:1px;margin:12px 0 14px;text-shadow:0 4px 44px rgba(0,0,0,.65)}
+.kpf-h em{font-style:normal;background:linear-gradient(120deg,var(--lilac),var(--magenta));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.kpf-sub{color:#e8dfff;font-size:clamp(15px,2.2vw,19px);max-width:540px;margin-bottom:26px;text-shadow:0 2px 22px rgba(0,0,0,.75)}
+@media(prefers-reduced-motion:reduce){.kpf-media{animation:none}}
+</style>
+<section class="kpf" aria-label="Kod Purpury — kadr kampanii">
+  <div class="kpf-media" style="background-image:url('kp-feature.webp')"></div>
+  <div class="kpf-scrim"></div>
+  <div class="kpf-in">
+    <span class="eyebrow"><b>Edycja</b> · Kod Purpury</span>
+    <h2 class="kpf-h">Tam, gdzie natura<br>spotyka <em>precyzję</em></h2>
+    <p class="kpf-sub">Jedna kapsułka. Rytuał dla tych, którzy nie uznają kompromisów w kwestii jakości.</p>
+    <a href="#seria" class="btn btn-fill">Zobacz serię ↓</a>
+  </div>
+</section>
 <section class="zone zone-green" id="protokol">
   <div class="wrap">
     <span class="zone-tab tab-g">01 · Fundamenty</span>
@@ -642,9 +663,9 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 .kps .stars{opacity:.4}
 .kps-row{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center;margin-top:46px}
 .kps-row.rev{direction:rtl}.kps-row.rev>*{direction:ltr}
-.kps-fig{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(160,32,240,.35);box-shadow:0 24px 70px -30px rgba(160,32,240,.7)}
+.kps-fig{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(160,32,240,.35);box-shadow:0 30px 90px -34px rgba(160,32,240,.85)}
 .kps-fig::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 70% 20%,transparent,rgba(10,6,18,.55));pointer-events:none}
-.kps-fig img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3;transition:transform .8s ease}
+.kps-fig img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:16/10;min-height:300px;transition:transform .8s ease}
 .kps-fig:hover img{transform:scale(1.045)}
 .kps-num{font-family:'Cinzel',serif;font-weight:800;font-size:15px;letter-spacing:6px;color:var(--lilac);opacity:.85}
 .kps-hook{font-family:'Cinzel',serif;font-weight:800;font-size:clamp(24px,3.4vw,36px);line-height:1.1;color:#fff;margin:10px 0 14px}
