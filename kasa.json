@@ -30,9 +30,9 @@
     {
       "agent": "Sebastian",
       "actions": 67,
-      "results": 47,
+      "results": 48,
       "revenue": 0,
-      "odrzucone": 66
+      "odrzucone": 67
     },
     {
       "agent": "Jarosław",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T15:30:00.490336+00:00",
+  "updated_at": "2026-07-19T15:40:00.418815+00:00",
   "money_lines": [
     {
       "leady": 30282,
