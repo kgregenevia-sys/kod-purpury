@@ -492,6 +492,13 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 .keye-chev{display:inline-block;margin-top:8px;color:var(--lilac2);font-size:20px;animation:keyeChev 1.8s ease-in-out infinite}
 @keyframes keyeChev{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(6px);opacity:1}}
 @media(prefers-reduced-motion:reduce){.keye-grid,.keye-glow,.keye-flash,.keye-glint,.keye-ballwrap,.keye-chev{animation:none}.keye-ballwrap{transform:none}}
+
+/* eye: naturalne, bez migania (wyl. blink/flash/glint/puls) */
+.keye-ballwrap{animation:none!important;transform:none!important}
+.keye-flash{animation:none!important;opacity:0!important}
+.keye-glint{animation:none!important;opacity:0!important}
+.keye-grid{animation:none!important;opacity:.16}
+.keye-glow{animation:none!important;opacity:.7;transform:translate(-50%,-50%) scale(1)}
 </style>
 <section class="keye" aria-label="Kod Purpury — spójrz głębiej">
   <div class="keye-glow"></div>
