@@ -1315,13 +1315,13 @@ document.getElementById("kpCookieNo").onclick=function(){try{localStorage.setIte
 })();
 </script>
 <script>
-/* keyeGaze: sama galka oczna rusza sie (kursor + idle saccady) */
+/* keyeGaze: galka rusza sie mocniej, we wszystkie strony */
 (function(){
-  var wrap=document.querySelector('.keye'),ball=document.querySelector('.keye-ball');
-  if(!wrap||!ball) return;
+  var wrap=document.querySelector('.keye'),stage=document.querySelector('.keye-stage');
+  if(!wrap||!stage) return;
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var R=15,cur={x:0,y:0},tgt={x:0,y:0},cursor=false,idleAt=0;
-  function idle(){tgt.x=(Math.random()*2-1)*R*0.7;tgt.y=(Math.random()*2-1)*R*0.6;}
+  var R=38,cur={x:0,y:0},tgt={x:0,y:0},cursor=false,idleAt=0;
+  function idle(){tgt.x=(Math.random()*2-1)*R*0.9;tgt.y=(Math.random()*2-1)*R*0.9;}
   wrap.addEventListener('mousemove',function(e){
     var r=wrap.getBoundingClientRect();
     var dx=Math.max(-1,Math.min(1,(e.clientX-(r.left+r.width/2))/(r.width/2)));
@@ -1330,9 +1330,9 @@ document.getElementById("kpCookieNo").onclick=function(){try{localStorage.setIte
   });
   wrap.addEventListener('mouseleave',function(){cursor=false;});
   function loop(t){
-    if(!cursor && t-idleAt>2200){idle();idleAt=t;}
-    cur.x+=(tgt.x-cur.x)*0.08;cur.y+=(tgt.y-cur.y)*0.08;
-    ball.style.transform='translate('+cur.x.toFixed(1)+'px,'+cur.y.toFixed(1)+'px)';
+    if(!cursor && t-idleAt>1900){idle();idleAt=t;}
+    cur.x+=(tgt.x-cur.x)*0.09;cur.y+=(tgt.y-cur.y)*0.09;
+    stage.style.transform='translate('+cur.x.toFixed(1)+'px,'+cur.y.toFixed(1)+'px)';
     requestAnimationFrame(loop);
   }
   requestAnimationFrame(loop);
