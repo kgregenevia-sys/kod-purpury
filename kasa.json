@@ -18,7 +18,7 @@
       "actions": 119,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 13
+      "odrzucone": 14
     },
     {
       "agent": "Mykolaj",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T01:10:00.351834+00:00",
+  "updated_at": "2026-07-19T01:20:00.341529+00:00",
   "money_lines": [
     {
       "leady": 30282,
