@@ -601,31 +601,70 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
   </div>
 </section>
 
+<style>
+.mn-split{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;margin-top:10px}
+.mn-visual{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(92,200,255,.32);box-shadow:0 30px 80px -34px rgba(92,200,255,.55)}
+.mn-visual img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+.mn-visual .lab{position:absolute;left:16px;bottom:14px;font-family:'Rajdhani';font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:11.5px;color:#cdeaff;background:rgba(6,18,31,.62);border:1px solid rgba(92,200,255,.4);padding:6px 12px;border-radius:20px;backdrop-filter:blur(6px)}
+.mn-lead2{color:#d7ecff;font-size:17px;line-height:1.55;margin-bottom:6px}
+.mn-chips{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 4px}
+.mn-chip{font-family:'Rajdhani';font-weight:800;color:#08202f;background:linear-gradient(120deg,#8ad4ff,#c4e9ff);border-radius:12px;padding:9px 12px;min-width:52px;text-align:center;line-height:1}
+.mn-chip small{display:block;font-size:9px;letter-spacing:.4px;opacity:.75;font-weight:700;margin-top:3px}
+.mn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px}
+.mn-c{position:relative;overflow:hidden;background:rgba(92,200,255,.05);border:1px solid rgba(92,200,255,.22);border-radius:18px;padding:26px 24px;transition:.3s}
+.mn-c:hover{transform:translateY(-4px);border-color:rgba(92,200,255,.55)}
+.mn-c::before{content:"";position:absolute;top:-46px;right:-46px;width:130px;height:130px;background:radial-gradient(circle,rgba(92,200,255,.18),transparent 70%);pointer-events:none}
+.mn-c .ic{width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:rgba(92,200,255,.14);border:1px solid rgba(92,200,255,.48);color:#c4e9ff;margin-bottom:15px}
+.mn-c .ic svg{width:26px;height:26px}
+.mn-c h3{font-family:'Rajdhani';font-weight:700;letter-spacing:1.2px;text-transform:uppercase;font-size:17px;color:#fff;margin-bottom:8px}
+.mn-c p{color:var(--muted);font-size:14.3px}
+.mn-c b{color:var(--blue2)}
+.mn-rhythm{margin-top:38px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mn-step{background:rgba(6,18,31,.4);border:1px solid rgba(92,200,255,.22);border-radius:16px;padding:22px 20px}
+.mn-step .t{font-family:'Rajdhani';font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-size:11.5px;color:var(--blue);margin-bottom:8px}
+.mn-step h4{font-family:'Cinzel';font-weight:700;font-size:17px;color:#fff;margin-bottom:6px}
+.mn-step p{font-size:13px;color:var(--muted)}
+.mn-note{color:var(--muted);font-size:12.5px;margin-top:24px;opacity:.85;max-width:720px}
+@media(max-width:820px){.mn-split{grid-template-columns:1fr}.mn-grid,.mn-rhythm{grid-template-columns:1fr}}
+</style>
 <section class="zone zone-blue" id="woda">
+  <div class="stars"></div>
   <div class="wrap">
-    <span class="zone-tab tab-b">02 · Woda</span>
+    <span class="zone-tab tab-b">02 · Woda i minerały</span>
     <h2>Nawodnienie i mineralizacja — <span class="bc">przepływ</span></h2>
-    <p class="zone-lead">Nawodnienie to nie tylko ilość wody. To minerały, które kierują ją tam, gdzie jest potrzebna — do wnętrza komórek.</p>
-    <div class="cards2">
-      <div class="card reveal">
-        <div class="ic b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c4 5 6 8 6 11a6 6 0 01-12 0c0-3 2-6 6-11z"/></svg></div>
-        <h3>Nawodnienie</h3>
-        <p>Elektrolity — sód, potas, magnez — decydują, czy woda trafia do komórek. Szklanka wody ze szczyptą soli niejodowanej to prosty rytuał wspierający prawidłowe nawodnienie.</p>
-      </div>
-      <div class="card reveal">
-        <div class="ic b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6-6-3.2-6 3.2 1.5-6L3 8.5 9 8z"/></svg></div>
-        <h3>Mineralizacja</h3>
-        <p>Nierafinowana sól zachowuje magnez, potas i wapń, których pozbawiona jest zwykła sól. Magnez to kofaktor ponad 300 reakcji enzymatycznych — w tym produkcji energii (ATP).</p>
+    <p class="zone-lead">Nawodnienie to nie sama ilość wody. To minerały, które kierują ją tam, gdzie jest potrzebna — do wnętrza komórek. Bez nich woda tylko przepływa.</p>
+
+    <div class="mn-split">
+      <figure class="mn-visual reveal"><img src="kp-photo-woda.webp" alt="Makro kropli wody z minerałami" loading="lazy"><span class="lab">Makro · żywa woda</span></figure>
+      <div class="reveal">
+        <p class="mn-lead2">Woda pozbawiona elektrolitów przepływa przez organizm i wypłukuje minerały. Dopiero <b>sód, potas i magnez</b> decydują, ile z niej trafia do komórek — i czy nawodnienie faktycznie wspiera Twoją energię.</p>
+        <div class="mn-chips">
+          <div class="mn-chip">Na<small>SÓD</small></div>
+          <div class="mn-chip">K<small>POTAS</small></div>
+          <div class="mn-chip">Mg<small>MAGNEZ</small></div>
+          <div class="mn-chip">Ca<small>WAPŃ</small></div>
+          <div class="mn-chip">Zn<small>CYNK</small></div>
+        </div>
       </div>
     </div>
-    <div class="ritual">
-      <div class="rit reveal"><div class="n">01</div><h4>Oddech świadomy</h4><p>Kilka głębokich oddechów przeponą — reset układu nerwowego.</p></div>
-      <div class="rit reveal"><div class="n">02</div><h4>Woda z solą</h4><p>Szklanka wody ze szczyptą soli niejodowanej rano.</p></div>
-      <div class="rit reveal"><div class="n">03</div><h4>Uziemnianie</h4><p>Bose stopy na ziemi — badania pilotażowe wiążą to z niższym stanem zapalnym i lepszym snem.</p></div>
+
+    <div class="mn-grid">
+      <div class="mn-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c4 5 6 8 6 11a6 6 0 01-12 0c0-3 2-6 6-11z"/></svg></div><h3>Nawodnienie komórkowe</h3><p>Elektrolity są „nawigacją" dla wody. Szklanka wody ze szczyptą <b>soli niejodowanej</b> rano to prosty rytuał wspierający prawidłowe nawodnienie od pierwszej godziny dnia.</p></div>
+      <div class="mn-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6-6-3.2-6 3.2 1.5-6L3 8.5 9 8z"/></svg></div><h3>Sól nierafinowana</h3><p>W przeciwieństwie do zwykłej soli, sól nierafinowana (himalajska, kłodawska) zachowuje <b>magnez, potas i wapń</b> — komplet mikroelementów, a nie sam chlorek sodu.</p></div>
+      <div class="mn-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div><h3>Magnez i energia</h3><p>Magnez to kofaktor ponad <b>300 reakcji enzymatycznych</b>, w tym produkcji energii komórkowej (ATP). To jeden z minerałów, których najczęściej brakuje we współczesnej diecie.</p></div>
+      <div class="mn-c reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18" opacity=".5"/></svg></div><h3>Jakość nad ilość</h3><p>Nie chodzi o litry na siłę. Czysta, dobrze zmineralizowana woda pita <b>równomiernie przez dzień</b> daje więcej niż litr wypity naraz. Rytm nad objętość.</p></div>
     </div>
+
+    <div class="mn-rhythm">
+      <div class="mn-step reveal"><div class="t">Rano</div><h4>Reset i minerały</h4><p>Szklanka wody ze szczyptą soli niejodowanej + kilka świadomych oddechów. Uzupełniasz to, co ciało zużyło w nocy.</p></div>
+      <div class="mn-step reveal"><div class="t">W ciągu dnia</div><h4>Równomierny przepływ</h4><p>Małe porcje co godzinę zamiast jednego dużego łyka. Woda dobrze zmineralizowana, nie „pusta".</p></div>
+      <div class="mn-step reveal"><div class="t">Wieczorem</div><h4>Wyciszenie</h4><p>Mniej płynów tuż przed snem, magnez wspierający regenerację. Ciało schodzi na niższe obroty.</p></div>
+    </div>
+
+    <p class="mn-note">Materiał edukacyjny dotyczący stylu życia. Suplement diety oraz nawodnienie wspierają zdrowy tryb życia — nie zastępują zróżnicowanej diety, leczenia ani indywidualnej konsultacji. Zapotrzebowanie na wodę i minerały jest indywidualne.</p>
   </div>
 
-    <figure class="svg-fig reveal"><img src="kp-photo-woda.webp" alt="Nawodnienie — makro kropli wody" loading="lazy"></figure>
+    <figure class="svg-fig reveal"><img src="kp-photo-woda.webp" alt="Nawodnienie — makro kropli wody" loading="lazy" style="display:none"></figure>
 </section>
 
 <!-- PRODUKT PREMIUM -->
@@ -696,12 +735,12 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
     </div>
 
     <div class="kps-row rev reveal" style="text-align:left">
-      <figure class="kps-fig"><img src="kp-seria-oko.webp" alt="Kod Purpury — kapsułka w oku, motyw precyzji" loading="lazy"></figure>
+      <figure class="kps-fig"><img src="kp-seria-swiatlo.webp" alt="Kod Purpury — kapsułka w purpurowej poświacie" loading="lazy"></figure>
       <div>
-        <div class="kps-num">02 · ŚWIADOMOŚĆ</div>
-        <div class="kps-hook">Zobacz <em>dalej</em></div>
-        <p class="kps-copy">Precyzja, której nie widać gołym okiem. Kod Purpury łączy starannie dobrany, premium skład z estetyką, która dorównuje jakości. Dla świadomych, którzy patrzą dalej niż większość.</p>
-        <div class="kps-tags"><span>Precyzja</span><span>Świadomość</span><span>Detal</span></div>
+        <div class="kps-num">02 · ŚWIATŁO</div>
+        <div class="kps-hook">Światło <em>Purpury</em></div>
+        <p class="kps-copy">Purpurowa poświata to znak rozpoznawczy marki — nie obietnica. W środku liczy się starannie dobrany, premium skład i forma dopracowana w każdym detalu.</p>
+        <div class="kps-tags"><span>Marka</span><span>Premium</span><span>Detal</span></div>
       </div>
     </div>
 
