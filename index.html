@@ -473,8 +473,9 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 .keye-img{position:absolute;inset:0;background:url('kp-seria-oko.webp') center/cover;filter:saturate(1.08) contrast(1.07)}
 .keye-grid{position:absolute;inset:-2px;z-index:2;background-image:linear-gradient(rgba(199,125,255,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(199,125,255,.16) 1px,transparent 1px);background-size:46px 46px;mix-blend-mode:screen;opacity:.5;animation:keyeGrid 5s ease-in-out infinite}
 @keyframes keyeGrid{0%,100%{opacity:.32}50%{opacity:.62}}
-.keye-flash{position:absolute;inset:0;z-index:3;pointer-events:none;mix-blend-mode:screen;opacity:0;background:radial-gradient(circle at 50% 42%,rgba(230,190,255,.95),rgba(160,32,240,.4) 16%,transparent 38%);animation:keyeFlash 16s ease-in-out infinite}
-@keyframes keyeFlash{0%,35.4%{opacity:0}36.2%{opacity:.9}38%{opacity:0}81.4%{opacity:0}82.2%{opacity:.9}84%{opacity:0}100%{opacity:0}}
+.keye-flash{position:absolute;inset:0;z-index:3;pointer-events:none;mix-blend-mode:screen;opacity:0;background:radial-gradient(circle at 50% 43%,rgba(255,253,255,1) 0%,rgba(226,175,255,.9) 9%,rgba(160,32,240,.42) 22%,transparent 45%);animation:keyeFlash 16s ease-out infinite}
+@keyframes keyeFlash{0%,35.5%{opacity:0}36.2%{opacity:1}37.6%{opacity:.28}38.4%{opacity:0}81.5%{opacity:0}82.2%{opacity:1}83.6%{opacity:.28}84.4%{opacity:0}100%{opacity:0}}
+.keye-glint{position:absolute;left:50%;top:40%;z-index:4;width:38px;height:38px;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.5);background:radial-gradient(circle,rgba(255,255,255,1) 0%,rgba(232,205,255,.95) 20%,transparent 60%);filter:drop-shadow(0 0 9px rgba(226,175,255,.95));animation:keyeGlint 16s ease-out infinite}.keye-glint::before,.keye-glint::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent)}.keye-glint::before{width:52px;height:2px}.keye-glint::after{width:2px;height:52px;background:linear-gradient(rgba(255,255,255,.95),transparent,rgba(255,255,255,.95))}@keyframes keyeGlint{0%,35.7%{opacity:0;transform:translate(-50%,-50%) scale(.45)}36.2%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}37.3%{opacity:0;transform:translate(-50%,-50%) scale(.7)}81.7%{opacity:0;transform:translate(-50%,-50%) scale(.45)}82.2%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}83.3%{opacity:0;transform:translate(-50%,-50%) scale(.7)}100%{opacity:0}}
 .keye-vig{position:absolute;inset:0;z-index:3;background:radial-gradient(120% 90% at 50% 42%,transparent 40%,rgba(10,6,18,.55) 100%),linear-gradient(180deg,rgba(10,6,18,.35) 0%,transparent 22%,transparent 62%,rgba(10,6,18,.95) 100%)}
 .keye-lid{position:absolute;left:0;right:0;height:52%;z-index:4;transform:scaleY(0)}
 .keye-lid.top{top:0;transform-origin:top;background:linear-gradient(180deg,#0a0612 60%,rgba(10,6,18,.4));animation:keyeBlink 16s cubic-bezier(.4,0,.2,1) infinite}
@@ -487,12 +488,13 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 .keye-line em{font-style:normal;background:linear-gradient(120deg,var(--lilac),var(--magenta));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .keye-chev{display:inline-block;margin-top:10px;color:var(--lilac2);font-size:20px;animation:keyeChev 1.8s ease-in-out infinite}
 @keyframes keyeChev{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(6px);opacity:1}}
-@media(prefers-reduced-motion:reduce){.keye-grid,.keye-flash,.keye-lid,.keye-chev{animation:none}.keye-lid{transform:scaleY(0)}}
+@media(prefers-reduced-motion:reduce){.keye-grid,.keye-flash,.keye-glint,.keye-lid,.keye-chev{animation:none}.keye-lid{transform:scaleY(0)}}
 </style>
 <section class="keye" aria-label="Kod Purpury — spójrz głębiej">
   <div class="keye-img"></div>
   <div class="keye-grid"></div>
   <div class="keye-flash"></div>
+  <div class="keye-glint"></div>
   <div class="keye-vig"></div>
   <div class="keye-lid top"></div>
   <div class="keye-lid bot"></div>
