@@ -60,7 +60,7 @@
       "actions": 36,
       "results": 5,
       "revenue": 0,
-      "odrzucone": 25
+      "odrzucone": 26
     },
     {
       "agent": "Bohdan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T16:50:00.273565+00:00",
+  "updated_at": "2026-07-19T17:00:00.509401+00:00",
   "money_lines": [
     {
       "leady": 30282,
