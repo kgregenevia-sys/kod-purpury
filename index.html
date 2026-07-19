@@ -437,7 +437,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
     <div class="brand">KOD <span>PURPURY</span></div>
     <div class="nav-links">
       <a href="#protokol">Protokół</a>
-      <a href="#produkt">Premium</a>
+      <a href="#produkt">Premium</a><a href="#seria">Seria</a>
       <a href="#akademia">Akademia</a>
       <a href="#opinie">Opinie</a>
       <a href="#kontakt">Kontakt</a><a href="/blog.html">Blog</a><a href="/karta.html">Karta 3 Fundamentów</a><a href="/regulamin.html">Regulamin</a><a href="/polityka.html">Prywatność</a>
@@ -449,7 +449,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#protokol">Protokół</a>
-  <a href="#produkt">Premium</a>
+  <a href="#produkt">Premium</a><a href="#seria">Seria</a>
   <a href="#akademia">Akademia</a>
   <a href="#opinie">Opinie</a>
   <a href="#wyzwanie">Wyzwanie</a>
@@ -628,6 +628,74 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 
     <figure class="svg-fig reveal"><img src="kp-photo-nauka.webp" alt="Technologia i badania" loading="lazy"></figure>
 </section>
+<!-- KOD PURPURY — SERIA (kampania edytorialowa) -->
+<style>
+.kps{position:relative;padding:82px 0;overflow:hidden;background:linear-gradient(175deg,#0d0618,#1b0a2e)}
+.kps .stars{opacity:.4}
+.kps-row{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center;margin-top:46px}
+.kps-row.rev{direction:rtl}.kps-row.rev>*{direction:ltr}
+.kps-fig{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(160,32,240,.35);box-shadow:0 24px 70px -30px rgba(160,32,240,.7)}
+.kps-fig::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 70% 20%,transparent,rgba(10,6,18,.55));pointer-events:none}
+.kps-fig img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3;transition:transform .8s ease}
+.kps-fig:hover img{transform:scale(1.045)}
+.kps-num{font-family:'Cinzel',serif;font-weight:800;font-size:15px;letter-spacing:6px;color:var(--lilac);opacity:.85}
+.kps-hook{font-family:'Cinzel',serif;font-weight:800;font-size:clamp(24px,3.4vw,36px);line-height:1.1;color:#fff;margin:10px 0 14px}
+.kps-hook em{font-style:normal;background:linear-gradient(120deg,var(--lilac),var(--magenta));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.kps-copy{color:var(--muted);font-size:15.5px;max-width:520px}
+.kps-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.kps-tags span{font-family:'Rajdhani';font-weight:600;letter-spacing:1.4px;text-transform:uppercase;font-size:11.5px;color:var(--lilac2);border:1px solid rgba(160,32,240,.4);border-radius:20px;padding:6px 13px}
+.kps-foot{text-align:center;margin-top:58px}
+.kps-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+.kps-note{color:var(--muted);font-size:12.5px;max-width:640px;margin:26px auto 0;text-align:center;opacity:.8}
+@media(max-width:800px){.kps-row,.kps-row.rev{grid-template-columns:1fr;direction:ltr;gap:20px}.kps-row.rev .kps-fig{order:-1}}
+</style>
+<section class="kps center" id="seria">
+  <div class="stars"></div>
+  <div class="wrap">
+    <span class="zone-tab tab-p">Edycja · Seria</span>
+    <h2>Kod Purpury — <span class="pc">Seria</span></h2>
+    <p class="zone-lead">Trzy odsłony jednego rytuału. Natura, dynamika i źródło — ujęte w języku, w jakim mówi tylko premium.</p>
+
+    <div class="kps-row reveal" style="text-align:left">
+      <figure class="kps-fig"><img src="kp-cyber-nature.webp" alt="Kod Purpury — kapsułka i luksusowa natura" loading="lazy"></figure>
+      <div>
+        <div class="kps-num">01 · NATURA</div>
+        <div class="kps-hook">Luksus, który <em>nie krzyczy</em></div>
+        <p class="kps-copy">Prawdziwy luksus nie krzyczy — redefiniuje to, co codzienne. Kod Purpury to nie kolejny suplement, to rytuał. Najrzadsze dary natury spotykają precyzję nauki w geometrii jednej, dopracowanej kapsułki. Elegancja spotyka jakość.</p>
+        <div class="kps-tags"><span>Premium origin</span><span>Czysty skład</span><span>Rytuał</span></div>
+      </div>
+    </div>
+
+    <div class="kps-row rev reveal" style="text-align:left">
+      <figure class="kps-fig"><img src="kp-plusk.webp" alt="Kod Purpury — dynamiczny plusk w purpurze" loading="lazy"></figure>
+      <div>
+        <div class="kps-num">02 · DYNAMIKA</div>
+        <div class="kps-hook">Dynamiczna <em>elegancja</em></div>
+        <p class="kps-copy">Ułamek sekundy, w którym forma spotyka energię. Precyzyjnie dobrana kompozycja składników premium — czysta, dopracowana, bez kompromisów. Estetyka, która dorównuje jakości i towarzyszy Twojej codziennej witalności.</p>
+        <div class="kps-tags"><span>Precyzja</span><span>Witalność</span><span>Wydajność</span></div>
+      </div>
+    </div>
+
+    <div class="kps-row reveal" style="text-align:left">
+      <figure class="kps-fig"><img src="kp-cyber-product.webp" alt="Kod Purpury — kapsułka w krysztale ametystu" loading="lazy"></figure>
+      <div>
+        <div class="kps-num">03 · ŹRÓDŁO MOCY</div>
+        <div class="kps-hook">Wydobyty z <em>perfekcji</em></div>
+        <p class="kps-copy">Każda kapsułka to arcydzieło precyzji. Tak jak natura potrzebuje eonów, by uformować najczystszy kryształ, my poświęciliśmy lata na formułę o nienagannej czystości. Osadzona w najrzadszych minerałach — symbol premium pochodzenia. Dla tych, którzy nie uznają kompromisów.</p>
+        <div class="kps-tags"><span>Nowa Zelandia</span><span>Liofilizacja</span><span>Czysta moc</span></div>
+      </div>
+    </div>
+
+    <div class="kps-foot">
+      <div class="kps-cta">
+        <a href="#zamow" class="btn btn-fill">Zapytaj o Kod Purpury</a>
+        <a href="#produkt" class="btn btn-ghost">Poznaj skład</a>
+      </div>
+      <p class="kps-note">Suplement diety wspiera zdrowy styl życia — nie zastępuje zróżnicowanej diety ani leczenia. Zdjęcia mają charakter wizerunkowy.</p>
+    </div>
+  </div>
+</section>
+
 <section class="seals"><div class="seals-in">
   <div class="seal"><div class="seal-ic">✓</div><b>Zweryfikowana autentyczność</b><span>Każda partia sprawdzana</span></div>
   <div class="seal"><div class="seal-ic">🌿</div><b>Nowa Zelandia</b><span>Czyste źródło surowca</span></div>
@@ -972,7 +1040,7 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
   <div class="wrap">
     <div class="f-brand">KOD <span>PURPURY</span></div>
     <div class="f-links">
-      <a href="#protokol">Protokół</a><a href="#produkt">Premium</a><a href="#akademia">Akademia</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a><a href="/blog.html">Blog</a>
+      <a href="#protokol">Protokół</a><a href="#produkt">Premium</a><a href="#seria">Seria</a><a href="#akademia">Akademia</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a><a href="/blog.html">Blog</a>
     </div>
 <div class="f-social">
       <a href="https://facebook.com/1150166388180951" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.75-1.6 1.5V12h2.7l-.43 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
