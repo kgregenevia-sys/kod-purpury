@@ -1078,13 +1078,65 @@ try{if(localStorage.getItem("kp_cookie_consent")==="granted"){window.kpLoadTrack
 
 <!-- ORDER -->
 <section class="zone zone-purple" id="zamow" style="padding-top:20px">
+  <style>
+    #zamow .kpz-inner{max-width:1080px;margin:0 auto;text-align:left}
+    #zamow .kpz-eyebrow{font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:13px;color:#c77dff;margin:0 0 10px}
+    #zamow .kpz-h{font-family:'Cinzel',serif;font-weight:800;font-size:clamp(26px,4vw,40px);line-height:1.1;margin:0 0 10px;color:#efe8ff}
+    #zamow .kpz-lede{color:rgba(224,214,255,.62);max-width:56ch;margin:0 0 30px;font-weight:300}
+    #zamow .kpz-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    @media(max-width:860px){#zamow .kpz-grid{grid-template-columns:1fr}}
+    #zamow .kpz-card{background:linear-gradient(180deg,rgba(27,10,46,.6),rgba(13,6,24,.6));border:1px solid rgba(199,125,255,.20);border-radius:20px;padding:28px}
+    #zamow .kpz-badge{display:inline-block;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:11px;color:#e6cf9c;border:1px solid rgba(230,207,156,.35);padding:5px 11px;border-radius:999px;margin-bottom:16px}
+    #zamow .kpz-name{font-family:'Cinzel',serif;font-weight:700;font-size:21px;margin:0 0 4px;color:#efe8ff}
+    #zamow .kpz-sub{color:rgba(224,214,255,.6);font-size:14px;margin:0 0 20px}
+    #zamow .kpz-price{display:flex;align-items:baseline;gap:8px;margin:0 0 4px}
+    #zamow .kpz-amt{font-family:'Cinzel',serif;font-weight:800;font-size:44px;line-height:1;color:#efe8ff}
+    #zamow .kpz-per{color:rgba(224,214,255,.6);font-size:16px}
+    #zamow .kpz-note{color:rgba(224,214,255,.55);font-size:13px;margin:0 0 22px}
+    #zamow .kpz-cta{display:block;text-align:center;text-decoration:none;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.04em;font-size:17px;padding:16px;border-radius:14px;color:#fff;background:linear-gradient(135deg,#a020f0,#e0398b);box-shadow:0 10px 30px rgba(160,32,240,.35);transition:.18s;margin-bottom:12px}
+    #zamow .kpz-cta:hover{transform:translateY(-2px)}
+    #zamow .kpz-cta:focus-visible{outline:2px solid #e0aaff;outline-offset:3px}
+    #zamow .kpz-wa{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:500;font-size:15px;color:#efe8ff;padding:13px;border-radius:14px;border:1px solid rgba(199,125,255,.20);transition:.18s}
+    #zamow .kpz-wa:hover{border-color:#25d366;color:#eafff2}
+    #zamow .kpz-wa svg{width:18px;height:18px;fill:#25d366}
+    #zamow .kpz-ph{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:#c77dff;margin:0 0 14px}
+    #zamow .kpz-proof{display:flex;flex-direction:column;gap:12px}
+    #zamow .kpz-pc{display:flex;gap:13px;align-items:flex-start;background:rgba(27,10,46,.5);border:1px solid rgba(199,125,255,.18);border-radius:14px;padding:15px 16px}
+    #zamow .kpz-pi{flex:0 0 38px;height:38px;border-radius:11px;display:grid;place-items:center;background:rgba(160,32,240,.14);border:1px solid rgba(199,125,255,.18)}
+    #zamow .kpz-pi svg{width:19px;height:19px;stroke:#e0aaff;fill:none;stroke-width:1.7}
+    #zamow .kpz-pc h4{font-weight:600;font-size:15px;margin:0 0 3px;color:#efe8ff}
+    #zamow .kpz-pc p{margin:0;color:rgba(224,214,255,.6);font-size:13px;line-height:1.45}
+    #zamow .kpz-foot{color:rgba(224,214,255,.5);font-size:12px;margin-top:26px;max-width:72ch;text-align:left}
+    @media (prefers-reduced-motion: reduce){#zamow .kpz-cta{transition:none}}
+  </style>
   <div class="wrap">
-    <div class="order reveal">
-      <h2>Zamów Kod Purpury</h2>
-      <p>Suplement oraz zaproszenia na warsztaty wyjazdowe zamówisz bezpośrednio u Zielonej Mamy — wyliczymy dawkowanie i skompletujemy pakiet.</p>
-      <div class="cta-row" style="justify-content:center">
-        <a href="https://wa.me/48536828393?text=Cze%C5%9B%C4%87%21%20Chc%C4%99%20zam%C3%B3wi%C4%87%20Kod%20Purpury%20%F0%9F%92%9C%20Prosz%C4%99%20o%20informacje%20o%20pakiecie%2C%20dawkowaniu%20i%20dost%C4%99pno%C5%9Bci." target="_blank" rel="noopener" class="btn btn-wa">Zamów u Zielonej Mamy (WhatsApp)</a>
+    <div class="kpz-inner">
+      <p class="kpz-eyebrow">Zamów · Kod Purpury</p>
+      <h2 class="kpz-h">Zamów Kod Purpury</h2>
+      <p class="kpz-lede">Cena jawna, subskrypcja miesięczna z dostępem od ręki. Wolisz jednorazowo albo masz pytania — napisz, dobierzemy pakiet i dawkowanie.</p>
+      <div class="kpz-grid">
+        <div class="kpz-card">
+          <span class="kpz-badge">Pakiet · 30 dni</span>
+          <div class="kpz-name">Suplement Premium — subskrypcja</div>
+          <p class="kpz-sub">Liofilizowany koncentrat komórkowy · powłoka dojelitowa · pełnia składników</p>
+          <div class="kpz-price"><span class="kpz-amt">199</span><span class="kpz-per">zł / mies.</span></div>
+          <p class="kpz-note">Subskrypcja miesięczna · anuluj w każdej chwili</p>
+          <a class="kpz-cta" href="https://buy.stripe.com/7sY00b10o5cN4IX2tZdQQ0x" target="_blank" rel="noopener">Zamów subskrypcję — 199 zł/mies.</a>
+          <a class="kpz-wa" href="https://wa.me/48536828393?text=Chc%C4%99%20zam%C3%B3wi%C4%87%20Kod%20Purpury%20jednorazowo%20lub%20pytanie" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.3.6-.6.8-.8 1.1-.1.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 1.9.9.3.2.5.3.5.4.1.2.1.6-.1 1.1z"/></svg>
+            Wolę jednorazowo lub mam pytania
+          </a>
+        </div>
+        <div>
+          <p class="kpz-ph">Dlaczego możesz zaufać</p>
+          <div class="kpz-proof">
+            <div class="kpz-pc"><div class="kpz-pi"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><rect x="4" y="4" width="16" height="16" rx="3"/></svg></div><div><h4>Zweryfikowana autentyczność</h4><p>Każda partia sprawdzana przed wysyłką.</p></div></div>
+            <div class="kpz-pc"><div class="kpz-pi"><svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z"/></svg></div><div><h4>Nowa Zelandia</h4><p>Czyste źródło surowca · liofilizacja · powłoka dojelitowa.</p></div></div>
+            <div class="kpz-pc"><div class="kpz-pi"><svg viewBox="0 0 24 24"><path d="M6 12l4 4 8-8"/></svg></div><div><h4>Anuluj w każdej chwili</h4><p>Subskrypcja bez zobowiązań — płatność przez Stripe.</p></div></div>
+          </div>
+        </div>
       </div>
+      <p class="kpz-foot">Suplement diety — nie zastępuje zróżnicowanej diety ani leczenia. Dawkowanie ustalamy indywidualnie. Subskrypcję możesz anulować w dowolnym momencie.</p>
     </div>
   </div>
 </section>
