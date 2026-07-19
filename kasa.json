@@ -30,9 +30,9 @@
     {
       "agent": "Sebastian",
       "actions": 59,
-      "results": 39,
+      "results": 40,
       "revenue": 0,
-      "odrzucone": 58
+      "odrzucone": 59
     },
     {
       "agent": "Jarosław",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T03:30:00.466737+00:00",
+  "updated_at": "2026-07-19T03:40:00.306867+00:00",
   "money_lines": [
     {
       "leady": 30282,
@@ -116,7 +116,7 @@
     {
       "hot": 18,
       "nazwa": "2 · LUX BROKERAGE",
-      "aktywa": 108,
+      "aktywa": 117,
       "status": "SKALPER OLX dziala; portale lux 403 - brak proxy",
       "produkt": "posrednictwo aktywa premium",
       "przychod": 0
