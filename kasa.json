@@ -29,7 +29,7 @@
     },
     {
       "agent": "Sebastian",
-      "actions": 65,
+      "actions": 66,
       "results": 46,
       "revenue": 0,
       "odrzucone": 65
@@ -67,7 +67,7 @@
       "actions": 32,
       "results": 5,
       "revenue": 0,
-      "odrzucone": 24
+      "odrzucone": 25
     },
     {
       "agent": "Dmytro",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T13:30:00.497013+00:00",
+  "updated_at": "2026-07-19T13:40:00.347001+00:00",
   "money_lines": [
     {
       "leady": 30282,
