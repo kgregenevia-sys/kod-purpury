@@ -15,7 +15,7 @@
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 115,
+      "actions": 116,
       "results": 0,
       "revenue": 0,
       "odrzucone": 13
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T00:00:00.42731+00:00",
+  "updated_at": "2026-07-19T00:10:00.298787+00:00",
   "money_lines": [
     {
       "leady": 30282,
