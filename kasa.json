@@ -46,7 +46,7 @@
       "actions": 41,
       "results": 4,
       "revenue": 0,
-      "odrzucone": 23
+      "odrzucone": 24
     },
     {
       "agent": "Rusłan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-19T11:50:00.236974+00:00",
+  "updated_at": "2026-07-19T12:00:00.689486+00:00",
   "money_lines": [
     {
       "leady": 30282,
