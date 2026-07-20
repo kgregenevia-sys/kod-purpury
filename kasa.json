@@ -46,7 +46,7 @@
       "actions": 59,
       "results": 8,
       "revenue": 0,
-      "odrzucone": 41
+      "odrzucone": 42
     },
     {
       "agent": "Jarosław",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-20T15:50:00.336942+00:00",
+  "updated_at": "2026-07-20T16:00:00.499087+00:00",
   "money_lines": [
     {
       "leady": 30282,
