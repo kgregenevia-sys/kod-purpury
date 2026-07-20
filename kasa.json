@@ -36,17 +36,17 @@
     },
     {
       "agent": "Wołodymyr",
-      "actions": 62,
+      "actions": 63,
       "results": 11,
       "revenue": 0,
       "odrzucone": 39
     },
     {
       "agent": "Sasza",
-      "actions": 56,
+      "actions": 57,
       "results": 7,
       "revenue": 0,
-      "odrzucone": 35
+      "odrzucone": 36
     },
     {
       "agent": "Jarosław",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-20T12:20:00.4579+00:00",
+  "updated_at": "2026-07-20T12:30:00.46798+00:00",
   "money_lines": [
     {
       "leady": 30282,
