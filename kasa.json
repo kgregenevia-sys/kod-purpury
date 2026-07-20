@@ -37,7 +37,7 @@
     {
       "agent": "Wołodymyr",
       "actions": 64,
-      "results": 11,
+      "results": 12,
       "revenue": 0,
       "odrzucone": 41
     },
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-20T13:50:00.21578+00:00",
+  "updated_at": "2026-07-20T14:00:00.558953+00:00",
   "money_lines": [
     {
       "leady": 30282,
