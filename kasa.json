@@ -25,11 +25,11 @@
       "actions": 163,
       "results": 1,
       "revenue": 0,
-      "odrzucone": 91
+      "odrzucone": 92
     },
     {
       "agent": "Sebastian",
-      "actions": 78,
+      "actions": 79,
       "results": 59,
       "revenue": 0,
       "odrzucone": 78
@@ -39,7 +39,7 @@
       "actions": 61,
       "results": 9,
       "revenue": 0,
-      "odrzucone": 36
+      "odrzucone": 37
     },
     {
       "agent": "Sasza",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-20T09:10:00.357746+00:00",
+  "updated_at": "2026-07-20T09:20:00.372798+00:00",
   "money_lines": [
     {
       "leady": 30282,
