@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundacja Zdrowie z Pasją — edukacja, warsztaty, natura</title>
+<meta name="description" content="Fundacja Zdrowie z Pasją — budujemy świadome podejście do zdrowia.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--green-deep:#1e4a28;--green-dark:#2a5d35;--green:#3f7d4c;--green-mid:#7eb085;
+--green-leaf:#9cc4a0;--green-light:#e6efe2;--green-soft:#f1f6ec;
+--blue-deep:#3d7e96;--blue:#5292ad;--blue-mid:#7fb3c8;--blue-soft:#a8cfdb;--blue-light:#e3eef2;
+--cream:#f5efe2;--cream-light:#faf5e8;--cream-deep:#ede5d2;
+--text:#2a3a2e;--text-muted:#6a786d;--border:rgba(30,74,40,.13);--shadow:rgba(30,74,40,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;color:var(--text);background:var(--cream);padding-top:78px;line-height:1.6}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:16px 48px;background:rgba(245,239,226,.92);backdrop-filter:blur(14px);z-index:100;border-bottom:1px solid var(--border);transition:all .3s}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{height:46px;border-radius:8px}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text strong{font-family:Fraunces,serif;font-size:17px;font-weight:600;color:var(--green-deep)}
+.logo-text span{font-size:11px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{color:var(--text);text-decoration:none;font-size:14px;font-weight:400;transition:color .2s}
+.nav-links a:hover{color:var(--green-deep)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--green-deep);border-radius:1px}
+.mobile-menu{display:none;position:fixed;top:78px;left:0;width:100%;background:var(--cream);flex-direction:column;padding:24px 32px;gap:18px;z-index:99;border-bottom:1px solid var(--border)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--text);text-decoration:none;font-size:16px;padding:10px 0;border-bottom:1px solid var(--border)}
+header{min-height:calc(100vh - 78px);display:flex;align-items:center;padding:60px 10% 80px;background:radial-gradient(circle at 80% 20%,rgba(168,207,219,.35),transparent 50%),radial-gradient(circle at 10% 80%,rgba(156,196,160,.3),transparent 55%),var(--cream);position:relative;overflow:hidden}
+.hero-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:var(--green-light);color:var(--green-deep);border-radius:999px;font-size:12px;font-weight:500;letter-spacing:.5px;margin-bottom:24px}
+h1{font-family:Fraunces,serif;font-size:clamp(38px,5.5vw,64px);font-weight:500;color:var(--green-deep);line-height:1.1;letter-spacing:-1px;margin-bottom:22px}
+h1 em{font-style:italic;color:var(--blue);font-weight:500}
+.hero-lead{font-size:18px;color:var(--text-muted);line-height:1.7;margin-bottom:34px;max-width:520px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary,.btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;transition:all .2s;cursor:pointer;border:none;font-family:Inter,sans-serif}
+.btn-primary{background:var(--green-dark);color:#fff}
+.btn-primary:hover{background:var(--green-deep)}
+.btn-secondary{background:transparent;color:var(--green-deep);border:1.5px solid var(--green-leaf)}
+.btn-secondary:hover{background:var(--green-light)}
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.hero-visual img{width:100%;max-width:460px;height:auto;filter:drop-shadow(0 20px 50px rgba(30,74,40,.15))}
+.stats-bar{display:flex;justify-content:center;padding:50px 10%;background:linear-gradient(135deg,var(--green-deep),var(--green-dark));color:#fff;text-align:center}
+.stat-num{font-family:Fraunces,serif;font-size:clamp(38px,5vw,56px);font-weight:500;color:#fff;line-height:1;margin-bottom:8px}
+.stat-label{font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--green-leaf);font-weight:500}
+section{padding:100px 10%;position:relative}
+section.alt{background:var(--green-soft)}
+.section-tag{display:inline-block;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:16px}
+h2{font-family:Fraunces,serif;font-size:clamp(30px,4vw,44px);font-weight:500;color:var(--green-deep);line-height:1.15;margin-bottom:20px}
+.section-lead{font-size:17px;color:var(--text-muted);max-width:680px;line-height:1.75;margin-bottom:30px}
+.editorial-note{max-width:760px;padding:20px 24px;margin-bottom:50px;background:var(--cream-light);border-left:3px solid var(--blue);border-radius:8px;font-size:14.5px;color:var(--text);line-height:1.7}
+.editorial-note strong{color:var(--green-deep);font-weight:600}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-text p{font-size:16px;color:var(--text);line-height:1.85;margin-bottom:18px}
+.about-text p strong{color:var(--green-deep);font-weight:500}
+.about-values{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.value-card{padding:26px 22px;background:var(--cream-light);border:1px solid var(--border);border-radius:16px;transition:all .25s}
+.value-card:hover{border-color:var(--green-leaf);transform:translateY(-3px);box-shadow:0 10px 30px var(--shadow)}
+.value-icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--green-light);border-radius:12px;margin-bottom:16px}
+.value-card h4{font-family:Fraunces,serif;font-size:18px;font-weight:500;color:var(--green-deep);margin-bottom:8px}
+.value-card p{font-size:14px;color:var(--text-muted);line-height:1.6}
+.workshops-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.workshop-card{background:var(--cream-light);border:1px solid var(--border);border-radius:20px;padding:32px 28px;transition:all .25s;display:flex;flex-direction:column}
+.workshop-card:hover{border-color:var(--green-leaf);transform:translateY(-4px);box-shadow:0 15px 40px var(--shadow)}
+.workshop-audience{display:inline-block;padding:4px 12px;background:var(--green-light);color:var(--green-deep);border-radius:999px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:500;margin-bottom:18px;align-self:flex-start}
+.workshop-card h3{font-family:Fraunces,serif;font-size:22px;font-weight:500;color:var(--green-deep);margin-bottom:6px}
+.status-badge{display:inline-block;padding:3px 10px;background:var(--blue-light);color:var(--blue-deep);border-radius:999px;font-size:11px;font-weight:500;margin-bottom:14px}
+.status-badge.done{background:#d4edd9;color:var(--green-deep)}
+.status-badge.ongoing{background:var(--cream-deep);color:var(--text)}
+.workshop-card p{font-size:14.5px;color:var(--text-muted);line-height:1.7;margin-bottom:24px;flex:1}
+.workshop-meta{display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);font-size:13px;color:var(--text-muted)}
+.workshop-meta a{color:var(--green-dark);text-decoration:none;font-weight:500}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.project-card{padding:36px 30px;background:var(--cream-light);border:1px solid var(--border);border-radius:20px;transition:all .25s}
+.project-card:hover{border-color:var(--green-leaf);transform:translateY(-4px);box-shadow:0 15px 40px var(--shadow)}
+.project-number{font-family:Fraunces,serif;font-size:40px;color:var(--green-leaf);font-weight:500;line-height:1;margin-bottom:18px}
+.project-card h3{font-family:Fraunces,serif;font-size:22px;font-weight:500;color:var(--green-deep);margin-bottom:6px}
+.project-card p{font-size:14.5px;color:var(--text-muted);line-height:1.7;margin-top:10px}
+.actions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.action-card{padding:36px 32px;background:var(--cream-light);border:1px solid var(--border);border-radius:20px;transition:all .25s;display:flex;flex-direction:column}
+.action-card.featured{background:linear-gradient(135deg,#eaf6ec,var(--cream-light));border-color:var(--green-leaf)}
+.action-card:hover{transform:translateY(-4px);box-shadow:0 15px 40px var(--shadow);border-color:var(--green-leaf)}
+.action-card h3{font-family:Fraunces,serif;font-size:22px;font-weight:500;color:var(--green-deep);margin-bottom:6px}
+.action-card>p{font-size:14.5px;color:var(--text-muted);line-height:1.7;margin-bottom:18px}
+.action-success{margin-top:auto;padding:18px 20px;background:#d4edd9;border-radius:14px;font-size:14px;color:var(--green-deep);line-height:1.7}
+.action-success strong{color:var(--green-deep);font-weight:600}
+.support-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.support-info h3{font-family:Fraunces,serif;font-size:26px;font-weight:500;color:var(--green-deep);margin-bottom:18px}
+.support-info p{font-size:16px;color:var(--text-muted);line-height:1.8;margin-bottom:16px}
+.support-info ul{list-style:none;margin-top:22px}
+.support-info ul li{padding:10px 0 10px 30px;position:relative;color:var(--text);font-size:15px}
+.support-info ul li::before{content:"";position:absolute;left:0;top:16px;width:14px;height:14px;border:2px solid var(--green-leaf);border-radius:50%;background:var(--green-light)}
+.account-box{background:var(--cream-light);border:1px solid var(--border);border-radius:20px;padding:40px 36px;box-shadow:0 10px 40px var(--shadow)}
+.account-box h4{font-family:Fraunces,serif;font-size:20px;font-weight:500;color:var(--green-deep);margin-bottom:24px}
+.account-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border)}
+.account-row:last-of-type{border-bottom:none}
+.account-label{font-size:12px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase}
+.account-value{font-family:Fraunces,serif;font-size:15px;color:var(--text);font-weight:500}
+.account-number{display:block;padding:16px 18px;background:var(--green-light);border-radius:12px;font-family:'Courier New',monospace;font-size:15px;color:var(--green-deep);margin-top:16px;text-align:center;font-weight:500;cursor:pointer}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.team-card{text-align:center}
+.team-avatar{width:160px;height:160px;margin:0 auto 20px;border-radius:50%;background:linear-gradient(135deg,var(--green-light),var(--blue-light));display:flex;align-items:center;justify-content:center;font-family:Fraunces,serif;font-size:46px;color:var(--green-deep);font-weight:500;border:4px solid var(--cream);box-shadow:0 4px 20px var(--shadow);overflow:hidden}
+.team-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.team-card h4{font-family:Fraunces,serif;font-size:19px;font-weight:500;color:var(--green-deep);margin-bottom:4px}
+.team-role{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;font-weight:500}
+.team-card p{font-size:14px;color:var(--text-muted);line-height:1.6;max-width:240px;margin:0 auto}
+.gallery{columns:4 220px;column-gap:14px}
+.gallery-item{display:block;margin-bottom:14px;border-radius:14px;overflow:hidden;break-inside:avoid;cursor:pointer;transition:transform .25s}
+.gallery-item:hover{transform:scale(1.02)}
+.gallery-item img{width:100%;display:block}
+.gallery-empty{text-align:center;padding:60px 20px;background:var(--cream-light);border:1px dashed var(--border);border-radius:20px;color:var(--text-muted)}
+.contact-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:start}
+.contact-info h3{font-family:Fraunces,serif;font-size:26px;font-weight:500;color:var(--green-deep);margin-bottom:22px}
+.contact-info p{color:var(--text-muted);line-height:1.8;margin-bottom:28px;font-size:15.5px}
+.contact-line{display:flex;align-items:center;gap:14px;padding:14px 0;font-size:15px;color:var(--text)}
+.contact-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--green-light);border-radius:12px;flex-shrink:0}
+form{display:flex;flex-direction:column;gap:14px}
+.form-group{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,textarea,select{width:100%;padding:14px 18px;background:var(--cream-light);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:Inter,sans-serif;font-size:15px;outline:none;transition:all .2s}
+input:focus,textarea:focus,select:focus{border-color:var(--green-leaf);background:#fff;box-shadow:0 0 0 4px rgba(126,176,133,.18)}
+textarea{resize:vertical;min-height:130px}
+.btn-send{padding:16px 32px;background:var(--green-dark);color:#fff;border:none;border-radius:999px;font-family:Inter,sans-serif;font-size:15px;font-weight:500;cursor:pointer;align-self:flex-start}
+.btn-send:hover{background:var(--green-deep)}
+.form-success{text-align:center;padding:40px;background:var(--green-light);border-radius:20px;color:var(--green-deep)}
+.form-error{padding:14px 18px;background:#fdecec;border:1px solid #e5b3b3;border-radius:12px;color:#8a2a2a;font-size:14px;margin-bottom:10px}
+
+/* PARTNERZY - OKRAGLE KOLA */
+.partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px;align-items:center;justify-items:center;max-width:1200px;margin:0 auto}
+.partner-logo{display:flex;align-items:center;justify-content:center;padding:30px;background:var(--cream-light);border:2px solid var(--border);border-radius:50%;width:200px;height:200px;transition:all .3s;cursor:pointer;flex-shrink:0;aspect-ratio:1/1}
+.partner-logo img{max-width:75%;max-height:75%;object-fit:contain;transition:all .3s}
+.partner-logo:hover{border-color:var(--green-leaf);transform:translateY(-4px) scale(1.04);box-shadow:0 14px 35px var(--shadow);background:#fff}
+.partner-logo:hover img{transform:scale(1.06)}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(30,74,40,.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;padding:40px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90%;max-height:90vh;object-fit:contain;border-radius:12px;background:#fff;padding:30px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.lightbox-close{position:absolute;top:20px;right:30px;color:#fff;font-size:40px;font-weight:300;cursor:pointer;line-height:1}
+
+footer{background:linear-gradient(135deg,var(--green-deep),var(--green-dark));color:#d4e3d0;padding:60px 10% 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:50px;margin-bottom:50px}
+.footer-brand p{font-size:14px;line-height:1.7;margin-top:20px;max-width:280px}
+.footer-col h5{font-family:Fraunces,serif;font-size:16px;color:#fff;margin-bottom:18px;font-weight:500}
+.footer-col a{display:block;color:#d4e3d0;text-decoration:none;font-size:14px;padding:5px 0}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;text-align:center;font-size:13px;color:var(--green-leaf)}
+@media(max-width:960px){
+nav{padding:14px 20px}
+.nav-links{display:none}
+.hamburger{display:flex}
+header{padding:40px 6% 60px}
+.hero-wrap{grid-template-columns:1fr;gap:40px}
+.hero-visual{order:-1}
+.hero-visual img{max-width:320px}
+section{padding:70px 6%}
+.about-grid,.support-wrap,.contact-wrap{grid-template-columns:1fr;gap:40px}
+.about-values{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+.footer-brand{grid-column:1/-1}
+footer{padding:50px 6% 30px}
+.stats-bar{padding:40px 6%}
+.partner-logo{width:160px;height:160px;padding:22px}
+}
+@media(max-width:500px){
+.form-group{grid-template-columns:1fr}
+.gallery{columns:2 140px}
+.footer-grid{grid-template-columns:1fr}
+.hero-ctas{flex-direction:column;align-items:stretch}
+.partners-grid{grid-template-columns:1fr 1fr;gap:18px}
+.partner-logo{width:130px;height:130px;padding:16px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#" class="logo">
+<img src="images/logo.png" alt="Fundacja">
+<div class="logo-text"><strong>Zdrowie z Pasją</strong><span>Fundacja</span></div>
+</a>
+<div class="nav-links">
+<a href="#o-nas">O nas</a>
+<a href="#warsztaty">Warsztaty</a>
+<a href="#projekty">Projekty</a>
+<a href="#akcje">Akcje</a>
+<a href="#wesprzyj">Wesprzyj</a>
+<a href="#zespol">Zespół</a>
+<a href="#galeria">Galeria</a>
+<a href="#partnerzy">Partnerzy</a>
+<a href="#kontakt">Kontakt</a>
+</div>
+<div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="#o-nas">O nas</a>
+<a href="#warsztaty">Warsztaty</a>
+<a href="#projekty">Projekty</a>
+<a href="#akcje">Akcje fundacji</a>
+<a href="#wesprzyj">Wesprzyj</a>
+<a href="#zespol">Zespół</a>
+<a href="#galeria">Galeria</a>
+<a href="#partnerzy">Partnerzy</a>
+<a href="#kontakt">Kontakt</a>
+</div>
+
+<header>
+<div class="hero-wrap">
+<div>
+<span class="hero-tag">Edukacja · Natura · Pasja</span>
+<h1>Zdrowie zaczyna się<br>od <em>świadomego wyboru</em>.</h1>
+<p class="hero-lead">Budujemy świadome podejście do zdrowia — wśród dzieci, młodzieży, dorosłych i seniorów. Edukujemy, inspirujemy i działamy naturalnie, bezpiecznie i z pasją.</p>
+<div class="hero-ctas">
+<a href="#wesprzyj" class="btn-primary">Wesprzyj fundację</a>
+</div>
+</div>
+<div class="hero-visual"><img src="images/logo.png" alt="Logo"></div>
+</div>
+</header>
+
+<div class="stats-bar">
+<div>
+<div class="stat-num">500+</div>
+<div class="stat-label">Uczestników warsztatów</div>
+</div>
+</div>
+
+<section id="o-nas">
+<span class="section-tag">Kim jesteśmy</span>
+<h2>Fundament dobrego życia.</h2>
+<p class="section-lead">W Fundacji „Zdrowie z Pasją" wierzymy, że zdrowie to fundament dobrego życia — bez względu na wiek. Wierzymy, że każdy może żyć zdrowo — wystarczy dać mu narzędzia, wiedzę i wsparcie.</p>
+<div class="about-grid">
+<div class="about-text">
+<p>Promujemy <strong>zieloną żywność</strong> jako źródło energii i odporności oraz <strong>dostęp do czystej wody</strong> dzięki nowoczesnym filtrom — bo zdrowie zaczyna się od tego, co jemy i pijemy.</p>
+<p>W naszych działaniach pokazujemy, jak <strong>bliska relacja z naturą</strong> może stać się codzienną praktyką troski o siebie i innych.</p>
+</div>
+<div class="about-values">
+<div class="value-card"><div class="value-icon">🌿</div><h4>Natura</h4><p>Naturalne, bezpieczne rozwiązania zakorzenione w mądrości przyrody.</p></div>
+<div class="value-card"><div class="value-icon">💧</div><h4>Czysta woda</h4><p>Edukujemy o jakości wody i jej wpływie na codzienne zdrowie.</p></div>
+<div class="value-card"><div class="value-icon">📚</div><h4>Edukacja</h4><p>Warsztaty, materiały i narzędzia dla każdego pokolenia.</p></div>
+<div class="value-card"><div class="value-icon">❤️</div><h4>Pasja</h4><p>Działamy z zaangażowaniem, bo wierzymy w to, co robimy.</p></div>
+</div>
+</div>
+</section>
+
+<section id="warsztaty" class="alt">
+<span class="section-tag">Co organizujemy</span>
+<h2>Warsztaty i wydarzenia</h2>
+<p class="section-lead">Spotkania, które inspirują i dają narzędzia. Dostosowane do wieku i poziomu — od zabawy z dziećmi po praktyczne warsztaty dla seniorów.</p>
+
+<div class="editorial-note">
+<strong>Ważna informacja redakcyjna:</strong> Fundacja dopiero planuje organizację poniższych wydarzeń. Przez ostatni rok członkini zarządu <strong>Angelika Kazimierczyk</strong> aktywnie promowała ideę zdrowego stylu życia jako zaproszony gość na wydarzeniach sportowych połączonych z tematyką zdrowego odżywiania — budując przy tym rozpoznawalność fundacji i jej misji.
+</div>
+
+<div class="workshops-grid">
+<div class="workshop-card">
+<span class="workshop-audience">Dzieci 6–12 lat</span>
+<h3>Mali odkrywcy natury</h3>
+<span class="status-badge">w przygotowaniu</span>
+<p>Zabawa i nauka w jednym. Dzieci poznają rośliny, tworzą własne zielone smoothie i uczą się, dlaczego czysta woda to skarb.</p>
+<div class="workshop-meta"><span>2h · w sali</span><a href="#kontakt">Zapisz się</a></div>
+</div>
+
+<div class="workshop-card">
+<span class="workshop-audience">Młodzież 13–18 lat</span>
+<h3>Świadome pokolenie</h3>
+<span class="status-badge">w przygotowaniu</span>
+<p>Jak nie dać się marketingowi żywności przetworzonej, jak czytać etykiety i jak zadbać o siebie w świecie pełnym bodźców.</p>
+<div class="workshop-meta"><span>3h · interaktywnie</span><a href="#kontakt">Zapisz się</a></div>
+</div>
+
+<div class="workshop-card">
+<span class="workshop-audience">Dorośli</span>
+<h3>Zielona kuchnia na co dzień</h3>
+<span class="status-badge">w przygotowaniu</span>
+<p>Praktyczne warsztaty: co kupować, jak gotować, jak dbać o rodzinę — bez obsesji i perfekcjonizmu. Z degustacją.</p>
+<div class="workshop-meta"><span>4h · w grupach</span><a href="#kontakt">Zapisz się</a></div>
+</div>
+
+<div class="workshop-card">
+<span class="workshop-audience">Seniorzy</span>
+<h3>Zdrowo po 60-tce</h3>
+<span class="status-badge">w przygotowaniu</span>
+<p>Ruch, nawodnienie, odżywianie — dostosowane do wieku i możliwości. W ciepłej atmosferze, z czasem na pytania.</p>
+<div class="workshop-meta"><span>2h · kameralnie</span><a href="#kontakt">Zapisz się</a></div>
+</div>
+
+<div class="workshop-card">
+<span class="workshop-audience">Rodziny</span>
+<h3>Weekend z naturą</h3>
+<span class="status-badge">w przygotowaniu</span>
+<p>Wyjście w teren, gotowanie przy ognisku, wspólne warsztaty. Dla całych rodzin — od dziadków po wnuki.</p>
+<div class="workshop-meta"><span>1 dzień · na świeżym powietrzu</span><a href="#kontakt">Zapisz się</a></div>
+</div>
+
+<div class="workshop-card">
+<span class="workshop-audience">Firmy i szkoły</span>
+<h3>Warsztat na zamówienie</h3>
+<p style="margin-top:14px">Planujemy szyty na miarę program dla Twojej firmy, szkoły czy przedszkola. Napisz — ustalimy szczegóły i termin realizacji.</p>
+<div class="workshop-meta"><span>Termin: do ustalenia</span><a href="#kontakt">Porozmawiajmy</a></div>
+</div>
+</div>
+</section>
+
+<section id="projekty">
+<span class="section-tag">Nasze działania</span>
+<h2>Projekty, które planujemy realizować</h2>
+<p class="section-lead">Łączymy edukację z realnym wpływem na życie ludzi. Każdy projekt to konkretne narzędzia, wiedza i wsparcie — budujemy je krok po kroku.</p>
+
+<div class="projects-grid">
+<div class="project-card">
+<div class="project-number">01</div>
+<h3>Zielona żywność w szkole</h3>
+<span class="status-badge">w przygotowaniu</span>
+<p>Program edukacyjny o roślinnych superproduktach, który planujemy wprowadzać do szkół i przedszkoli. Warsztaty, materiały edukacyjne, wspólne gotowanie.</p>
+</div>
+<div class="project-card">
+<div class="project-number">02</div>
+<h3>Czysta woda w domu</h3>
+<span class="status-badge">w przygotowaniu</span>
+<p>Planujemy promować świadomość na temat jakości wody pitnej. Edukacja o filtracji, składzie wody i jej realnym wpływie na zdrowie każdego dnia.</p>
+</div>
+<div class="project-card">
+<div class="project-number">03</div>
+<h3>Seniorzy w ruchu</h3>
+<span class="status-badge">w przygotowaniu</span>
+<p>Cykl spotkań dla osób 60+. Zajęcia fizyczne, edukacja o odżywianiu, budowanie społeczności i towarzyszenie w codzienności.</p>
+</div>
+<div class="project-card">
+<div class="project-number">04</div>
+<h3>Rodzinne weekendy z naturą</h3>
+<span class="status-badge">w przygotowaniu</span>
+<p>Wyjazdy edukacyjne dla rodzin wielopokoleniowych. Kontakt z przyrodą, wspólne gotowanie, budowanie więzi między pokoleniami.</p>
+</div>
+</div>
+</section>
+
+<section id="akcje" class="alt">
+<span class="section-tag">Co już zrobiliśmy</span>
+<h2>Akcje fundacji</h2>
+<p class="section-lead">Realne działania, realna pomoc. Organizujemy zbiórki, akcje wsparcia oraz inicjatywy dla osób, które potrzebują naszej obecności w trudnym momencie życia.</p>
+
+<div class="actions-grid">
+<div class="action-card featured">
+<h3>Zbiórki suplementacyjne</h3>
+<span class="status-badge done">Zakończona sukcesem</span>
+<p>Organizujemy zbiórki na zaawansowane suplementy regeneracyjne dla osób w trudnej sytuacji zdrowotnej. Wspieramy rodziny w dostępie do produktów, na które samodzielnie nie mogą sobie pozwolić.</p>
+<div class="action-success">
+<strong>Nasza pierwsza akcja zakończyła się sukcesem.</strong> Dzięki wsparciu uczestników konferencji o zdrowiu komórkowym zebraliśmy środki dla <strong>Pani Agaty i jej syna Borysa</strong>. Każdy uczestnik wydarzenia otrzymał powitalny pakiet odżywczy, który mógł zatrzymać lub przekazać bezpośrednio rodzinie. Dziękujemy wszystkim, którzy byli z nami <strong>21 września w Hotelu Radisson w Gdańsku</strong>.
+</div>
+</div>
+
+<div class="action-card">
+<h3>Wsparcie regeneracyjne</h3>
+<span class="status-badge ongoing">Stała inicjatywa</span>
+<p>Dla osób po operacjach, w trakcie rekonwalescencji oraz przewlekle chorych — pomagamy w doborze i finansowaniu naturalnych metod wsparcia procesu zdrowienia.</p>
+</div>
+
+<div class="action-card">
+<h3>Społeczność wsparcia</h3>
+<span class="status-badge ongoing">Ciągła inicjatywa</span>
+<p>Łączymy rodziny w podobnej sytuacji. Dzielimy się wiedzą, doświadczeniem i kontaktami, aby nikt nie został sam ze swoją historią.</p>
+</div>
+</div>
+</section>
+
+<section id="wesprzyj">
+<span class="section-tag">Jak pomóc</span>
+<h2>Wesprzyj fundację</h2>
+<p class="section-lead">Każda wpłata — mała czy duża — to realna rodzina, którą możemy wesprzeć. To wiedza, która trafi do dzieci, seniorów i rodziców, którzy jej potrzebują. To pierwsze warsztaty, które dzięki Tobie w końcu powstają.</p>
+
+<div class="support-wrap">
+<div class="support-info">
+<h3>Twoje wsparcie buduje fundację od podstaw.</h3>
+<p>Jesteśmy na początku drogi — i właśnie teraz Twoja pomoc ma największe znaczenie.</p>
+<ul>
+<li>100% darowizn idzie na cele statutowe</li>
+<li>Przejrzyste sprawozdania roczne</li>
+<li>Realny kontakt z uczestnikami projektów</li>
+<li>Możliwość odliczenia od podatku</li>
+</ul>
+<a href="#account-box" class="btn-primary" style="margin-top:24px">Wesprzyj nas</a>
+</div>
+
+<div class="account-box" id="account-box">
+<h4>Dane do przelewu</h4>
+<div class="account-row"><span class="account-label">Odbiorca</span><span class="account-value">Fundacja Zdrowie z Pasją</span></div>
+<div class="account-row"><span class="account-label">KRS</span><span class="account-value">000 000 0000</span></div>
+<div class="account-row"><span class="account-label">NIP</span><span class="account-value">000-000-00-00</span></div>
+<div class="account-row"><span class="account-label">Tytuł</span><span class="account-value">Darowizna</span></div>
+<span class="account-number" id="accountNumber" onclick="copyAccount()">PL 00 0000 0000 0000 0000 0000 0000</span>
+</div>
+</div>
+</section>
+
+<section id="zespol" class="alt">
+<span class="section-tag">Kto stoi za fundacją</span>
+<h2>Nasz zespół</h2>
+<p class="section-lead">Ludzie z pasją, którzy wierzą, że małe codzienne wybory zmieniają świat.</p>
+
+<div class="team-grid">
+<div class="team-card">
+<div class="team-avatar"><img src="images/michal.jpg" alt="Michał Gajda"></div>
+<h4>Michał Gajda</h4>
+<div class="team-role">Fundator</div>
+<p>Założyciel fundacji. Wizjoner i pomysłodawca misji budowania świadomego podejścia do zdrowia.</p>
+</div>
+<div class="team-card">
+<div class="team-avatar"><img src="images/agnieszka.jpg" alt="Agnieszka Błaś"></div>
+<h4>Agnieszka Błaś</h4>
+<div class="team-role">Prezes Zarządu</div>
+<p>Liderka fundacji. Odpowiada za strategiczny rozwój i realizację celów statutowych.</p>
+</div>
+<div class="team-card">
+<div class="team-avatar"><img src="images/angelika.jpg" alt="Angelika Kazimierczyk"></div>
+<h4>Angelika Kazimierczyk</h4>
+<div class="team-role">Członkini Zarządu · @zielonamama33</div>
+<p>Twarz fundacji i ambasadorka idei zdrowego stylu życia. Aktywnie promuje misję fundacji na wydarzeniach sportowych i konferencjach.</p>
+</div>
+</div>
+</section>
+
+<section id="galeria">
+<span class="section-tag">Gdzie nas zobaczysz</span>
+<h2>Galeria</h2>
+<p class="section-lead">Jesteśmy tam, gdzie dzieje się coś ważnego dla zdrowia i aktywnego życia.</p>
+
+<div class="editorial-note">
+Zdjęcia z wydarzeń sportowych, konferencji i spotkań, w których aktywnie uczestniczy nasza członkini zarządu — <strong>Angelika Kazimierczyk</strong>. To właśnie z tych miejsc czerpiemy inspirację do tego, co budujemy.
+</div>
+
+<div class="gallery">
+<div class="gallery-empty"><p>Galeria wkrótce — zbieramy zdjęcia z pierwszych warsztatów.</p></div>
+</div>
+</section>
+
+<section id="partnerzy" class="alt">
+<span class="section-tag">Współpracujemy</span>
+<h2>Nasi Partnerzy</h2>
+<p class="section-lead">Dziękujemy organizacjom, firmom i osobom, które wspierają naszą misję. Kliknij w logo, żeby je powiększyć.</p>
+
+<div class="partners-grid">
+<div class="gallery-empty" style="grid-column:1/-1"><p>Lista partnerów wkrótce.</p></div>
+</div>
+</section>
+
+<section id="kontakt">
+<span class="section-tag">Porozmawiajmy</span>
+<h2>Skontaktuj się z nami</h2>
+<p class="section-lead">Pytanie o współpracę, pomysł na wspólny projekt, chęć wsparcia fundacji — napisz do nas.</p>
+
+<div class="contact-wrap">
+<div class="contact-info">
+<h3>Dane kontaktowe</h3>
+<p>Odpowiadamy na wiadomości w ciągu 24h w dni robocze.</p>
+<div class="contact-line">
+<div class="contact-icon">📧</div>
+<a href="mailto:fundacjazdrowiezpasja@gmail.com" style="color:inherit;text-decoration:none">fundacjazdrowiezpasja@gmail.com</a>
+</div>
+<div class="contact-line">
+<div class="contact-icon">📞</div>
+<a href="tel:+48503777336" style="color:inherit;text-decoration:none">+48 503 777 336</a>
+</div>
+<div class="contact-line">
+<div class="contact-icon">📍</div>
+<span>Polska — działamy online</span>
+</div>
+</div>
+
+<div>
+<div id="formSuccess" class="form-success" style="display:none">
+<p style="font-family:Fraunces,serif;font-size:22px;margin-bottom:10px">Dziękujemy!</p>
+<p style="font-size:14px">Odezwiemy się jak najszybciej.</p>
+</div>
+<form id="kontaktForm" method="POST" action="/kontakt">
+<div id="formError" class="form-error" style="display:none">Uzupełnij wszystkie pola formularza.</div>
+<div class="form-group">
+<input name="name" placeholder="Imię i nazwisko" required>
+<input name="email" placeholder="Adres email" type="email" required>
+</div>
+<select name="topic" required>
+<option value="">Temat wiadomości…</option>
+<option>Współpraca</option>
+<option>Ambasador / wolontariat</option>
+<option>Darowizna / wsparcie</option>
+<option>Inne</option>
+</select>
+<textarea name="message" placeholder="Napisz, w czym możemy pomóc…" required></textarea>
+<button type="submit" class="btn-send">Wyślij wiadomość</button>
+</form>
+</div>
+</div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<span class="lightbox-close">&times;</span>
+<img id="lightboxImg" src="" alt="">
+</div>
+
+<footer>
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="logo-text" style="color:#fff"><strong style="color:#fff">Zdrowie z Pasją</strong><span style="color:var(--green-leaf)">Fundacja</span></div>
+<p>Budujemy świadome podejście do zdrowia — bez względu na wiek.</p>
+</div>
+<div class="footer-col">
+<h5>Strona</h5>
+<a href="#o-nas">O nas</a>
+<a href="#warsztaty">Warsztaty</a>
+<a href="#projekty">Projekty</a>
+<a href="#akcje">Akcje fundacji</a>
+<a href="#zespol">Zespół</a>
+</div>
+<div class="footer-col">
+<h5>Wesprzyj</h5>
+<a href="#wesprzyj">Darowizna</a>
+<a href="#kontakt">Współpraca</a>
+</div>
+<div class="footer-col">
+<h5>Kontakt</h5>
+<a href="mailto:fundacjazdrowiezpasja@gmail.com">fundacjazdrowiezpasja@gmail.com</a>
+<a href="tel:+48503777336">+48 503 777 336</a>
+</div>
+</div>
+<div class="footer-bottom">
+&copy; 2026 Fundacja Zdrowie z Pasją
+</div>
+</footer>
+
+<script>
+document.getElementById('hamburger').onclick = function() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+};
+
+document.querySelectorAll('#mobileMenu a').forEach(function(a) {
+    a.addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.remove('open');
+    });
+});
+
+function copyAccount() {
+    var acc = document.getElementById('accountNumber');
+    var text = acc.textContent.replace(/\s/g, '');
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() {
+            var orig = acc.textContent;
+            acc.textContent = 'Skopiowano!';
+            setTimeout(function() { acc.textContent = orig; }, 1500);
+        });
+    }
+}
+
+function openLightbox(src, alt) {
+    var lb = document.getElementById('lightbox');
+    var img = document.getElementById('lightboxImg');
+    img.src = src;
+    img.alt = alt;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
+
+<script>
+document.getElementById('kontaktForm')?.addEventListener('submit', async function(e){
+  e.preventDefault();
+  var f=this, err=document.getElementById('formError'), ok=document.getElementById('formSuccess');
+  err.style.display='none';
+  var data=Object.fromEntries(new FormData(f).entries());
+  if(!data.name||!data.email||!data.topic||!data.message){err.style.display='block';return;}
+  var btn=f.querySelector('button'); btn.disabled=true; btn.textContent='Wysyłanie…';
+  try{
+    var r=await fetch('/kontakt',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    if(!r.ok) throw new Error();
+    f.style.display='none'; ok.style.display='block';
+  }catch(_){
+    window.location.href='mailto:fundacjazdrowiezpasja@gmail.com?subject='+encodeURIComponent('['+data.topic+'] '+data.name)+'&body='+encodeURIComponent(data.message+'\n\nEmail: '+data.email);
+  }finally{btn.disabled=false;btn.textContent='Wyślij wiadomość';}
+});
+</script>
+</body>
+</html>
