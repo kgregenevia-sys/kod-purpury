@@ -91,9 +91,9 @@
       "odrzucone": 34
     },
     {
-      "agent": "Kierownik",
+      "agent": "matcher",
       "actions": 26,
-      "results": 2,
+      "results": 26,
       "revenue": 0,
       "odrzucone": 26
     }
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-27T20:00:00.58411+00:00",
+  "updated_at": "2026-07-27T20:10:00.320301+00:00",
   "money_lines": [
     {
       "leady": 30282,
