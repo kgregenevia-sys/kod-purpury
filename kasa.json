@@ -15,80 +15,80 @@
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 783,
+      "actions": 784,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 23
+      "odrzucone": 598
     },
     {
       "agent": "Mykolaj",
-      "actions": 639,
+      "actions": 640,
       "results": 3,
       "revenue": 0,
-      "odrzucone": 113
+      "odrzucone": 585
     },
     {
       "agent": "Sebastian",
-      "actions": 560,
+      "actions": 561,
       "results": 69,
       "revenue": 0,
       "odrzucone": 88
     },
     {
       "agent": "Sasza",
-      "actions": 368,
+      "actions": 369,
       "results": 9,
       "revenue": 0,
-      "odrzucone": 47
+      "odrzucone": 362
     },
     {
       "agent": "Jarosław",
       "actions": 101,
       "results": 2,
       "revenue": 0,
-      "odrzucone": 28
+      "odrzucone": 83
     },
     {
       "agent": "Wołodymyr",
       "actions": 77,
       "results": 14,
       "revenue": 0,
-      "odrzucone": 49
+      "odrzucone": 65
     },
     {
       "agent": "Rusłan",
       "actions": 47,
       "results": 3,
       "revenue": 0,
-      "odrzucone": 23
+      "odrzucone": 30
     },
     {
       "agent": "Bohdan",
       "actions": 43,
       "results": 1,
       "revenue": 0,
-      "odrzucone": 20
+      "odrzucone": 21
     },
     {
       "agent": "Stepan",
       "actions": 37,
       "results": 1,
       "revenue": 0,
-      "odrzucone": 8
+      "odrzucone": 29
     },
     {
       "agent": "Oksana",
       "actions": 36,
       "results": 0,
       "revenue": 0,
-      "odrzucone": 22
+      "odrzucone": 35
     },
     {
       "agent": "Dmytro",
       "actions": 35,
       "results": 1,
       "revenue": 0,
-      "odrzucone": 23
+      "odrzucone": 34
     },
     {
       "agent": "Kierownik",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-27T13:40:00.347949+00:00",
+  "updated_at": "2026-07-27T13:50:00.264183+00:00",
   "money_lines": [
     {
       "leady": 30282,
