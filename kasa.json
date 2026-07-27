@@ -92,10 +92,10 @@
     },
     {
       "agent": "matcher",
-      "actions": 26,
-      "results": 26,
+      "actions": 30,
+      "results": 30,
       "revenue": 0,
-      "odrzucone": 26
+      "odrzucone": 30
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-27T21:00:00.656954+00:00",
+  "updated_at": "2026-07-27T21:10:00.34818+00:00",
   "money_lines": [
     {
       "leady": 30282,
