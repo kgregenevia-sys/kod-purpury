@@ -57,17 +57,17 @@
     },
     {
       "agent": "zwiadowca",
-      "actions": 50,
-      "results": 49,
+      "actions": 54,
+      "results": 53,
       "revenue": 0,
-      "odrzucone": 50
+      "odrzucone": 54
     },
     {
       "agent": "matcher",
-      "actions": 50,
-      "results": 50,
+      "actions": 54,
+      "results": 54,
       "revenue": 0,
-      "odrzucone": 50
+      "odrzucone": 54
     },
     {
       "agent": "Rusłan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-28T03:00:00.545671+00:00",
+  "updated_at": "2026-07-28T03:10:00.369249+00:00",
   "money_lines": [
     {
       "leady": 30282,
