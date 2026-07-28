@@ -29,7 +29,7 @@
     },
     {
       "agent": "Sebastian",
-      "actions": 594,
+      "actions": 595,
       "results": 69,
       "revenue": 0,
       "odrzucone": 88
@@ -63,25 +63,25 @@
       "odrzucone": 30
     },
     {
+      "agent": "zwiadowca",
+      "actions": 46,
+      "results": 45,
+      "revenue": 0,
+      "odrzucone": 46
+    },
+    {
+      "agent": "matcher",
+      "actions": 46,
+      "results": 46,
+      "revenue": 0,
+      "odrzucone": 46
+    },
+    {
       "agent": "Bohdan",
       "actions": 43,
       "results": 1,
       "revenue": 0,
       "odrzucone": 21
-    },
-    {
-      "agent": "zwiadowca",
-      "actions": 42,
-      "results": 41,
-      "revenue": 0,
-      "odrzucone": 42
-    },
-    {
-      "agent": "matcher",
-      "actions": 42,
-      "results": 42,
-      "revenue": 0,
-      "odrzucone": 42
     },
     {
       "agent": "Stepan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-28T00:50:00.35166+00:00",
+  "updated_at": "2026-07-28T01:10:00.355698+00:00",
   "money_lines": [
     {
       "leady": 30282,
