@@ -29,7 +29,7 @@
     },
     {
       "agent": "Sebastian",
-      "actions": 591,
+      "actions": 592,
       "results": 69,
       "revenue": 0,
       "odrzucone": 88
@@ -71,17 +71,17 @@
     },
     {
       "agent": "zwiadowca",
-      "actions": 38,
-      "results": 37,
+      "actions": 42,
+      "results": 41,
       "revenue": 0,
-      "odrzucone": 38
+      "odrzucone": 42
     },
     {
       "agent": "matcher",
-      "actions": 38,
-      "results": 38,
+      "actions": 42,
+      "results": 42,
       "revenue": 0,
-      "odrzucone": 38
+      "odrzucone": 42
     },
     {
       "agent": "Stepan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-28T00:00:00.544619+00:00",
+  "updated_at": "2026-07-28T00:10:00.373557+00:00",
   "money_lines": [
     {
       "leady": 30282,
