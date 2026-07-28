@@ -56,25 +56,25 @@
       "odrzucone": 65
     },
     {
+      "agent": "zwiadowca",
+      "actions": 50,
+      "results": 49,
+      "revenue": 0,
+      "odrzucone": 50
+    },
+    {
+      "agent": "matcher",
+      "actions": 50,
+      "results": 50,
+      "revenue": 0,
+      "odrzucone": 50
+    },
+    {
       "agent": "Rusłan",
       "actions": 47,
       "results": 3,
       "revenue": 0,
       "odrzucone": 30
-    },
-    {
-      "agent": "zwiadowca",
-      "actions": 46,
-      "results": 45,
-      "revenue": 0,
-      "odrzucone": 46
-    },
-    {
-      "agent": "matcher",
-      "actions": 46,
-      "results": 46,
-      "revenue": 0,
-      "odrzucone": 46
     },
     {
       "agent": "Bohdan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-28T02:00:00.749299+00:00",
+  "updated_at": "2026-07-28T02:10:00.403832+00:00",
   "money_lines": [
     {
       "leady": 30282,
