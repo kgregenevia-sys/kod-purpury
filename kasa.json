@@ -10,7 +10,7 @@
     "przychod_30d_pln": 99,
     "przychod_dzis_pln": 0,
     "odpowiedzi_zweryfikowane": 11,
-    "odpowiedzi_odrzucone_bez_dowodu": 88
+    "odpowiedzi_odrzucone_bez_dowodu": 108
   },
   "agenci": [
     {
@@ -22,7 +22,7 @@
     },
     {
       "agent": "Sebastian",
-      "actions": 688,
+      "actions": 689,
       "results": 69,
       "revenue": 0,
       "odrzucone": 88
@@ -78,7 +78,7 @@
     },
     {
       "agent": "strateg",
-      "actions": 58,
+      "actions": 60,
       "results": 48,
       "revenue": 0,
       "odrzucone": 48
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-29T08:10:00.397585+00:00",
+  "updated_at": "2026-07-29T08:20:00.369562+00:00",
   "money_lines": [
     {
       "leady": 30282,
