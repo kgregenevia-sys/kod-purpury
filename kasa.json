@@ -10,7 +10,7 @@
     "przychod_30d_pln": 99,
     "przychod_dzis_pln": 0,
     "odpowiedzi_zweryfikowane": 11,
-    "odpowiedzi_odrzucone_bez_dowodu": 151
+    "odpowiedzi_odrzucone_bez_dowodu": 152
   },
   "agenci": [
     {
@@ -43,17 +43,17 @@
     },
     {
       "agent": "matcher",
-      "actions": 188,
-      "results": 187,
+      "actions": 192,
+      "results": 191,
       "revenue": 0,
-      "odrzucone": 187
+      "odrzucone": 191
     },
     {
       "agent": "zwiadowca",
-      "actions": 183,
-      "results": 182,
+      "actions": 187,
+      "results": 186,
       "revenue": 0,
-      "odrzucone": 183
+      "odrzucone": 187
     },
     {
       "agent": "Jarosław",
@@ -64,10 +64,10 @@
     },
     {
       "agent": "product_marketing",
-      "actions": 91,
-      "results": 91,
+      "actions": 93,
+      "results": 93,
       "revenue": 0,
-      "odrzucone": 91
+      "odrzucone": 93
     },
     {
       "agent": "Wołodymyr",
@@ -78,17 +78,17 @@
     },
     {
       "agent": "strateg",
-      "actions": 73,
-      "results": 50,
+      "actions": 75,
+      "results": 51,
       "revenue": 0,
-      "odrzucone": 50
+      "odrzucone": 51
     },
     {
       "agent": "nadzorca",
-      "actions": 48,
-      "results": 48,
+      "actions": 49,
+      "results": 49,
       "revenue": 0,
-      "odrzucone": 48
+      "odrzucone": 49
     },
     {
       "agent": "Rusłan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-29T11:00:00.60257+00:00",
+  "updated_at": "2026-07-29T11:10:00.400838+00:00",
   "money_lines": [
     {
       "leady": 30282,
