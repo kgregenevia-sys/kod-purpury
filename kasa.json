@@ -15,14 +15,14 @@
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 786,
+      "actions": 788,
       "results": 0,
       "revenue": 0,
       "odrzucone": 598
     },
     {
       "agent": "Sebastian",
-      "actions": 678,
+      "actions": 679,
       "results": 69,
       "revenue": 0,
       "odrzucone": 88
@@ -43,17 +43,17 @@
     },
     {
       "agent": "matcher",
-      "actions": 164,
-      "results": 163,
+      "actions": 168,
+      "results": 167,
       "revenue": 0,
-      "odrzucone": 163
+      "odrzucone": 167
     },
     {
       "agent": "zwiadowca",
-      "actions": 159,
-      "results": 158,
+      "actions": 163,
+      "results": 162,
       "revenue": 0,
-      "odrzucone": 159
+      "odrzucone": 163
     },
     {
       "agent": "Jarosław",
@@ -64,10 +64,10 @@
     },
     {
       "agent": "product_marketing",
-      "actions": 79,
-      "results": 79,
+      "actions": 81,
+      "results": 81,
       "revenue": 0,
-      "odrzucone": 79
+      "odrzucone": 81
     },
     {
       "agent": "Wołodymyr",
@@ -78,10 +78,10 @@
     },
     {
       "agent": "strateg",
-      "actions": 48,
-      "results": 44,
+      "actions": 49,
+      "results": 45,
       "revenue": 0,
-      "odrzucone": 44
+      "odrzucone": 45
     },
     {
       "agent": "Rusłan",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-29T05:00:00.465952+00:00",
+  "updated_at": "2026-07-29T05:10:00.354287+00:00",
   "money_lines": [
     {
       "leady": 30282,
