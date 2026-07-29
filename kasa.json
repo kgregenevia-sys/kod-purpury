@@ -43,24 +43,24 @@
     },
     {
       "agent": "matcher",
-      "actions": 216,
-      "results": 215,
+      "actions": 220,
+      "results": 219,
+      "revenue": 0,
+      "odrzucone": 219
+    },
+    {
+      "agent": "zwiadowca",
+      "actions": 215,
+      "results": 214,
       "revenue": 0,
       "odrzucone": 215
     },
     {
-      "agent": "zwiadowca",
-      "actions": 211,
-      "results": 210,
-      "revenue": 0,
-      "odrzucone": 211
-    },
-    {
       "agent": "product_marketing",
-      "actions": 105,
-      "results": 105,
+      "actions": 107,
+      "results": 107,
       "revenue": 0,
-      "odrzucone": 105
+      "odrzucone": 107
     },
     {
       "agent": "Jarosław",
@@ -71,10 +71,10 @@
     },
     {
       "agent": "strateg",
-      "actions": 87,
-      "results": 57,
+      "actions": 88,
+      "results": 58,
       "revenue": 0,
-      "odrzucone": 57
+      "odrzucone": 58
     },
     {
       "agent": "Wołodymyr",
@@ -85,17 +85,17 @@
     },
     {
       "agent": "nadzorca",
-      "actions": 55,
-      "results": 55,
+      "actions": 56,
+      "results": 56,
       "revenue": 0,
-      "odrzucone": 55
+      "odrzucone": 56
     },
     {
       "agent": "wartownik_mail",
-      "actions": 52,
-      "results": 52,
+      "actions": 53,
+      "results": 53,
       "revenue": 0,
-      "odrzucone": 52
+      "odrzucone": 53
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-29T18:00:00.515844+00:00",
+  "updated_at": "2026-07-29T18:10:00.419896+00:00",
   "money_lines": [
     {
       "leady": 30282,
