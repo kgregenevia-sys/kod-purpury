@@ -10,12 +10,12 @@
     "przychod_30d_pln": 99,
     "przychod_dzis_pln": 0,
     "odpowiedzi_zweryfikowane": 11,
-    "odpowiedzi_odrzucone_bez_dowodu": 185
+    "odpowiedzi_odrzucone_bez_dowodu": 187
   },
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 788,
+      "actions": 790,
       "results": 0,
       "revenue": 0,
       "odrzucone": 598
@@ -43,24 +43,24 @@
     },
     {
       "agent": "matcher",
-      "actions": 260,
-      "results": 259,
+      "actions": 264,
+      "results": 263,
+      "revenue": 0,
+      "odrzucone": 263
+    },
+    {
+      "agent": "zwiadowca",
+      "actions": 259,
+      "results": 258,
       "revenue": 0,
       "odrzucone": 259
     },
     {
-      "agent": "zwiadowca",
-      "actions": 255,
-      "results": 254,
-      "revenue": 0,
-      "odrzucone": 255
-    },
-    {
       "agent": "product_marketing",
-      "actions": 127,
-      "results": 127,
+      "actions": 129,
+      "results": 129,
       "revenue": 0,
-      "odrzucone": 127
+      "odrzucone": 129
     },
     {
       "agent": "Jarosław",
@@ -71,10 +71,10 @@
     },
     {
       "agent": "strateg",
-      "actions": 99,
-      "results": 68,
+      "actions": 100,
+      "results": 69,
       "revenue": 0,
-      "odrzucone": 68
+      "odrzucone": 69
     },
     {
       "agent": "Wołodymyr",
@@ -85,17 +85,17 @@
     },
     {
       "agent": "nadzorca",
-      "actions": 66,
-      "results": 66,
+      "actions": 67,
+      "results": 67,
       "revenue": 0,
-      "odrzucone": 66
+      "odrzucone": 67
     },
     {
       "agent": "wartownik_mail",
-      "actions": 63,
-      "results": 63,
+      "actions": 64,
+      "results": 64,
       "revenue": 0,
-      "odrzucone": 63
+      "odrzucone": 64
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-30T05:00:00.630403+00:00",
+  "updated_at": "2026-07-30T05:10:00.452058+00:00",
   "money_lines": [
     {
       "leady": 30282,
