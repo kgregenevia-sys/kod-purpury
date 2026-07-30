@@ -64,10 +64,10 @@
     },
     {
       "agent": "strateg",
-      "actions": 105,
-      "results": 72,
+      "actions": 106,
+      "results": 73,
       "revenue": 0,
-      "odrzucone": 72
+      "odrzucone": 73
     },
     {
       "agent": "Jarosław",
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-30T08:20:00.508493+00:00",
+  "updated_at": "2026-07-30T08:30:00.432113+00:00",
   "money_lines": [
     {
       "leady": 30282,
