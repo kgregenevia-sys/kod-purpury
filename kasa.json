@@ -15,7 +15,7 @@
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 805,
+      "actions": 806,
       "results": 0,
       "revenue": 0,
       "odrzucone": 598
@@ -29,45 +29,45 @@
     },
     {
       "agent": "Mykolaj",
-      "actions": 649,
+      "actions": 650,
       "results": 3,
       "revenue": 0,
       "odrzucone": 585
     },
     {
       "agent": "Sasza",
-      "actions": 377,
+      "actions": 378,
       "results": 9,
       "revenue": 0,
       "odrzucone": 362
     },
     {
       "agent": "matcher",
-      "actions": 333,
-      "results": 332,
+      "actions": 337,
+      "results": 336,
       "revenue": 0,
-      "odrzucone": 332
+      "odrzucone": 336
     },
     {
       "agent": "zwiadowca",
-      "actions": 327,
-      "results": 326,
+      "actions": 331,
+      "results": 330,
       "revenue": 0,
-      "odrzucone": 327
+      "odrzucone": 331
     },
     {
       "agent": "product_marketing",
-      "actions": 163,
-      "results": 163,
+      "actions": 165,
+      "results": 165,
       "revenue": 0,
-      "odrzucone": 163
+      "odrzucone": 165
     },
     {
       "agent": "strateg",
-      "actions": 134,
-      "results": 87,
+      "actions": 135,
+      "results": 88,
       "revenue": 0,
-      "odrzucone": 87
+      "odrzucone": 88
     },
     {
       "agent": "Jarosław",
@@ -78,24 +78,24 @@
     },
     {
       "agent": "nadzorca",
-      "actions": 84,
-      "results": 84,
+      "actions": 85,
+      "results": 85,
       "revenue": 0,
-      "odrzucone": 84
+      "odrzucone": 85
     },
     {
       "agent": "wartownik_mail",
+      "actions": 82,
+      "results": 82,
+      "revenue": 0,
+      "odrzucone": 82
+    },
+    {
+      "agent": "content_distribution",
       "actions": 81,
       "results": 81,
       "revenue": 0,
       "odrzucone": 81
-    },
-    {
-      "agent": "content_distribution",
-      "actions": 80,
-      "results": 80,
-      "revenue": 0,
-      "odrzucone": 80
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-30T22:50:00.533004+00:00",
+  "updated_at": "2026-07-30T23:10:00.475223+00:00",
   "money_lines": [
     {
       "leady": 30282,
