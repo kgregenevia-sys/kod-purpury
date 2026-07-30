@@ -10,7 +10,7 @@
     "przychod_30d_pln": 99,
     "przychod_dzis_pln": 0,
     "odpowiedzi_zweryfikowane": 11,
-    "odpowiedzi_odrzucone_bez_dowodu": 190
+    "odpowiedzi_odrzucone_bez_dowodu": 192
   },
   "agenci": [
     {
@@ -43,31 +43,31 @@
     },
     {
       "agent": "matcher",
-      "actions": 268,
-      "results": 267,
+      "actions": 272,
+      "results": 271,
+      "revenue": 0,
+      "odrzucone": 271
+    },
+    {
+      "agent": "zwiadowca",
+      "actions": 267,
+      "results": 266,
       "revenue": 0,
       "odrzucone": 267
     },
     {
-      "agent": "zwiadowca",
-      "actions": 263,
-      "results": 262,
-      "revenue": 0,
-      "odrzucone": 263
-    },
-    {
       "agent": "product_marketing",
-      "actions": 131,
-      "results": 131,
+      "actions": 133,
+      "results": 133,
       "revenue": 0,
-      "odrzucone": 131
+      "odrzucone": 133
     },
     {
       "agent": "strateg",
-      "actions": 102,
-      "results": 70,
+      "actions": 104,
+      "results": 71,
       "revenue": 0,
-      "odrzucone": 70
+      "odrzucone": 71
     },
     {
       "agent": "Jarosław",
@@ -85,17 +85,17 @@
     },
     {
       "agent": "nadzorca",
-      "actions": 68,
-      "results": 68,
+      "actions": 69,
+      "results": 69,
       "revenue": 0,
-      "odrzucone": 68
+      "odrzucone": 69
     },
     {
       "agent": "wartownik_mail",
-      "actions": 65,
-      "results": 65,
+      "actions": 66,
+      "results": 66,
       "revenue": 0,
-      "odrzucone": 65
+      "odrzucone": 66
     }
   ],
   "prawda": {
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-30T06:50:00.325171+00:00",
+  "updated_at": "2026-07-30T07:10:00.348264+00:00",
   "money_lines": [
     {
       "leady": 30282,
