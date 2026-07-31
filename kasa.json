@@ -15,7 +15,7 @@
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 824,
+      "actions": 825,
       "results": 0,
       "revenue": 0,
       "odrzucone": 598
@@ -29,7 +29,7 @@
     },
     {
       "agent": "Mykolaj",
-      "actions": 660,
+      "actions": 661,
       "results": 3,
       "revenue": 0,
       "odrzucone": 585
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-31T03:30:00.708544+00:00",
+  "updated_at": "2026-07-31T03:40:00.643622+00:00",
   "money_lines": [
     {
       "leady": 30282,
@@ -116,7 +116,7 @@
     {
       "hot": 32,
       "nazwa": "2 · LUX BROKERAGE",
-      "aktywa": 220,
+      "aktywa": 226,
       "status": "SKALPER OLX dziala; portale lux 403 - brak proxy",
       "produkt": "posrednictwo aktywa premium",
       "przychod": 0
