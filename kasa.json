@@ -10,12 +10,12 @@
     "przychod_30d_pln": 99,
     "przychod_dzis_pln": 0,
     "odpowiedzi_zweryfikowane": 11,
-    "odpowiedzi_odrzucone_bez_dowodu": 293
+    "odpowiedzi_odrzucone_bez_dowodu": 294
   },
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 854,
+      "actions": 855,
       "results": 0,
       "revenue": 0,
       "odrzucone": 598
@@ -29,14 +29,14 @@
     },
     {
       "agent": "Mykolaj",
-      "actions": 682,
+      "actions": 683,
       "results": 3,
       "revenue": 0,
       "odrzucone": 585
     },
     {
       "agent": "Sasza",
-      "actions": 403,
+      "actions": 404,
       "results": 9,
       "revenue": 0,
       "odrzucone": 362
@@ -64,7 +64,7 @@
     },
     {
       "agent": "strateg",
-      "actions": 160,
+      "actions": 161,
       "results": 100,
       "revenue": 0,
       "odrzucone": 100
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-31T11:50:00.311214+00:00",
+  "updated_at": "2026-07-31T12:00:00.853724+00:00",
   "money_lines": [
     {
       "leady": 30282,
