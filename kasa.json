@@ -10,12 +10,12 @@
     "przychod_30d_pln": 99,
     "przychod_dzis_pln": 0,
     "odpowiedzi_zweryfikowane": 11,
-    "odpowiedzi_odrzucone_bez_dowodu": 296
+    "odpowiedzi_odrzucone_bez_dowodu": 297
   },
   "agenci": [
     {
       "agent": "Ostap",
-      "actions": 856,
+      "actions": 857,
       "results": 0,
       "revenue": 0,
       "odrzucone": 598
@@ -29,7 +29,7 @@
     },
     {
       "agent": "Mykolaj",
-      "actions": 683,
+      "actions": 684,
       "results": 3,
       "revenue": 0,
       "odrzucone": 585
@@ -103,7 +103,7 @@
     "zadania_done_bez_dowodu": 0,
     "odpowiedzi_z_dowodem_gmail": 11
   },
-  "updated_at": "2026-07-31T12:30:00.577875+00:00",
+  "updated_at": "2026-07-31T12:40:00.493632+00:00",
   "money_lines": [
     {
       "leady": 30282,
